@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "첫 번째 블로그 글 입니다"
+title: "두 번째 블로그 글 입니다"
 categories: second
 tag: [C++, 연습, blog]
 toc: true
