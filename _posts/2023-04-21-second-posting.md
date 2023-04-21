@@ -1,13 +1,13 @@
 ---
 layout: single
 title: "두 번째 블로그 글 입니다"
-categories: second
-tag: [C++, 연습, blog]
-toc: true
-author_profile: false
-sidebar: 
-  nav: "docs"
-search: true
+# categories: second
+# tag: [C++, 연습, blog]
+# toc: true
+# author_profile: false
+# sidebar: 
+#   nav: "docs"
+# search: true
 ---
 
 # 우준상
