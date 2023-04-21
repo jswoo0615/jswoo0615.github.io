@@ -7,6 +7,7 @@ main:
   - title: "Search"
     url: /search/
 
+
 docs:
   - title: "대목차1"
     children: 
@@ -15,12 +16,12 @@ docs:
       - title: "Tag"
         url: /tags/
   
-  - title: "대목차2"
-    children: 
-      - title: "Category"
-        url: /categories/
-      - title: "Tag"
-        url: /tags/
+  # - title: "대목차2"
+  #   children: 
+  #     - title: "Pets"
+  #       url: /pets/
+  #     - title: "Portfolio"
+  #       url: /portfolios/
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
