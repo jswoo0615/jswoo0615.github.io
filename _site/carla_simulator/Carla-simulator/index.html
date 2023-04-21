@@ -1,0 +1,787 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Carla Simulator 설치 | 우준상 블로그</title>
+<meta name="description" content="1. 패키지 설치 - 의존성 패키지 설치 Linux build - CARLA Simulator 의 Part One : Prerequisite의 내용 설치 진행했다. sudo apt-get update &amp;&amp; sudo apt-get install wget software-properties-common &amp;&amp; sudo add-apt-repository ppa:ubuntu-toolchain-r/test &amp;&amp; wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add - &amp;&amp; sudo apt-add-repository &quot;deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main&quot; &amp;&amp; sudo apt-get update  sudo apt-get install build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git  Carla Simulator는 Unreal 엔진 기반으로 실행되는 프로그램으로 C++로 구성되어 있다.   Carla Simulator에서는 clang-8과 LLVM’s libc++을 사용하여 개발이 진행되었다.      clang-9을 컴파일러로 사용하는 우분투 20.04에서는 MESA 관련 에러가 발생하여 우분투 18.04 환경에서 진행을 했다.   기존 gcc 컴파일러 대신, clang으로 컴파일러를 변경해야 한다. sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 &amp;&amp; sudo update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180">
+
+
+  <meta name="author" content="우준상">
+  
+  <meta property="article:author" content="우준상">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="우준상 블로그">
+<meta property="og:title" content="Carla Simulator 설치">
+<meta property="og:url" content="http://localhost:4000/carla_simulator/Carla-simulator/">
+
+
+  <meta property="og:description" content="1. 패키지 설치 - 의존성 패키지 설치 Linux build - CARLA Simulator 의 Part One : Prerequisite의 내용 설치 진행했다. sudo apt-get update &amp;&amp; sudo apt-get install wget software-properties-common &amp;&amp; sudo add-apt-repository ppa:ubuntu-toolchain-r/test &amp;&amp; wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add - &amp;&amp; sudo apt-add-repository &quot;deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main&quot; &amp;&amp; sudo apt-get update  sudo apt-get install build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git  Carla Simulator는 Unreal 엔진 기반으로 실행되는 프로그램으로 C++로 구성되어 있다.   Carla Simulator에서는 clang-8과 LLVM’s libc++을 사용하여 개발이 진행되었다.      clang-9을 컴파일러로 사용하는 우분투 20.04에서는 MESA 관련 에러가 발생하여 우분투 18.04 환경에서 진행을 했다.   기존 gcc 컴파일러 대신, clang으로 컴파일러를 변경해야 한다. sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 &amp;&amp; sudo update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-04-21T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/carla_simulator/Carla-simulator/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "우준상",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="우준상 블로그 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/logo_ex.png" alt="우준상 블로그"></a>
+        
+        <a class="site-title" href="/">
+          우준상 블로그
+          <span class="site-subtitle">기록용 블로그</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Category</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tag</a>
+            </li><li class="masthead__menu-item">
+              <a href="/search/">Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#carla_simulator" itemprop="item"><span itemprop="name">Carla_simulator</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Carla Simulator 설치</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">우준상</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>우준상의 블로그입니다</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:dnwnstkd122@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://jswoo0615.github.io" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/jswoo0615" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://instagram.com/woocjs900615" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Carla Simulator 설치">
+    <meta itemprop="description" content="1. 패키지 설치- 의존성 패키지 설치Linux build - CARLA Simulator 의 Part One : Prerequisite의 내용 설치 진행했다.sudo apt-get update &amp;&amp;sudo apt-get install wget software-properties-common &amp;&amp;sudo add-apt-repository ppa:ubuntu-toolchain-r/test &amp;&amp;wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add - &amp;&amp;sudo apt-add-repository &quot;deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main&quot; &amp;&amp;sudo apt-get updatesudo apt-get install build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev gitCarla Simulator는 Unreal 엔진 기반으로 실행되는 프로그램으로 C++로 구성되어 있다.  Carla Simulator에서는 clang-8과 LLVM’s libc++을 사용하여 개발이 진행되었다.     clang-9을 컴파일러로 사용하는 우분투 20.04에서는 MESA 관련 에러가 발생하여 우분투 18.04 환경에서 진행을 했다.  기존 gcc 컴파일러 대신, clang으로 컴파일러를 변경해야 한다.sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 &amp;&amp;sudo update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180">
+    <meta itemprop="datePublished" content="2023-04-21T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/carla_simulator/Carla-simulator/" class="u-url" itemprop="url">Carla Simulator 설치
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-04-21T00:00:00+09:00">April 21, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#1-패키지-설치">1. 패키지 설치</a><ul><li><a href="#--의존성-패키지-설치">- 의존성 패키지 설치</a></li><li><a href="#--파이썬-의존성-패키지-설치">- 파이썬 의존성 패키지 설치</a></li></ul></li><li><a href="#2-carla-설치">2. Carla 설치</a><ul><li><a href="#--build-linux-unreal-engine-build">- Build Linux (Unreal Engine build)</a></li><li><a href="#--debian-패키지">- Debian 패키지</a></li><li><a href="#--git-repository-패키지">- Git repository 패키지</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="1-패키지-설치">1. 패키지 설치</h1>
+<h2 id="--의존성-패키지-설치">- 의존성 패키지 설치</h2>
+<p><a href="https://carla.readthedocs.io/en/latest/build_linux/" class="btn btn--inverse">Linux build - CARLA Simulator</a> 의 Part One : Prerequisite의 내용 설치 진행했다.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update <span class="o">&amp;&amp;</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>wget software-properties-common <span class="o">&amp;&amp;</span>
+<span class="nb">sudo </span>add-apt-repository ppa:ubuntu-toolchain-r/test <span class="o">&amp;&amp;</span>
+wget <span class="nt">-O</span> - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add - <span class="o">&amp;&amp;</span>
+<span class="nb">sudo </span>apt-add-repository <span class="s2">"deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main"</span> <span class="o">&amp;&amp;</span>
+<span class="nb">sudo </span>apt-get update
+</code></pre></div></div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata <span class="nb">sed </span>curl unzip autoconf libtool rsync libxml2-dev git
+</code></pre></div></div>
+<p>Carla Simulator는 Unreal 엔진 기반으로 실행되는 프로그램으로 C++로 구성되어 있다.  <br />
+Carla Simulator에서는 clang-8과 LLVM’s libc++을 사용하여 개발이 진행되었다.     <br />
+clang-9을 컴파일러로 사용하는 우분투 20.04에서는 MESA 관련 에러가 발생하여 우분투 18.04 환경에서 진행을 했다.  <br />
+기존 gcc 컴파일러 대신, clang으로 컴파일러를 변경해야 한다.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>update-alternatives <span class="nt">--install</span> /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 <span class="o">&amp;&amp;</span>
+<span class="nb">sudo </span>update-alternatives <span class="nt">--install</span> /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180
+</code></pre></div></div>
+
+<h2 id="--파이썬-의존성-패키지-설치">- 파이썬 의존성 패키지 설치</h2>
+<ul>
+  <li>pip 확인 후 pip 업그레이드 진행
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c"># Python3</span>
+  pip3 <span class="nt">-V</span>
+  pip3 <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+  <span class="c"># Python2</span>
+  pip <span class="nt">-V</span>
+  pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+</code></pre></div>    </div>
+  </li>
+  <li>pip 업그레이드 후 pip를 이용한 의존성 패키지 설치
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  pip <span class="nb">install</span> <span class="nt">--user</span> setuptools <span class="o">&amp;&amp;</span>
+  pip3 <span class="nb">install</span> <span class="nt">-Iv</span> <span class="nv">setuptools</span><span class="o">==</span>47.3.1 <span class="o">&amp;&amp;</span>
+  pip <span class="nb">install</span> <span class="nt">--user</span> distro <span class="o">&amp;&amp;</span>
+  pip3 <span class="nb">install</span> <span class="nt">--user</span> distro <span class="o">&amp;&amp;</span>
+  pip <span class="nb">install</span> <span class="nt">--user</span> wheel <span class="o">&amp;&amp;</span>
+  pip3 <span class="nb">install</span> <span class="nt">--user</span> wheel auditwheel
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="2-carla-설치">2. Carla 설치</h1>
+<h2 id="--build-linux-unreal-engine-build">- Build Linux (Unreal Engine build)</h2>
+<p><a href="https://carla.readthedocs.io/en/latest/build_linux/" class="btn btn--inverse">Linux build - CARLA Simulator</a> 의 Part One : Prerequisite의 Software Requirements - Unreal Engine부터 설치 진행</p>
+
+<h2 id="--debian-패키지">- Debian 패키지</h2>
+<p><a href="https://carla.readthedocs.io/en/latest/start_quickstart/" class="btn btn--inverse">Quick start package install</a>의 Debian CARLA Installation으로 진행</p>
+
+<h2 id="--git-repository-패키지">- Git repository 패키지</h2>
+<p><a href="https://carla.readthedocs.io/en/latest/start_quickstart/" class="btn btn--inverse">Quick start package install</a>의 Package installation으로 진행</p>
+
+<p>추후 진행은 NATSA의 시나리오 기반으로 Agent의 주행 성능 평가를 점수화 할 수 있는 Carla Leaderboard를 사용하기 위해 <strong>Git repository</strong>에서 다운 받아 압축 해제하는 방식 대신, <a href="https://leaderboard.carla.org/get_started/" class="btn btn--inverse">Carla Leaderboard</a> 의 패키지를 다운받아 진행</p>
+<div class="notice">
+<h4>추후 작성 예정 항목</h4>
+<ul>
+  <li> Carla Leaderboard </li>
+  <li> Carla Scenario Runner </li>
+  <li> Carla ROS Bridge </li>
+</ul>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#carla" class="page__taxonomy-item p-category" rel="tag">Carla</a><span class="sep">, </span>
+    
+      <a href="/tags/#%EC%84%A4%EC%B9%98" class="page__taxonomy-item p-category" rel="tag">설치</a><span class="sep">, </span>
+    
+      <a href="/tags/#%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0" class="page__taxonomy-item p-category" rel="tag">자율주행 시뮬레이터</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#carla-simulator" class="page__taxonomy-item p-category" rel="tag">Carla_Simulator</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-04-21T00:00:00+09:00">April 21, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Carla+Simulator+%EC%84%A4%EC%B9%98%20http%3A%2F%2Flocalhost%3A4000%2Fcarla_simulator%2FCarla-simulator%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fcarla_simulator%2FCarla-simulator%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcarla_simulator%2FCarla-simulator%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/ad_stack/Autoware-Universe/" class="pagination--pager" title="Autoware_Universe
+">이전</a>
+    
+    
+      <a href="/second-posting/" class="pagination--pager" title="두 번째 블로그 글 입니다
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/second-posting/" rel="permalink">두 번째 블로그 글 입니다
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-04-21T00:00:00+09:00">April 21, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">우준상
+이미지 목차
+이미지 목차 1
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/ad_stack/Autoware-Universe/" rel="permalink">Autoware_Universe
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-04-21T00:00:00+09:00">April 21, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/ad_stack/Autoware-AI/" rel="permalink">Autoware_AI
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-04-21T00:00:00+09:00">April 21, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/first-posting/" rel="permalink">첫 번째 블로그 글 입니다
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-04-20T00:00:00+09:00">April 20, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">우준상
+이미지 목차
+이미지 목차 1
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/jswoo0615" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/woocjs900615" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 우준상. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/carla_simulator/Carla-simulator/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/carla_simulator/Carla-simulator"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jswoo0615.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

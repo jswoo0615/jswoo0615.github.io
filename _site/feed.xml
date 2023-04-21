@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-21T12:57:53+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">우준상 블로그</title><subtitle>공사중입니다</subtitle><author><name>우준상</name></author><entry><title type="html">두 번째 블로그 글 입니다</title><link href="http://localhost:4000/second/second-posting/" rel="alternate" type="text/html" title="두 번째 블로그 글 입니다" /><published>2023-04-21T00:00:00+09:00</published><updated>2023-04-21T00:00:00+09:00</updated><id>http://localhost:4000/second/second-posting</id><content type="html" xml:base="http://localhost:4000/second/second-posting/"><![CDATA[<h1 id="우준상">우준상</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-21T22:02:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">우준상 블로그</title><subtitle>공사중입니다</subtitle><author><name>우준상</name></author><entry><title type="html">Autoware_AI</title><link href="http://localhost:4000/ad_stack/Autoware-AI/" rel="alternate" type="text/html" title="Autoware_AI" /><published>2023-04-21T00:00:00+09:00</published><updated>2023-04-21T00:00:00+09:00</updated><id>http://localhost:4000/ad_stack/Autoware-AI</id><content type="html" xml:base="http://localhost:4000/ad_stack/Autoware-AI/"><![CDATA[]]></content><author><name>우준상</name></author><category term="AD_Stack" /><category term="Autoware.AI" /><category term="AD_Stack" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Autoware_Universe</title><link href="http://localhost:4000/ad_stack/Autoware-Universe/" rel="alternate" type="text/html" title="Autoware_Universe" /><published>2023-04-21T00:00:00+09:00</published><updated>2023-04-21T00:00:00+09:00</updated><id>http://localhost:4000/ad_stack/Autoware-Universe</id><content type="html" xml:base="http://localhost:4000/ad_stack/Autoware-Universe/"><![CDATA[]]></content><author><name>우준상</name></author><category term="AD_Stack" /><category term="Autoware.Universe" /><category term="AD_Stack" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Carla Simulator 설치</title><link href="http://localhost:4000/carla_simulator/Carla-simulator/" rel="alternate" type="text/html" title="Carla Simulator 설치" /><published>2023-04-21T00:00:00+09:00</published><updated>2023-04-21T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-simulator</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-simulator/"><![CDATA[<h1 id="1-패키지-설치">1. 패키지 설치</h1>
+<h2 id="--의존성-패키지-설치">- 의존성 패키지 설치</h2>
+<p><a href="https://carla.readthedocs.io/en/latest/build_linux/" class="btn btn--inverse">Linux build - CARLA Simulator</a> 의 Part One : Prerequisite의 내용 설치 진행했다.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update <span class="o">&amp;&amp;</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>wget software-properties-common <span class="o">&amp;&amp;</span>
+<span class="nb">sudo </span>add-apt-repository ppa:ubuntu-toolchain-r/test <span class="o">&amp;&amp;</span>
+wget <span class="nt">-O</span> - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add - <span class="o">&amp;&amp;</span>
+<span class="nb">sudo </span>apt-add-repository <span class="s2">"deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main"</span> <span class="o">&amp;&amp;</span>
+<span class="nb">sudo </span>apt-get update
+</code></pre></div></div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata <span class="nb">sed </span>curl unzip autoconf libtool rsync libxml2-dev git
+</code></pre></div></div>
+<p>Carla Simulator는 Unreal 엔진 기반으로 실행되는 프로그램으로 C++로 구성되어 있다.  <br />
+Carla Simulator에서는 clang-8과 LLVM’s libc++을 사용하여 개발이 진행되었다.     <br />
+clang-9을 컴파일러로 사용하는 우분투 20.04에서는 MESA 관련 에러가 발생하여 우분투 18.04 환경에서 진행을 했다.  <br />
+기존 gcc 컴파일러 대신, clang으로 컴파일러를 변경해야 한다.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>update-alternatives <span class="nt">--install</span> /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 <span class="o">&amp;&amp;</span>
+<span class="nb">sudo </span>update-alternatives <span class="nt">--install</span> /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180
+</code></pre></div></div>
+
+<h2 id="--파이썬-의존성-패키지-설치">- 파이썬 의존성 패키지 설치</h2>
+<ul>
+  <li>pip 확인 후 pip 업그레이드 진행
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c"># Python3</span>
+  pip3 <span class="nt">-V</span>
+  pip3 <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+  <span class="c"># Python2</span>
+  pip <span class="nt">-V</span>
+  pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+</code></pre></div>    </div>
+  </li>
+  <li>pip 업그레이드 후 pip를 이용한 의존성 패키지 설치
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  pip <span class="nb">install</span> <span class="nt">--user</span> setuptools <span class="o">&amp;&amp;</span>
+  pip3 <span class="nb">install</span> <span class="nt">-Iv</span> <span class="nv">setuptools</span><span class="o">==</span>47.3.1 <span class="o">&amp;&amp;</span>
+  pip <span class="nb">install</span> <span class="nt">--user</span> distro <span class="o">&amp;&amp;</span>
+  pip3 <span class="nb">install</span> <span class="nt">--user</span> distro <span class="o">&amp;&amp;</span>
+  pip <span class="nb">install</span> <span class="nt">--user</span> wheel <span class="o">&amp;&amp;</span>
+  pip3 <span class="nb">install</span> <span class="nt">--user</span> wheel auditwheel
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="2-carla-설치">2. Carla 설치</h1>
+<h2 id="--build-linux-unreal-engine-build">- Build Linux (Unreal Engine build)</h2>
+<p><a href="https://carla.readthedocs.io/en/latest/build_linux/" class="btn btn--inverse">Linux build - CARLA Simulator</a> 의 Part One : Prerequisite의 Software Requirements - Unreal Engine부터 설치 진행</p>
+
+<h2 id="--debian-패키지">- Debian 패키지</h2>
+<p><a href="https://carla.readthedocs.io/en/latest/start_quickstart/" class="btn btn--inverse">Quick start package install</a>의 Debian CARLA Installation으로 진행</p>
+
+<h2 id="--git-repository-패키지">- Git repository 패키지</h2>
+<p><a href="https://carla.readthedocs.io/en/latest/start_quickstart/" class="btn btn--inverse">Quick start package install</a>의 Package installation으로 진행</p>
+
+<p>추후 진행은 NATSA의 시나리오 기반으로 Agent의 주행 성능 평가를 점수화 할 수 있는 Carla Leaderboard를 사용하기 위해 <strong>Git repository</strong>에서 다운 받아 압축 해제하는 방식 대신, <a href="https://leaderboard.carla.org/get_started/" class="btn btn--inverse">Carla Leaderboard</a> 의 패키지를 다운받아 진행</p>
+<div class="notice">
+<h4>추후 작성 예정 항목</h4>
+<ul>
+  <li> Carla Leaderboard </li>
+  <li> Carla Scenario Runner </li>
+  <li> Carla ROS Bridge </li>
+</ul>
+</div>]]></content><author><name>우준상</name></author><category term="Carla_Simulator" /><category term="Carla" /><category term="자율주행 시뮬레이터" /><category term="설치" /><summary type="html"><![CDATA[1. 패키지 설치 - 의존성 패키지 설치 Linux build - CARLA Simulator 의 Part One : Prerequisite의 내용 설치 진행했다. sudo apt-get update &amp;&amp; sudo apt-get install wget software-properties-common &amp;&amp; sudo add-apt-repository ppa:ubuntu-toolchain-r/test &amp;&amp; wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add - &amp;&amp; sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main" &amp;&amp; sudo apt-get update sudo apt-get install build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip libpng-dev libtiff5-dev libjpeg-dev tzdata sed curl unzip autoconf libtool rsync libxml2-dev git Carla Simulator는 Unreal 엔진 기반으로 실행되는 프로그램으로 C++로 구성되어 있다. Carla Simulator에서는 clang-8과 LLVM’s libc++을 사용하여 개발이 진행되었다. clang-9을 컴파일러로 사용하는 우분투 20.04에서는 MESA 관련 에러가 발생하여 우분투 18.04 환경에서 진행을 했다. 기존 gcc 컴파일러 대신, clang으로 컴파일러를 변경해야 한다. sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-8/bin/clang++ 180 &amp;&amp; sudo update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clang 180]]></summary></entry><entry><title type="html">두 번째 블로그 글 입니다</title><link href="http://localhost:4000/second-posting/" rel="alternate" type="text/html" title="두 번째 블로그 글 입니다" /><published>2023-04-21T00:00:00+09:00</published><updated>2023-04-21T00:00:00+09:00</updated><id>http://localhost:4000/second-posting</id><content type="html" xml:base="http://localhost:4000/second-posting/"><![CDATA[<h1 id="우준상">우준상</h1>
 <h2 id="이미지-목차">이미지 목차</h2>
 <h3 id="이미지-목차-1">이미지 목차 1</h3>
 
@@ -15,7 +75,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="안뇽">안뇽</h1>]]></content><author><name>우준상</name></author><category term="second" /><category term="C++" /><category term="연습" /><category term="blog" /><summary type="html"><![CDATA[우준상 이미지 목차 이미지 목차 1]]></summary></entry><entry><title type="html">첫 번째 블로그 글 입니다</title><link href="http://localhost:4000/coding/first-posting/" rel="alternate" type="text/html" title="첫 번째 블로그 글 입니다" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/coding/first-posting</id><content type="html" xml:base="http://localhost:4000/coding/first-posting/"><![CDATA[<h1 id="우준상">우준상</h1>
+<h1 id="안뇽">안뇽</h1>]]></content><author><name>우준상</name></author><summary type="html"><![CDATA[우준상 이미지 목차 이미지 목차 1]]></summary></entry><entry><title type="html">첫 번째 블로그 글 입니다</title><link href="http://localhost:4000/first-posting/" rel="alternate" type="text/html" title="첫 번째 블로그 글 입니다" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/first-posting</id><content type="html" xml:base="http://localhost:4000/first-posting/"><![CDATA[<h1 id="우준상">우준상</h1>
 <h2 id="이미지-목차">이미지 목차</h2>
 <h3 id="이미지-목차-1">이미지 목차 1</h3>
 
@@ -32,4 +92,4 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="안뇽">안뇽</h1>]]></content><author><name>우준상</name></author><category term="coding" /><category term="C++" /><category term="연습" /><category term="blog" /><summary type="html"><![CDATA[우준상 이미지 목차 이미지 목차 1]]></summary></entry></feed>
+<h1 id="안뇽">안뇽</h1>]]></content><author><name>우준상</name></author><summary type="html"><![CDATA[우준상 이미지 목차 이미지 목차 1]]></summary></entry></feed>
