@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Autoware_AI | 배워서 남주기</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>[C++] Arithmitic Metaprogramming | 배워서 남주기</title>
+<meta name="description" content="Arithmitic Metaprogramming Intro 컴파일 시간에 산술 연산을 처리하기 위해 C++ 템플릿 메타프로그래밍을 사용합니다.">
 
 
   <meta name="author" content="우준상">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="배워서 남주기">
-<meta property="og:title" content="Autoware_AI">
-<meta property="og:url" content="http://localhost:4000/ad_stack/Autoware-AI/">
+<meta property="og:title" content="[C++] Arithmitic Metaprogramming">
+<meta property="og:url" content="http://localhost:4000/c++_study/Arithmitic-Metaprogramming/">
 
 
-  <meta property="og:description" content="">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-04-21T00:00:00+09:00">
+  <meta property="og:description" content="Arithmitic Metaprogramming Intro 컴파일 시간에 산술 연산을 처리하기 위해 C++ 템플릿 메타프로그래밍을 사용합니다.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2023-04-22T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/ad_stack/Autoware-AI/">
+
+<link rel="canonical" href="http://localhost:4000/c++_study/Arithmitic-Metaprogramming/">
 
 
 
@@ -162,7 +162,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#ad_stack" itemprop="item"><span itemprop="name">Ad_stack</span></a>
+          <a href="/categories/#c++_study" itemprop="item"><span itemprop="name">C++_study</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -170,7 +170,7 @@
     
       
       
-        <li class="current">Autoware_AI</li>
+        <li class="current">[C++] Arithmitic Metaprogramming</li>
       
     
   </ol>
@@ -199,6 +199,30 @@
   <label for="ac-toc">토글 메뉴</label>
   <ul class="nav__items">
     
+      <li>
+        
+          <a href="/categories/"><span class="nav__sub-title">Category</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/tags/"><span class="nav__sub-title">Tag</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/search/"><span class="nav__sub-title">Search</span></a>
+        
+
+        
+      </li>
+    
   </ul>
 </nav>
 
@@ -209,16 +233,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Autoware_AI">
-    <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2023-04-21T00:00:00+09:00">
+    <meta itemprop="headline" content="[C++] Arithmitic Metaprogramming">
+    <meta itemprop="description" content="Arithmitic MetaprogrammingIntro컴파일 시간에 산술 연산을 처리하기 위해 C++ 템플릿 메타프로그래밍을 사용합니다.">
+    <meta itemprop="datePublished" content="2023-04-22T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/ad_stack/Autoware-AI/" class="u-url" itemprop="url">Autoware_AI
+            <a href="http://localhost:4000/c++_study/Arithmitic-Metaprogramming/" class="u-url" itemprop="url">[C++] Arithmitic Metaprogramming
 </a>
           </h1>
           
@@ -229,7 +253,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2023-04-21T00:00:00+09:00">April 21, 2023</time>
+        <time datetime="2023-04-22T00:00:00+09:00">April 22, 2023</time>
       </span>
     
 
@@ -257,12 +281,22 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              
+              <ul class="toc__menu"><li><a href="#arithmitic-metaprogramming">Arithmitic Metaprogramming</a><ul><li><a href="#intro">Intro</a></li><li><a href="#calculating-power-in-olog-n">Calculating power in O(log n)</a></li><li><a href="#c14">C++14</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        
+        <h2 id="arithmitic-metaprogramming">Arithmitic Metaprogramming</h2>
+<h3 id="intro">Intro</h3>
+<p>컴파일 시간에 산술 연산을 처리하기 위해 C++ 템플릿 메타프로그래밍을 사용합니다.</p>
+
+<h3 id="calculating-power-in-olog-n">Calculating power in O(log n)</h3>
+<p>이 예제는 템플릿 메타프로그래밍을 사용하여 거듭제곱을 효율적으로 계산합니다.
+<script src="https://gist.github.com/jswoo0615/03d386030cdbed5ebe0adf9729b73f78.js"></script></p>
+
+<h3 id="c14">C++14</h3>
+<p>아래 예제는 음수 지수도 처리하는 예제입니다.
+<script src="https://gist.github.com/jswoo0615/d9fcdd92d7c86d03c1c62d19e25c3058.js"></script></p>
 
         
       </section>
@@ -279,7 +313,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#ad-stack" class="page__taxonomy-item p-category" rel="tag">AD_Stack</a>
+      <a href="/tags/#c" class="page__taxonomy-item p-category" rel="tag">C++</a>
     
     </span>
   </p>
@@ -296,7 +330,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#ad-stack" class="page__taxonomy-item p-category" rel="tag">AD_Stack</a>
+      <a href="/categories/#c-study" class="page__taxonomy-item p-category" rel="tag">C++_Study</a>
     
     </span>
   </p>
@@ -304,7 +338,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-04-21T00:00:00+09:00">April 21, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-04-22T00:00:00+09:00">April 22, 2023</time></p>
 
       </footer>
 
@@ -313,22 +347,22 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Autoware_AI%20http%3A%2F%2Flocalhost%3A4000%2Fad_stack%2FAutoware-AI%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BC%2B%2B%5D+Arithmitic+Metaprogramming%20http%3A%2F%2Flocalhost%3A4000%2Fc%2B%2B_study%2FArithmitic-Metaprogramming%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fad_stack%2FAutoware-AI%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fc%2B%2B_study%2FArithmitic-Metaprogramming%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fad_stack%2FAutoware-AI%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fc%2B%2B_study%2FArithmitic-Metaprogramming%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/etc/multipass-how-to-use/" class="pagination--pager" title="multipass를 이용한 우분투 가상환경 생성
+      <a href="/c++_study/Argument-Dependent-Name-Lookup/" class="pagination--pager" title="[C++] Argument Depenent Name Lookup
 ">이전</a>
     
     
-      <a href="/ad_stack/Autoware-Universe/" class="pagination--pager" title="Autoware_Universe
+      <a href="/c++_study/Array/" class="pagination--pager" title="[C++] Array
 ">다음</a>
     
   </nav>
@@ -598,8 +632,8 @@ Intro
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/ad_stack/Autoware-AI/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/ad_stack/Autoware-AI"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/c++_study/Arithmitic-Metaprogramming/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/c++_study/Arithmitic-Metaprogramming"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
