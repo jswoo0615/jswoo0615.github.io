@@ -9,7 +9,6 @@ sidebar:
   nav: "main"
 search: true
 ---
-# Carla Simulator 패키지 설치
 ## 목차
 [1. Installing Graphic Driver](#1-installing-graphic-driver)
 - [종속성 패키지 설치](#11-종속성-패키지-설치)

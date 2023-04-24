@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "multipass를 이용한 우분투 가상환경 생성"
-categories: multipass
+categories: etc
 tag: [가상환경]
 toc: true
 author_profile: true
@@ -9,7 +9,6 @@ sidebar:
   nav: "main"
 search: true
 ---
-## multipass를 이용한 가상환경 생성
 multipass를 이용한 가상환경 생성을 위해 아래와 같이 명령어를 입력합니다.  
 `multipass launch --cpus <cpu 사용 갯수> --disk <용량>G --mem 4GB --name ubuntu1804 <우분투 버전>`
 
