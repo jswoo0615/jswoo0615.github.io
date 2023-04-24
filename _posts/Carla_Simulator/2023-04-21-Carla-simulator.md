@@ -1,3 +1,14 @@
+---
+layout: single
+title: "Carla Simulator 설치"
+categories: Carla_Simulator
+tag: [Carla, 설치]
+toc: true
+author_profile: true
+sidebar: 
+  nav: "main"
+search: true
+---
 # Carla Simulator 패키지 설치
 ## 목차
 [1. Installing Graphic Driver](#1-installing-graphic-driver)
