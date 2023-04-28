@@ -137,7 +137,7 @@ class MinimalPublisher : public rclcpp::Node
 };
 ```
 `timer_callback` 함수는 메시지 데이터가 설정되고, 실제 메시지가 출력되는 부분입니다.  
-메시지 데이터는 
+메시지 데이터는 `"Hello world! "`와 숫자 카운트가 진행됩니다.  
 `RCLCPP_INFO` 매크로는 게시된 모든 메시지가 콘솔에 출력되도록 합니다.  
 
 ## 3. Subscriber 노드
