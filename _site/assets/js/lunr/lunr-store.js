@@ -1,10 +1,4 @@
 var store = [{
-        "title": "multipass를 이용한 우분투 가상환경 생성",
-        "excerpt":"multipass를 이용한 가상환경 생성을 위해 아래와 같이 명령어를 입력합니다. multipass launch --cpus &lt;cpu 사용 갯수&gt; --disk &lt;용량&gt;G --mem 4GB --name ubuntu1804 &lt;우분투 버전&gt; Visual Studio Code에서 가상환경 사용하기 (ssh) 가상환경으로 생성한 우분투의 터미널에서 ssh 접속을 위한 비밀번호 설정을 해줍니다. sudo passwd root, sudo passwd &lt;user_name&gt;를 이용하여 비밀번호를 설정해줍니다. 그 후...","categories": ["etc"],
-        "tags": ["가상환경"],
-        "url": "/etc/multipass-how-to-use/",
-        "teaser": null
-      },{
         "title": "Autoware_AI",
         "excerpt":" ","categories": ["AD_Stack"],
         "tags": ["AD_Stack"],
@@ -63,5 +57,35 @@ var store = [{
         "excerpt":"Intro 포스트를 남기다보니 본문 영역이 좁아, 영역 및 글자 크기 조절에 대해 남겨보고자 합니다. 사용한 테마는 minimal_mistakes 입니다. 본문 영역 너비 조절 _variables.scss 수정 파일 : user.github.io 폴더 -&gt; _sass -&gt; _minimal-mistakes -&gt; _variables.scss 해당 파일의 158 ~ 160번째 줄에서 너비 설정이 가능합니다. 본문의 너비를 조절하는 것이 아닌, 사이드 바의...","categories": ["Github_Blog"],
         "tags": ["Github_Blog"],
         "url": "/github_blog/github-blog-width-font-size/",
+        "teaser": null
+      },{
+        "title": "multipass를 이용한 우분투 가상환경 생성",
+        "excerpt":"multipass를 이용한 가상환경 생성을 위해 아래와 같이 명령어를 입력합니다. multipass launch --cpus &lt;cpu 사용 갯수&gt; --disk &lt;용량&gt;G --mem 4GB --name ubuntu1804 &lt;우분투 버전&gt; Visual Studio Code에서 가상환경 사용하기 (ssh) 가상환경으로 생성한 우분투의 터미널에서 ssh 접속을 위한 비밀번호 설정을 해줍니다. sudo passwd root, sudo passwd &lt;user_name&gt;를 이용하여 비밀번호를 설정해줍니다. 그 후...","categories": ["etc"],
+        "tags": ["가상환경"],
+        "url": "/etc/multipass-how-to-use/",
+        "teaser": null
+      },{
+        "title": "[C++] std::functional",
+        "excerpt":"https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)  ","categories": ["C++_Study"],
+        "tags": ["C++"],
+        "url": "/c++_study/std-functional/",
+        "teaser": null
+      },{
+        "title": "[C++] std::memory",
+        "excerpt":"https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170  ","categories": ["C++_Study"],
+        "tags": ["C++"],
+        "url": "/c++_study/std-memory/",
+        "teaser": null
+      },{
+        "title": "[ROS2] Workspace 및 Package 생성",
+        "excerpt":"ROS2의 작업환경 (Workspace) 생성 방법에 관한 내용입니다. 1. 작업공간 (Workspace) 생성 1.1. ROS2 환경변수 적용 ros2를 설치한 후 실행하기 위해 아래와 같이 환경변수 설정을 해야합니다. ros2가 설치되어 있는 경로의 setup.bash 파일을 이용하여 환경변수 설정해줍니다. source /opt/ros/humble/setup.bash 위의 방법은 반영구적으로 터미널을 실행할 때마다 실행해주어야 하는 번거로움이 있습니다. 그러므로 터미널을 새로 열...","categories": ["ROS2"],
+        "tags": ["ROS2"],
+        "url": "/ros2/Creating-a-Workspace-Packages/",
+        "teaser": null
+      },{
+        "title": "[ROS2] Publisher와 Subscriber 생성",
+        "excerpt":"1. 패키지 생성 패키지를 생성 및 빌드하기 위해 작업공간의 ~/ros2_ws/src 폴더로 이동하여 패키지를 생성해줍니다. 지금은 cpp_pubsub 이라는 이름의 패키지를 만들도록 하겠습니다. cd ~/ros2_ws/src ros2 pkg create --build-type ament_cmake cpp_pubsub 아래 그림과 같이 cpp_pubsub 이름의 패키지가 생성되었습니다. 2. Publisher 노드 Publisher 노드를 생성하기 위해 패키지 내의 cpp_pubsub/src로 이동합니다. 2.1. 전체 코드...","categories": ["ROS2"],
+        "tags": ["ROS2"],
+        "url": "/ros2/Writing-a-simple-publisher-and-subscriber-C++/",
         "teaser": null
       }]
