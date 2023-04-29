@@ -84,7 +84,7 @@ var store = [{
         "teaser": null
       },{
         "title": "[ROS2] Publisher와 Subscriber 생성",
-        "excerpt":"1. 패키지 생성 패키지를 생성 및 빌드하기 위해 작업공간의 ~/ros2_ws/src 폴더로 이동하여 패키지를 생성해줍니다. 지금은 cpp_pubsub 이라는 이름의 패키지를 만들도록 하겠습니다. cd ~/ros2_ws/src ros2 pkg create --build-type ament_cmake cpp_pubsub 아래 그림과 같이 cpp_pubsub 이름의 패키지가 생성되었습니다. 2. Publisher 노드 Publisher 노드를 생성하기 위해 패키지 내의 cpp_pubsub/src로 이동합니다. 2.1. 전체 코드...","categories": ["ROS2"],
+        "excerpt":"1. 패키지 생성 패키지를 생성 및 빌드하기 위해 작업공간의 ~/ros2_ws/src 폴더로 이동하여 패키지를 생성해줍니다. 지금은 cpp_pubsub 이라는 이름의 패키지를 만들도록 하겠습니다. 아래 그림과 같이 cpp_pubsub 이름의 패키지가 생성되었습니다. 2. Publisher 노드 Publisher 노드를 생성하기 위해 패키지 내의 cpp_pubsub/src로 이동합니다. 2.1. 전체 코드 2.2. 코드 분석 2.2.1. 헤더부분 (1) #include &lt;chrono&gt;...","categories": ["ROS2"],
         "tags": ["ROS2"],
         "url": "/ros2/Writing-a-simple-publisher-and-subscriber-C++/",
         "teaser": null
