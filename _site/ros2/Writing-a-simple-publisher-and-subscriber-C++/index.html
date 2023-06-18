@@ -393,7 +393,7 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#1-패키지-생성">1. 패키지 생성</a></li><li><a href="#2-publisher-노드">2. Publisher 노드</a><ul><li><a href="#21-전체-코드">2.1. 전체 코드</a></li><li><a href="#22-코드-분석">2.2. 코드 분석</a><ul><li><a href="#221-헤더부분">2.2.1. 헤더부분</a></li><li><a href="#222-publisher-클래스">2.2.2. Publisher 클래스</a><ul><li><a href="#2221-public-생성자-부분">2.2.2.1. public 생성자 부분</a></li><li><a href="#2222-private-생성자-부분">2.2.2.2. private 생성자 부분</a></li></ul></li></ul></li></ul></li><li><a href="#3-subscriber-노드">3. Subscriber 노드</a></li><li><a href="#4-빌드">4. 빌드</a></li></ul>
+              <ul class="toc__menu"><li><a href="#1-패키지-생성">1. 패키지 생성</a></li><li><a href="#2-publisher-노드">2. Publisher 노드</a><ul><li><a href="#21-전체-코드">2.1. 전체 코드</a></li><li><a href="#22-코드-분석">2.2. 코드 분석</a><ul><li><a href="#221-헤더부분">2.2.1. 헤더부분</a></li><li><a href="#222-publisher-클래스">2.2.2. Publisher 클래스</a><ul><li><a href="#2221-public-생성자-부분">2.2.2.1. public 생성자 부분</a></li><li><a href="#2222-private-생성자-부분">2.2.2.2. private 생성자 부분</a></li></ul></li><li><a href="#223-main-부분">2.2.3. main 부분</a></li></ul></li><li><a href="#23-cmakeliststxt와-packagexml">2.3. CMakeLists.txt와 package.xml</a><ul><li><a href="#231-cmakeliststxt">2.3.1. CMakeLists.txt</a></li><li><a href="#232-packagesxml">2.3.2. packages.xml</a></li></ul></li></ul></li><li><a href="#3-subscriber-노드">3. Subscriber 노드</a></li><li><a href="#4-빌드">4. 빌드</a></li></ul>
 
             </nav>
           </aside>
@@ -401,11 +401,8 @@
         <h2 id="1-패키지-생성">1. 패키지 생성</h2>
 <p>패키지를 생성 및 빌드하기 위해 작업공간의 <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code> 폴더로 이동하여 패키지를 생성해줍니다.</p>
 
-<p>지금은 <code class="language-plaintext highlighter-rouge">cpp_pubsub</code> 이라는 이름의 패키지를 만들도록 하겠습니다.</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/ros2_ws/src
-
-ros2 pkg create <span class="nt">--build-type</span> ament_cmake cpp_pubsub
-</code></pre></div></div>
+<p>지금은 <code class="language-plaintext highlighter-rouge">cpp_pubsub</code> 이라는 이름의 패키지를 만들도록 하겠습니다.<br />
+<script src="https://gist.github.com/jswoo0615/022a54ebbf8b229886b703481e31d750.js"></script></p>
 
 <p>아래 그림과 같이 <code class="language-plaintext highlighter-rouge">cpp_pubsub</code> 이름의 패키지가 생성되었습니다.<br />
 <img width="328" alt="Publisher_Subscriber_1" src="https://user-images.githubusercontent.com/128343128/235099090-3703d77b-da1e-498d-a81e-981916efda5a.png" /></p>
@@ -413,58 +410,11 @@ ros2 pkg create <span class="nt">--build-type</span> ament_cmake cpp_pubsub
 <h2 id="2-publisher-노드">2. Publisher 노드</h2>
 <p><code class="language-plaintext highlighter-rouge">Publisher</code> 노드를 생성하기 위해 패키지 내의 <code class="language-plaintext highlighter-rouge">cpp_pubsub/src</code>로 이동합니다.</p>
 <h3 id="21-전체-코드">2.1. 전체 코드</h3>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;functional&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
-</span>
-<span class="cp">#include</span> <span class="cpf">"rclcpp/rclcpp.hpp"</span><span class="cp">
-#include</span> <span class="cpf">"std_msgs/msg/string.hpp"</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono_literals</span><span class="p">;</span>
-
-<span class="k">class</span> <span class="nc">MinimalPublisher</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
-<span class="p">{</span>
-  <span class="nl">public:</span>
-    <span class="n">MinimalPublisher</span><span class="p">()</span> <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">"Minimal_Publisher"</span><span class="p">,</span> <span class="n">count_</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-    <span class="p">{</span>
-      <span class="n">publisher_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"topic"</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-      <span class="n">timer_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span><span class="mx">100ms</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MinimalPublisher</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">));</span>
-    <span class="p">}</span>
-
-  <span class="k">private</span><span class="o">:</span>
-    <span class="kt">void</span> <span class="nf">timer_callback</span><span class="p">()</span>
-    <span class="p">{</span>
-      <span class="k">auto</span> <span class="n">message</span> <span class="o">=</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="p">();</span>
-      <span class="n">message</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="s">"Hello, World! "</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">count_</span><span class="o">++</span><span class="p">);</span>
-      <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">"Publishing : '%s'"</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
-      <span class="n">publisher_</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">timer_</span><span class="p">;</span>
-    <span class="n">rclcpp</span><span class="o">::</span><span class="n">Publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">publisher_</span><span class="p">;</span>
-    <span class="kt">size_t</span> <span class="n">count_</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MinimalPublisher</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<script src="https://gist.github.com/jswoo0615/e752bd6a4349d486a56aace156222e9a.js"></script>
 
 <h3 id="22-코드-분석">2.2. 코드 분석</h3>
 <h4 id="221-헤더부분">2.2.1. 헤더부분</h4>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;functional&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
-</span>
-<span class="cp">#include</span> <span class="cpf">"rclcpp/rclcpp.hpp"</span><span class="cp">
-#include</span> <span class="cpf">"std_msgs/msg/string.hpp"</span><span class="cp">
-</span></code></pre></div></div>
+<script src="https://gist.github.com/jswoo0615/3713851505f213a0d424f2a44967dc43.js"></script>
 
 <p>(1) <code class="language-plaintext highlighter-rouge">#include &lt;chrono&gt;</code></p>
 <ul>
@@ -501,38 +451,75 @@ ros2 pkg create <span class="nt">--build-type</span> ament_cmake cpp_pubsub
 
 <h4 id="222-publisher-클래스">2.2.2. Publisher 클래스</h4>
 <h5 id="2221-public-생성자-부분">2.2.2.1. public 생성자 부분</h5>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MinimalPublisher</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
-<span class="p">{</span>
-  <span class="nl">public:</span>
-    <span class="n">MinimalPublisher</span><span class="p">()</span> <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">"Minial_Publisher"</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="n">publisher_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"topic"</span><span class="p">,</span> <span class="n">count_</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
-      <span class="n">timer</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span><span class="mx">100ms</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MinimalPublisher</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">));</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div></div>
-<p><code class="language-plaintext highlighter-rouge">rclcpp::Node</code>를 상속하여 <code class="language-plaintext highlighter-rouge">MinimalPublisher</code> 클래스를 생성합니다.<br />
-<code class="language-plaintext highlighter-rouge">this</code>는 모두 <code class="language-plaintext highlighter-rouge">Node</code>를 참조합니다.<br />
-<code class="language-plaintext highlighter-rouge">public</code> 생성자는 노드 이름을 <code class="language-plaintext highlighter-rouge">Minimal_Publisher</code>이라 정의하고, <code class="language-plaintext highlighter-rouge">count_</code>를 0으로 초기화했습니다.<br />
-생성자 내부에서 <code class="language-plaintext highlighter-rouge">publisher</code>는 <code class="language-plaintext highlighter-rouge">String</code> 메시지 타입, <code class="language-plaintext highlighter-rouge">topic</code>의 이름과 <code class="language-plaintext highlighter-rouge">queue</code> 사이즈를 정하여 백업 이벤트에서의 메시지 갯수를 제한합니다.<br />
-<code class="language-plaintext highlighter-rouge">timer_</code>를 초기화하여 1초에 2회씩 <code class="language-plaintext highlighter-rouge">private</code> 생성자의 <code class="language-plaintext highlighter-rouge">timer_callback</code>함수가 실행되도록 합니다.</p>
+<script src="https://gist.github.com/jswoo0615/3f9e70d6eb84e3d1ea01fabd1ce31002.js"></script>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">rclcpp::Node</code>를 상속하여 <code class="language-plaintext highlighter-rouge">MinimalPublisher</code> 클래스를 생성합니다.<br />
+<code class="language-plaintext highlighter-rouge">this</code>는 모두 <code class="language-plaintext highlighter-rouge">Node</code>를 참조합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">public</code> 생성자는 노드 이름을 <code class="language-plaintext highlighter-rouge">Minimal_Publisher</code>이라 정의하고, <code class="language-plaintext highlighter-rouge">count_</code>를 0으로 초기화했습니다.</li>
+  <li>생성자 내부에서 <code class="language-plaintext highlighter-rouge">publisher</code>는 <code class="language-plaintext highlighter-rouge">String</code> 메시지 타입, <code class="language-plaintext highlighter-rouge">topic</code>의 이름과 <code class="language-plaintext highlighter-rouge">queue</code> 사이즈를 정하여 백업 이벤트에서의 메시지 갯수를 제한합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">timer_</code>를 초기화하여 1초에 2회씩 <code class="language-plaintext highlighter-rouge">private</code> 생성자의 <code class="language-plaintext highlighter-rouge">timer_callback</code>함수가 실행되도록 합니다.</li>
+</ul>
 
 <h5 id="2222-private-생성자-부분">2.2.2.2. private 생성자 부분</h5>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MinimalPublisher</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span> 
-<span class="p">{</span>
-  <span class="nl">private:</span>
-    <span class="kt">void</span> <span class="n">timer_callback</span><span class="p">()</span>
-    <span class="p">{</span>
-      <span class="k">auto</span> <span class="n">message</span> <span class="o">=</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="p">();</span>
-      <span class="n">message</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="s">"Hello world! "</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">count_</span><span class="o">++</span><span class="p">);</span>
-      <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">"Publishing : '%s'"</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
-      <span class="n">publisher_</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+<script src="https://gist.github.com/jswoo0615/136405defccadbe969fdffaaafe7f039.js"></script>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">timer_callback</code> 함수는 메시지 데이터가 설정되고, 실제 메시지가 출력되는 부분입니다.<br />
+메시지 데이터는 <code class="language-plaintext highlighter-rouge">"Hello world! "</code>와 숫자 카운트가 진행됩니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">RCLCPP_INFO</code> 매크로는 게시된 모든 메시지가 콘솔에 출력되도록 합니다.</li>
+</ul>
+
+<h4 id="223-main-부분">2.2.3. main 부분</h4>
+<script src="https://gist.github.com/jswoo0615/b9481efe5587195920d0df46eed0aefe.js"></script>
+
+<p>main 문에서는 <code class="language-plaintext highlighter-rouge">Minimal_Publisher</code>라는 이름의 노드를 실제로 구동시키는 부분입니다.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">rclcpp::init(argc, argv)</code><br />
+<code class="language-plaintext highlighter-rouge">Minimal_Publisher</code> 노드를 초기화시킵니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">rclcpp::spin(std::make_shared&lt;MinimalPublisher&gt;())</code><br />
+<code class="language-plaintext highlighter-rouge">Minimal_Publisher</code> 노드의 데이터를 사용합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">rclcpp::shutdown()</code><br />
+<code class="language-plaintext highlighter-rouge">Minimal_Publisher</code> 노드를 종료합니다.</li>
+</ul>
+
+<h3 id="23-cmakeliststxt와-packagexml">2.3. CMakeLists.txt와 package.xml</h3>
+<p><a href="#2-publisher-노드"><code class="language-plaintext highlighter-rouge">Minimal_Publisher</code></a> 코드 작성한 뒤인 현재는 <code class="language-plaintext highlighter-rouge">cpp_pubsub</code> 패키지의 <code class="language-plaintext highlighter-rouge">src</code> 폴더입니다.<br />
+즉, <code class="language-plaintext highlighter-rouge">~/ros2_ws/src/cpp_pubsub/src</code>의 경로에서 작업을 했습니다.<br />
+상위 디렉토리로 이동하면 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code>, <code class="language-plaintext highlighter-rouge">package.xml</code> 파일이 있습니다.<br />
+이 두 파일은 위에서 작성한 <code class="language-plaintext highlighter-rouge">Minimal_Publisher</code> 노드의 빌드를 위해 종속성 패키지를 추가해줍니다.</p>
+
+<h4 id="231-cmakeliststxt">2.3.1. CMakeLists.txt</h4>
+<p><code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 파일을 열기 위해 <code class="language-plaintext highlighter-rouge">~/ros2_ws/src/cpp_pubsub</code> 폴더로 이동합니다.<br />
+파일을 열면 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code>는 아래와 같이 구성되어 있습니다.<br />
+<script src="https://gist.github.com/jswoo0615/bf95145a79e043508ef2566e21224c1c.js"></script></p>
+
+<p>위 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code>는 패키지 빌드 후 처음 열었을 때입니다.<br />
+우리는 위 코드의 9번째 줄 아래에 <code class="language-plaintext highlighter-rouge">rclcpp</code>, <code class="language-plaintext highlighter-rouge">std_msgs</code> 종속성 패키지를 추가할 예정입니다.</p>
+<pre><code class="language-CMake">find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">MinimalPublisher</code>노드는 <code class="language-plaintext highlighter-rouge">rclcpp</code>, <code class="language-plaintext highlighter-rouge">std_msgs</code> 두 종속성 패키지를 사용했으므로 패키지를 추가해줍니다.</p>
+
+<p>그 후 실행을 할 수 있도록 추가해줍니다.</p>
+<pre><code class="language-CMake">add_executable(talker src/publisher_memeber_function.cpp)
+ament_target_dependencies(talker rclcpp std_msgs)
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">ros2 run &lt;패키지 이름&gt; &lt;실행 할 프로그램 이름&gt;</code> 명령어를 사용하여 프로그램을 실행할 예정입니다.<br />
+<code class="language-plaintext highlighter-rouge">MinimalPublisher</code>노드를 실행하기 위한 이름을 <code class="language-plaintext highlighter-rouge">talker</code>로 명명해줍니다.</p>
+
+<p>마지막으로 <code class="language-plaintext highlighter-rouge">ros2 run</code> 명령어가 패키지를 찾을 수 있도록 해주기 위한 과정입니다.</p>
+<pre><code class="language-CMake">install(TARGETS
+  talker
+  DESTINATION lib/${PROJECT_NAME}
+)
+</code></pre>
+<p>불필요한 부분을 제외하고 최종적으로는 아래와 같이 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code>를 구성합니다.<br />
+<script src="https://gist.github.com/jswoo0615/f4eb8dbf18724fc7cb8b3d552136d97b.js"></script></p>
+
+<h4 id="232-packagesxml">2.3.2. packages.xml</h4>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 </code></pre></div></div>
-<p><code class="language-plaintext highlighter-rouge">timer_callback</code> 함수는 메시지 데이터가 설정되고, 실제 메시지가 출력되는 부분입니다.<br />
-메시지 데이터는 
-<code class="language-plaintext highlighter-rouge">RCLCPP_INFO</code> 매크로는 게시된 모든 메시지가 콘솔에 출력되도록 합니다.</p>
 
 <h2 id="3-subscriber-노드">3. Subscriber 노드</h2>
 
@@ -602,7 +589,8 @@ ros2 pkg create <span class="nt">--build-type</span> ament_cmake cpp_pubsub
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/carla_simulator/Carla-Tutorial/" class="pagination--pager" title="Carla Simulator 기본
+">다음</a>
     
   </nav>
 
@@ -616,6 +604,53 @@ ros2 pkg create <span class="nt">--build-type</span> ament_cmake cpp_pubsub
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/carla_simulator/Carla-Tutorial/" rel="permalink">Carla Simulator 기본
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-05-14T00:00:00+09:00">May 14, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          8 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">이번 포스트에서는 Carla Simulator의 기본 사용 방법에 대해 알아보도록 하겠습니다.
+</p>
+  </article>
+</div>
+
         
           
 
@@ -756,54 +791,6 @@ ros2가 설치되어 있는 경로의 setup.bash 파일을 ...</p>
 
 
     <p class="archive__item-excerpt" itemprop="description">https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/etc/multipass-how-to-use/" rel="permalink">multipass를 이용한 우분투 가상환경 생성
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2023-04-23T00:00:00+09:00">April 23, 2023</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">multipass를 이용한 가상환경 생성을 위해 아래와 같이 명령어를 입력합니다.
-multipass launch --cpus &lt;cpu 사용 갯수&gt; --disk &lt;용량&gt;G --mem 4GB --name ubuntu1804 &lt;우분투 버전&gt;
 </p>
   </article>
 </div>

@@ -84,8 +84,14 @@ var store = [{
         "teaser": null
       },{
         "title": "[ROS2] Publisher와 Subscriber 생성",
-        "excerpt":"1. 패키지 생성 패키지를 생성 및 빌드하기 위해 작업공간의 ~/ros2_ws/src 폴더로 이동하여 패키지를 생성해줍니다. 지금은 cpp_pubsub 이라는 이름의 패키지를 만들도록 하겠습니다. cd ~/ros2_ws/src ros2 pkg create --build-type ament_cmake cpp_pubsub 아래 그림과 같이 cpp_pubsub 이름의 패키지가 생성되었습니다. 2. Publisher 노드 Publisher 노드를 생성하기 위해 패키지 내의 cpp_pubsub/src로 이동합니다. 2.1. 전체 코드...","categories": ["ROS2"],
+        "excerpt":"1. 패키지 생성 패키지를 생성 및 빌드하기 위해 작업공간의 ~/ros2_ws/src 폴더로 이동하여 패키지를 생성해줍니다. 지금은 cpp_pubsub 이라는 이름의 패키지를 만들도록 하겠습니다. 아래 그림과 같이 cpp_pubsub 이름의 패키지가 생성되었습니다. 2. Publisher 노드 Publisher 노드를 생성하기 위해 패키지 내의 cpp_pubsub/src로 이동합니다. 2.1. 전체 코드 2.2. 코드 분석 2.2.1. 헤더부분 (1) #include &lt;chrono&gt;...","categories": ["ROS2"],
         "tags": ["ROS2"],
         "url": "/ros2/Writing-a-simple-publisher-and-subscriber-C++/",
+        "teaser": null
+      },{
+        "title": "Carla Simulator 기본",
+        "excerpt":"이번 포스트에서는 Carla Simulator의 기본 사용 방법에 대해 알아보도록 하겠습니다. Carla Simulator 기본 1. 사용 모듈 추가 import os import glob import sys import time try: sys.path.append(glob.glob('carla_simulation_root/PythonAPI/carla/dist/carla-*%d.%d-%s.egg' % ( sys.version_info.major, sys.version_info.minor, 'win-amd64' if os.name == 'nt' else 'linux-x86_64'))[0]) except IndexError: pass import carla import argparse import logging from numpy import...","categories": ["Carla_Simulator"],
+        "tags": ["Carla"],
+        "url": "/carla_simulator/Carla-Tutorial/",
         "teaser": null
       }]
