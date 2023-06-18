@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-17T21:00:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">배워서 남주기</title><subtitle>공사중입니다</subtitle><author><name>우준상</name></author><entry><title type="html">Carla Simulator 기본</title><link href="http://localhost:4000/carla_simulator/Carla-Tutorial/" rel="alternate" type="text/html" title="Carla Simulator 기본" /><published>2023-05-14T00:00:00+09:00</published><updated>2023-05-14T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-Tutorial</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-Tutorial/"><![CDATA[<p>이번 포스트에서는 Carla Simulator의 기본 사용 방법에 대해 알아보도록 하겠습니다.</p>
 
 <h1 id="carla-simulator-기본">Carla Simulator 기본</h1>
@@ -725,6 +726,9 @@ ament_target_dependencies(talker rclcpp std_msgs)
 <h2 id="3-subscriber-노드">3. Subscriber 노드</h2>
 
 <h2 id="4-빌드">4. 빌드</h2>]]></content><author><name>우준상</name></author><category term="ROS2" /><category term="ROS2" /><summary type="html"><![CDATA[1. 패키지 생성 패키지를 생성 및 빌드하기 위해 작업공간의 ~/ros2_ws/src 폴더로 이동하여 패키지를 생성해줍니다.]]></summary></entry><entry><title type="html">[ROS2] Workspace 및 Package 생성</title><link href="http://localhost:4000/ros2/Creating-a-Workspace-Packages/" rel="alternate" type="text/html" title="[ROS2] Workspace 및 Package 생성" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/ros2/Creating-a-Workspace-Packages</id><content type="html" xml:base="http://localhost:4000/ros2/Creating-a-Workspace-Packages/"><![CDATA[<p>ROS2의 작업환경 (Workspace) 생성 방법에 관한 내용입니다.</p>
+=======
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-29T13:34:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">배워서 남주기</title><subtitle>공사중입니다</subtitle><author><name>우준상</name></author><entry><title type="html">[ROS2] Workspace 및 Package 생성</title><link href="http://localhost:4000/ros2/Creating-a-Workspace-Packages/" rel="alternate" type="text/html" title="[ROS2] Workspace 및 Package 생성" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/ros2/Creating-a-Workspace-Packages</id><content type="html" xml:base="http://localhost:4000/ros2/Creating-a-Workspace-Packages/"><![CDATA[<p>ROS2의 작업환경 (Workspace) 생성 방법에 관한 내용입니다.</p>
+>>>>>>> d2333025128317f3cd1c1b26ac6e9c78e2de9f0e
 <h2 id="1-작업공간-workspace-생성">1. 작업공간 (Workspace) 생성</h2>
 <h3 id="11-ros2-환경변수-적용">1.1. ROS2 환경변수 적용</h3>
 <p>ros2를 설치한 후 실행하기 위해 아래와 같이 환경변수 설정을 해야합니다.<br />
@@ -799,7 +803,136 @@ ros2가 설치되어 있는 경로의 <code class="language-plaintext highlighte
 
 <p>빌드를 한 후, <code class="language-plaintext highlighter-rouge">source ~/.bashrc</code>를 실행해 환경변수 재적용 해줍니다.</p>
 
+<<<<<<< HEAD
 <p>다음 과정으로는 C++를 위주로 ROS2 패키지를 빌드해보도록 하겠습니다.</p>]]></content><author><name>우준상</name></author><category term="ROS2" /><category term="ROS2" /><summary type="html"><![CDATA[ROS2의 작업환경 (Workspace) 생성 방법에 관한 내용입니다. 1. 작업공간 (Workspace) 생성 1.1. ROS2 환경변수 적용 ros2를 설치한 후 실행하기 위해 아래와 같이 환경변수 설정을 해야합니다. ros2가 설치되어 있는 경로의 setup.bash 파일을 이용하여 환경변수 설정해줍니다. source /opt/ros/humble/setup.bash 위의 방법은 반영구적으로 터미널을 실행할 때마다 실행해주어야 하는 번거로움이 있습니다. 그러므로 터미널을 새로 열 때마다 바로 ros2를 실행할 수 있도록 하기 위해 아래와 같이 ~/.bashrc 파일에 위 명령어를 입력 후 저장해줍니다. sh -c "echo \"source /opt/ros/humble/setup.bash\" &gt;&gt; ~/.bashrc"]]></summary></entry><entry><title type="html">[C++] std::memory</title><link href="http://localhost:4000/c++_study/std-memory/" rel="alternate" type="text/html" title="[C++] std::memory" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/c++_study/std-memory</id><content type="html" xml:base="http://localhost:4000/c++_study/std-memory/"><![CDATA[<p>https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170</p>]]></content><author><name>우준상</name></author><category term="C++_Study" /><category term="C++" /><summary type="html"><![CDATA[https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170]]></summary></entry><entry><title type="html">[C++] std::functional</title><link href="http://localhost:4000/c++_study/std-functional/" rel="alternate" type="text/html" title="[C++] std::functional" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/c++_study/std-functional</id><content type="html" xml:base="http://localhost:4000/c++_study/std-functional/"><![CDATA[<p>https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)</p>]]></content><author><name>우준상</name></author><category term="C++_Study" /><category term="C++" /><summary type="html"><![CDATA[https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)]]></summary></entry><entry><title type="html">multipass를 이용한 우분투 가상환경 생성</title><link href="http://localhost:4000/etc/multipass-how-to-use/" rel="alternate" type="text/html" title="multipass를 이용한 우분투 가상환경 생성" /><published>2023-04-23T00:00:00+09:00</published><updated>2023-04-23T00:00:00+09:00</updated><id>http://localhost:4000/etc/multipass-how-to-use</id><content type="html" xml:base="http://localhost:4000/etc/multipass-how-to-use/"><![CDATA[<p>multipass를 이용한 가상환경 생성을 위해 아래와 같이 명령어를 입력합니다.<br />
+=======
+<p>다음 과정으로는 C++를 위주로 ROS2 패키지를 빌드해보도록 하겠습니다.</p>]]></content><author><name>우준상</name></author><category term="ROS2" /><category term="ROS2" /><summary type="html"><![CDATA[ROS2의 작업환경 (Workspace) 생성 방법에 관한 내용입니다. 1. 작업공간 (Workspace) 생성 1.1. ROS2 환경변수 적용 ros2를 설치한 후 실행하기 위해 아래와 같이 환경변수 설정을 해야합니다. ros2가 설치되어 있는 경로의 setup.bash 파일을 이용하여 환경변수 설정해줍니다. source /opt/ros/humble/setup.bash 위의 방법은 반영구적으로 터미널을 실행할 때마다 실행해주어야 하는 번거로움이 있습니다. 그러므로 터미널을 새로 열 때마다 바로 ros2를 실행할 수 있도록 하기 위해 아래와 같이 ~/.bashrc 파일에 위 명령어를 입력 후 저장해줍니다. sh -c "echo \"source /opt/ros/humble/setup.bash\" &gt;&gt; ~/.bashrc"]]></summary></entry><entry><title type="html">[ROS2] Publisher와 Subscriber 생성</title><link href="http://localhost:4000/ros2/Writing-a-simple-publisher-and-subscriber-C++/" rel="alternate" type="text/html" title="[ROS2] Publisher와 Subscriber 생성" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/ros2/Writing-a-simple-publisher-and-subscriber-C++</id><content type="html" xml:base="http://localhost:4000/ros2/Writing-a-simple-publisher-and-subscriber-C++/"><![CDATA[<h2 id="1-패키지-생성">1. 패키지 생성</h2>
+<p>패키지를 생성 및 빌드하기 위해 작업공간의 <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code> 폴더로 이동하여 패키지를 생성해줍니다.</p>
+
+<p>지금은 <code class="language-plaintext highlighter-rouge">cpp_pubsub</code> 이라는 이름의 패키지를 만들도록 하겠습니다.<br />
+<script src="https://gist.github.com/jswoo0615/022a54ebbf8b229886b703481e31d750.js"></script></p>
+
+<p>아래 그림과 같이 <code class="language-plaintext highlighter-rouge">cpp_pubsub</code> 이름의 패키지가 생성되었습니다.<br />
+<img width="328" alt="Publisher_Subscriber_1" src="https://user-images.githubusercontent.com/128343128/235099090-3703d77b-da1e-498d-a81e-981916efda5a.png" /></p>
+
+<h2 id="2-publisher-노드">2. Publisher 노드</h2>
+<p><code class="language-plaintext highlighter-rouge">Publisher</code> 노드를 생성하기 위해 패키지 내의 <code class="language-plaintext highlighter-rouge">cpp_pubsub/src</code>로 이동합니다.</p>
+<h3 id="21-전체-코드">2.1. 전체 코드</h3>
+<script src="https://gist.github.com/jswoo0615/e752bd6a4349d486a56aace156222e9a.js"></script>
+
+<h3 id="22-코드-분석">2.2. 코드 분석</h3>
+<h4 id="221-헤더부분">2.2.1. 헤더부분</h4>
+<script src="https://gist.github.com/jswoo0615/3713851505f213a0d424f2a44967dc43.js"></script>
+
+<p>(1) <code class="language-plaintext highlighter-rouge">#include &lt;chrono&gt;</code></p>
+<ul>
+  <li>C++11에 추가된 시간 관련 헤더파일입니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;chrono&gt;</code> 라이브러리를 이용하여 나노초 (ns) 단위의 정확한 시간 측정을 할 수 있습니다.</li>
+</ul>
+
+<p>(2) <code class="language-plaintext highlighter-rouge">#include &lt;functional&gt;</code></p>
+<ul>
+  <li>class 설계할 때 기존 함수포인터를 대신 C++11 이후에 <code class="language-plaintext highlighter-rouge">&lt;functional&gt;</code>을 이용하여 class 구현을 합니다.</li>
+</ul>
+
+<p>(3) <code class="language-plaintext highlighter-rouge">#include &lt;memory&gt;</code></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">shared_ptr</code>을 사용할 수 있는 라이브러리입니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">shared_ptr&lt;message_type&gt;</code>과 <code class="language-plaintext highlighter-rouge">&lt;message_type&gt;::SharedPtr</code>은 같습니다.</li>
+</ul>
+
+<p>(4) <code class="language-plaintext highlighter-rouge">#include &lt;string&gt;</code></p>
+<ul>
+  <li>C++에서 <code class="language-plaintext highlighter-rouge">String</code>과 관련된 함수들의 라이브러리 입니다.</li>
+</ul>
+
+<p>(5) <code class="language-plaintext highlighter-rouge">#include "rclcpp/rclcpp.hpp"</code></p>
+<ul>
+  <li>ROS2에서 C++로 빌드하기 위해 ROS의 <code class="language-plaintext highlighter-rouge">rclcpp</code>의 <code class="language-plaintext highlighter-rouge">rclcpp.hpp</code> 헤더 파일을 포함해 주어야 합니다.</li>
+  <li>노드 생성, <code class="language-plaintext highlighter-rouge">create_publisher</code>, <code class="language-plaintext highlighter-rouge">create_subscriber</code> 등의 다양한 함수를 사용할 수 있는 헤더 파일입니다.</li>
+</ul>
+
+<p>(6) <code class="language-plaintext highlighter-rouge">#inclde "std_msgs/msg/string.hpp"</code></p>
+<ul>
+  <li>ROS2의 메시지 중 string과 관련된 메시지 라이브러리입니다.</li>
+</ul>
+
+<h4 id="222-publisher-클래스">2.2.2. Publisher 클래스</h4>
+<h5 id="2221-public-생성자-부분">2.2.2.1. public 생성자 부분</h5>
+<script src="https://gist.github.com/jswoo0615/3f9e70d6eb84e3d1ea01fabd1ce31002.js"></script>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">rclcpp::Node</code>를 상속하여 <code class="language-plaintext highlighter-rouge">MinimalPublisher</code> 클래스를 생성합니다.<br />
+<code class="language-plaintext highlighter-rouge">this</code>는 모두 <code class="language-plaintext highlighter-rouge">Node</code>를 참조합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">public</code> 생성자는 노드 이름을 <code class="language-plaintext highlighter-rouge">Minimal_Publisher</code>이라 정의하고, <code class="language-plaintext highlighter-rouge">count_</code>를 0으로 초기화했습니다.</li>
+  <li>생성자 내부에서 <code class="language-plaintext highlighter-rouge">publisher</code>는 <code class="language-plaintext highlighter-rouge">String</code> 메시지 타입, <code class="language-plaintext highlighter-rouge">topic</code>의 이름과 <code class="language-plaintext highlighter-rouge">queue</code> 사이즈를 정하여 백업 이벤트에서의 메시지 갯수를 제한합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">timer_</code>를 초기화하여 1초에 2회씩 <code class="language-plaintext highlighter-rouge">private</code> 생성자의 <code class="language-plaintext highlighter-rouge">timer_callback</code>함수가 실행되도록 합니다.</li>
+</ul>
+
+<h5 id="2222-private-생성자-부분">2.2.2.2. private 생성자 부분</h5>
+<script src="https://gist.github.com/jswoo0615/136405defccadbe969fdffaaafe7f039.js"></script>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">timer_callback</code> 함수는 메시지 데이터가 설정되고, 실제 메시지가 출력되는 부분입니다.<br />
+메시지 데이터는 <code class="language-plaintext highlighter-rouge">"Hello world! "</code>와 숫자 카운트가 진행됩니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">RCLCPP_INFO</code> 매크로는 게시된 모든 메시지가 콘솔에 출력되도록 합니다.</li>
+</ul>
+
+<h4 id="223-main-부분">2.2.3. main 부분</h4>
+<script src="https://gist.github.com/jswoo0615/b9481efe5587195920d0df46eed0aefe.js"></script>
+
+<p>main 문에서는 <code class="language-plaintext highlighter-rouge">Minimal_Publisher</code>라는 이름의 노드를 실제로 구동시키는 부분입니다.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">rclcpp::init(argc, argv)</code><br />
+<code class="language-plaintext highlighter-rouge">Minimal_Publisher</code> 노드를 초기화시킵니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">rclcpp::spin(std::make_shared&lt;MinimalPublisher&gt;())</code><br />
+<code class="language-plaintext highlighter-rouge">Minimal_Publisher</code> 노드의 데이터를 사용합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">rclcpp::shutdown()</code><br />
+<code class="language-plaintext highlighter-rouge">Minimal_Publisher</code> 노드를 종료합니다.</li>
+</ul>
+
+<h3 id="23-cmakeliststxt와-packagexml">2.3. CMakeLists.txt와 package.xml</h3>
+<p><a href="#2-publisher-노드"><code class="language-plaintext highlighter-rouge">Minimal_Publisher</code></a> 코드 작성한 뒤인 현재는 <code class="language-plaintext highlighter-rouge">cpp_pubsub</code> 패키지의 <code class="language-plaintext highlighter-rouge">src</code> 폴더입니다.<br />
+즉, <code class="language-plaintext highlighter-rouge">~/ros2_ws/src/cpp_pubsub/src</code>의 경로에서 작업을 했습니다.<br />
+상위 디렉토리로 이동하면 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code>, <code class="language-plaintext highlighter-rouge">package.xml</code> 파일이 있습니다.<br />
+이 두 파일은 위에서 작성한 <code class="language-plaintext highlighter-rouge">Minimal_Publisher</code> 노드의 빌드를 위해 종속성 패키지를 추가해줍니다.</p>
+
+<h4 id="231-cmakeliststxt">2.3.1. CMakeLists.txt</h4>
+<p><code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 파일을 열기 위해 <code class="language-plaintext highlighter-rouge">~/ros2_ws/src/cpp_pubsub</code> 폴더로 이동합니다.<br />
+파일을 열면 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code>는 아래와 같이 구성되어 있습니다.<br />
+<script src="https://gist.github.com/jswoo0615/bf95145a79e043508ef2566e21224c1c.js"></script></p>
+
+<p>위 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code>는 패키지 빌드 후 처음 열었을 때입니다.<br />
+우리는 위 코드의 9번째 줄 아래에 <code class="language-plaintext highlighter-rouge">rclcpp</code>, <code class="language-plaintext highlighter-rouge">std_msgs</code> 종속성 패키지를 추가할 예정입니다.</p>
+<pre><code class="language-CMake">find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">MinimalPublisher</code>노드는 <code class="language-plaintext highlighter-rouge">rclcpp</code>, <code class="language-plaintext highlighter-rouge">std_msgs</code> 두 종속성 패키지를 사용했으므로 패키지를 추가해줍니다.</p>
+
+<p>그 후 실행을 할 수 있도록 추가해줍니다.</p>
+<pre><code class="language-CMake">add_executable(talker src/publisher_memeber_function.cpp)
+ament_target_dependencies(talker rclcpp std_msgs)
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">ros2 run &lt;패키지 이름&gt; &lt;실행 할 프로그램 이름&gt;</code> 명령어를 사용하여 프로그램을 실행할 예정입니다.<br />
+<code class="language-plaintext highlighter-rouge">MinimalPublisher</code>노드를 실행하기 위한 이름을 <code class="language-plaintext highlighter-rouge">talker</code>로 명명해줍니다.</p>
+
+<p>마지막으로 <code class="language-plaintext highlighter-rouge">ros2 run</code> 명령어가 패키지를 찾을 수 있도록 해주기 위한 과정입니다.</p>
+<pre><code class="language-CMake">install(TARGETS
+  talker
+  DESTINATION lib/${PROJECT_NAME}
+)
+</code></pre>
+<p>불필요한 부분을 제외하고 최종적으로는 아래와 같이 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code>를 구성합니다.<br />
+<script src="https://gist.github.com/jswoo0615/f4eb8dbf18724fc7cb8b3d552136d97b.js"></script></p>
+
+<h4 id="232-packagesxml">2.3.2. packages.xml</h4>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<h2 id="3-subscriber-노드">3. Subscriber 노드</h2>
+
+<h2 id="4-빌드">4. 빌드</h2>]]></content><author><name>우준상</name></author><category term="ROS2" /><category term="ROS2" /><summary type="html"><![CDATA[1. 패키지 생성 패키지를 생성 및 빌드하기 위해 작업공간의 ~/ros2_ws/src 폴더로 이동하여 패키지를 생성해줍니다.]]></summary></entry><entry><title type="html">[C++] std::memory</title><link href="http://localhost:4000/c++_study/std-memory/" rel="alternate" type="text/html" title="[C++] std::memory" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/c++_study/std-memory</id><content type="html" xml:base="http://localhost:4000/c++_study/std-memory/"><![CDATA[<p>https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170</p>]]></content><author><name>우준상</name></author><category term="C++_Study" /><category term="C++" /><summary type="html"><![CDATA[https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170]]></summary></entry><entry><title type="html">[C++] std::functional</title><link href="http://localhost:4000/c++_study/std-functional/" rel="alternate" type="text/html" title="[C++] std::functional" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/c++_study/std-functional</id><content type="html" xml:base="http://localhost:4000/c++_study/std-functional/"><![CDATA[<p>https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)</p>]]></content><author><name>우준상</name></author><category term="C++_Study" /><category term="C++" /><summary type="html"><![CDATA[https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)]]></summary></entry><entry><title type="html">multipass를 이용한 우분투 가상환경 생성</title><link href="http://localhost:4000/etc/multipass-how-to-use/" rel="alternate" type="text/html" title="multipass를 이용한 우분투 가상환경 생성" /><published>2023-04-23T00:00:00+09:00</published><updated>2023-04-23T00:00:00+09:00</updated><id>http://localhost:4000/etc/multipass-how-to-use</id><content type="html" xml:base="http://localhost:4000/etc/multipass-how-to-use/"><![CDATA[<p>multipass를 이용한 가상환경 생성을 위해 아래와 같이 명령어를 입력합니다.<br />
+>>>>>>> d2333025128317f3cd1c1b26ac6e9c78e2de9f0e
 <code class="language-plaintext highlighter-rouge">multipass launch --cpus &lt;cpu 사용 갯수&gt; --disk &lt;용량&gt;G --mem 4GB --name ubuntu1804 &lt;우분투 버전&gt;</code></p>
 
 <h2 id="visual-studio-code에서-가상환경-사용하기-ssh">Visual Studio Code에서 가상환경 사용하기 (ssh)</h2>
