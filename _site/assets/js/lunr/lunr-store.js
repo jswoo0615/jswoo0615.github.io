@@ -95,8 +95,8 @@ var store = [{
         "url": "/carla_simulator/Carla-Tutorial/",
         "teaser": null
       },{
-        "title": "Carla Simulator Bounding Box",
-        "excerpt":"지난 포스트에서는 Carla Simulator에서 맵 선택, 차량, 센서 설정 등에 대해 알아봤었습니다.  이번 시간에는 2D / 3D Bounding Box와 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다.   1. 2D Bounding Box  1.1. 모듈 추가  지난 포스트 Carla_Simulaor_기본  ","categories": ["Carla_Simulator"],
+        "title": "Carla Simulator Bounding Box 기본",
+        "excerpt":"지난 포스트에서는 Carla Simulator에서 맵 선택, 차량, 센서 설정 등에 대해 알아봤었습니다. 이번 시간에는 2D / 3D Bounding Box와 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다. 1. 기존 코드 지난 포스트 Carla_Simulator_기본의 모듈추가와 동일합니다. import os import glob import sys import time try: sys.path.append(glob.glob('carla_simulation_root/PythonAPI/carla/dist/carla-*%d.%d-%s.egg' % ( sys.version_info.major, sys.version_info.minor,...","categories": ["Carla_Simulator"],
         "tags": ["Carla"],
         "url": "/carla_simulator/Carla-Bounding-Box/",
         "teaser": null
