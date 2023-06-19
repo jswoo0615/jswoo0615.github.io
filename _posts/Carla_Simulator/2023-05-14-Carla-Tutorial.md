@@ -438,7 +438,9 @@ def sensor_callback(data):
   print(str(data))
 ```
 각 센서의 `listen` 메소드를 이용하여 취득된 데이터를 사용합니다.  
-![gnss](https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/1119998b-1ceb-42a9-ac28-655bb277ce1c)
+```shell
+GNSSGnssMeasurement(frame=41, timestamp=3.406018, lat=-0.000983, lon=0.000038, alt=2.006749)
+```
 
 ##### 5.2.4.2 IMU 센서
 ```python
@@ -454,7 +456,9 @@ def imu_callback(imu):
 ego_imu.listen(lambda imu: imu_callback(imu))
 actor_list.append(ego_imu)
 ```
-![imu](https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/edbb3d54-f570-4fe1-aa6a-f4fd7d0a4c33)  
+```shell
+IMUMeasurement(frame=1183, timestamp=60.331609, accelerometer=Vector3D(x=0.039622m y=-0.000000, z=9.809920), gyroscope=Vector3D(x=0.000000, y=-0.000000, z=-0.000000), compass=4.712394)
+```
 #### 5.2.5 기타 센서
 ##### 5.2.5.1 Collision Detector
 ```python
@@ -469,7 +473,9 @@ def collision_callback(colli):
 ego_colli.listen(lambda colli: collision_callback(colli))
 actor_list.append(ego_colli)
 ```
-![collision](https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/b3303ac3-0801-4259-aaa2-6145c107dc95)
+```shell
+Collision with CollisionEvent(frame=520, timestamp=27.410257, other_actor=0x7f9e68003200)
+```
 
 ##### 5.2.5.2 Lane Invasion Detector
 ```python
@@ -484,7 +490,9 @@ def lane_callback(lane):
 ego_lane_invasion.listen(lambda lane: lane_callback(lane))
 actor_list.append(ego_lane_invasion)
 ```
-![lane_invasion](https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/dc0fe02d-99e1-4df3-853d-496868e2c99c)
+```shell
+LaneInvasionEvent(frame=1670, timestamp=84.717585)
+```
 
 ##### 5.2.5.3 Obstacle Detector
 ```python
@@ -503,7 +511,9 @@ actor_list.append(ego_obstacle)
 
 time.sleep(500)
 ```
-![obstacle](https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/1a48976e-c884-461b-9c36-d207545ce220)
+```shell
+ObstacleDetectionEvent(frame=361, timestamp=19.400106, other_actor=0x557e59b86800)
+```
 ### 5.3 Actor 해제
 위 과정들을 통해 생성된 `actor_list` 내의 차량, 센서 등의 객체들을 해제해야 합니다.  
 객체들을 해제를 하지 않으면 Carla Simulator Server에 그대로 객체들이 남아있기 때문에 다음 시뮬레이션 진행 시 제대로 된 시뮬레이션을 진행할 수 없습니다.  

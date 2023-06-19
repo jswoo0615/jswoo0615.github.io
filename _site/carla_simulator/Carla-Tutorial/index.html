@@ -927,8 +927,9 @@ Carla Simulator의 Radar 센서는 흰색, 적색, 청색 점으로 debug를 합
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sensor_callback</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
   <span class="nf">print</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
 </code></pre></div></div>
-<p>각 센서의 <code class="language-plaintext highlighter-rouge">listen</code> 메소드를 이용하여 취득된 데이터를 사용합니다.<br />
-<img src="https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/1119998b-1ceb-42a9-ac28-655bb277ce1c" alt="gnss" /></p>
+<p>각 센서의 <code class="language-plaintext highlighter-rouge">listen</code> 메소드를 이용하여 취득된 데이터를 사용합니다.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GNSSGnssMeasurement<span class="o">(</span><span class="nv">frame</span><span class="o">=</span>41, <span class="nv">timestamp</span><span class="o">=</span>3.406018, <span class="nv">lat</span><span class="o">=</span><span class="nt">-0</span>.000983, <span class="nv">lon</span><span class="o">=</span>0.000038, <span class="nv">alt</span><span class="o">=</span>2.006749<span class="o">)</span>
+</code></pre></div></div>
 
 <h5 id="5242-imu-센서">5.2.4.2 IMU 센서</h5>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ego_imu</span> <span class="o">=</span> <span class="bp">None</span>
@@ -943,7 +944,8 @@ Carla Simulator의 Radar 센서는 흰색, 적색, 청색 점으로 debug를 합
 <span class="n">ego_imu</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="k">lambda</span> <span class="n">imu</span><span class="p">:</span> <span class="nf">imu_callback</span><span class="p">(</span><span class="n">imu</span><span class="p">))</span>
 <span class="n">actor_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">ego_imu</span><span class="p">)</span>
 </code></pre></div></div>
-<p><img src="https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/edbb3d54-f570-4fe1-aa6a-f4fd7d0a4c33" alt="imu" /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IMUMeasurement<span class="o">(</span><span class="nv">frame</span><span class="o">=</span>1183, <span class="nv">timestamp</span><span class="o">=</span>60.331609, <span class="nv">accelerometer</span><span class="o">=</span>Vector3D<span class="o">(</span><span class="nv">x</span><span class="o">=</span>0.039622m <span class="nv">y</span><span class="o">=</span><span class="nt">-0</span>.000000, <span class="nv">z</span><span class="o">=</span>9.809920<span class="o">)</span>, <span class="nv">gyroscope</span><span class="o">=</span>Vector3D<span class="o">(</span><span class="nv">x</span><span class="o">=</span>0.000000, <span class="nv">y</span><span class="o">=</span><span class="nt">-0</span>.000000, <span class="nv">z</span><span class="o">=</span><span class="nt">-0</span>.000000<span class="o">)</span>, <span class="nv">compass</span><span class="o">=</span>4.712394<span class="o">)</span>
+</code></pre></div></div>
 <h4 id="525-기타-센서">5.2.5 기타 센서</h4>
 <h5 id="5251-collision-detector">5.2.5.1 Collision Detector</h5>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ego_colli</span> <span class="o">=</span> <span class="bp">None</span>
@@ -957,7 +959,8 @@ Carla Simulator의 Radar 센서는 흰색, 적색, 청색 점으로 debug를 합
 <span class="n">ego_colli</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="k">lambda</span> <span class="n">colli</span><span class="p">:</span> <span class="nf">collision_callback</span><span class="p">(</span><span class="n">colli</span><span class="p">))</span>
 <span class="n">actor_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">ego_colli</span><span class="p">)</span>
 </code></pre></div></div>
-<p><img src="https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/b3303ac3-0801-4259-aaa2-6145c107dc95" alt="collision" /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Collision with CollisionEvent<span class="o">(</span><span class="nv">frame</span><span class="o">=</span>520, <span class="nv">timestamp</span><span class="o">=</span>27.410257, <span class="nv">other_actor</span><span class="o">=</span>0x7f9e68003200<span class="o">)</span>
+</code></pre></div></div>
 
 <h5 id="5252-lane-invasion-detector">5.2.5.2 Lane Invasion Detector</h5>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ego_lane_invasion</span> <span class="o">=</span> <span class="bp">None</span>
@@ -971,7 +974,8 @@ Carla Simulator의 Radar 센서는 흰색, 적색, 청색 점으로 debug를 합
 <span class="n">ego_lane_invasion</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="k">lambda</span> <span class="n">lane</span><span class="p">:</span> <span class="nf">lane_callback</span><span class="p">(</span><span class="n">lane</span><span class="p">))</span>
 <span class="n">actor_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">ego_lane_invasion</span><span class="p">)</span>
 </code></pre></div></div>
-<p><img src="https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/dc0fe02d-99e1-4df3-853d-496868e2c99c" alt="lane_invasion" /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LaneInvasionEvent<span class="o">(</span><span class="nv">frame</span><span class="o">=</span>1670, <span class="nv">timestamp</span><span class="o">=</span>84.717585<span class="o">)</span>
+</code></pre></div></div>
 
 <h5 id="5253-obstacle-detector">5.2.5.3 Obstacle Detector</h5>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ego_obstacle</span> <span class="o">=</span> <span class="bp">None</span>
@@ -989,7 +993,8 @@ Carla Simulator의 Radar 센서는 흰색, 적색, 청색 점으로 debug를 합
 
 <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 </code></pre></div></div>
-<p><img src="https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/1a48976e-c884-461b-9c36-d207545ce220" alt="obstacle" /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ObstacleDetectionEvent<span class="o">(</span><span class="nv">frame</span><span class="o">=</span>361, <span class="nv">timestamp</span><span class="o">=</span>19.400106, <span class="nv">other_actor</span><span class="o">=</span>0x557e59b86800<span class="o">)</span>
+</code></pre></div></div>
 <h3 id="53-actor-해제">5.3 Actor 해제</h3>
 <p>위 과정들을 통해 생성된 <code class="language-plaintext highlighter-rouge">actor_list</code> 내의 차량, 센서 등의 객체들을 해제해야 합니다.<br />
 객체들을 해제를 하지 않으면 Carla Simulator Server에 그대로 객체들이 남아있기 때문에 다음 시뮬레이션 진행 시 제대로 된 시뮬레이션을 진행할 수 없습니다.</p>
