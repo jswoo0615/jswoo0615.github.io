@@ -229,6 +229,9 @@ for actor in actor_list:
 print('done')
 ```
 
+## 7. 전체 코드
+<script src="https://gist.github.com/jswoo0615/69f39d35537ba62ba6353a72f1300b6e.js"></script>
+
 다음 포스트는 차량 3D Bounding Box에 대해 포스팅 하도록 하겠습니다.
 
 감사합니다.
