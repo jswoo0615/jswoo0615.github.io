@@ -95,9 +95,33 @@ var store = [{
         "url": "/carla_simulator/Carla-Tutorial/",
         "teaser": null
       },{
+        "title": "Gym_tutorial_1",
+        "excerpt":"안녕하세요, 이번 포스트부터는 Carla Simulator에서도 강화학습이 가능하다는 이야기를 듣고 모델 구성을 위해 개념을 잡아보는 시간으로 이번 포스팅을 하게 되었습니다. 강화학습 개념을 잡기 위해 OpenAI의 gym을 이용하여 개념을 잡아보고자 합니다. 0. 설치 pip install gym 위 명령어를 실행하여 gym을 설치해줍니다. 1. 환경 설정 import gym gym을 불러옵니다. 사용하고자 하는 강화학습 환경은...","categories": ["Reinforcement_Learning"],
+        "tags": ["Gym","Reinforcement_Learning"],
+        "url": "/reinforcement_learning/Gym_1/",
+        "teaser": null
+      },{
+        "title": "Carla Simulator Vehicle Physics",
+        "excerpt":"이번 포스팅에서는 Carla Simulator에서 차량의 동역학적 요소 (타이어 마찰력, 엔진 관성 모멘트 등)을 변경하는 방법에 대해 알아보도록 하겠습니다. 변경한 차량의 동역학적 요소들은 해당 파이썬 스크립트를 실행하는 Runtime에만 적용되며, 종료 후에는 Carla Simulator 내의 차량 기본 값으로 전환됩니다. 휠의 마찰력, damping, steering을 변경하고, 엔진, 질량, 항력계수 등을 변경했습니다. Carla Simulator에서 차량의...","categories": ["Carla_Simulator"],
+        "tags": ["Carla"],
+        "url": "/carla_simulator/Carla-vehicle-physics/",
+        "teaser": null
+      },{
         "title": "Carla Simulator Bounding Box 기본",
         "excerpt":"지난 포스트에서는 Carla Simulator에서 맵 선택, 차량, 센서 설정 등에 대해 알아봤었습니다. 이번 시간에는 2D / 3D Bounding Box와 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다. 1. 기존 코드 지난 포스트 Carla_Simulator_기본의 모듈추가와 동일합니다. import os import glob import sys import time try: sys.path.append(glob.glob('carla_simulation_root/PythonAPI/carla/dist/carla-*%d.%d-%s.egg' % ( sys.version_info.major, sys.version_info.minor,...","categories": ["Carla_Simulator"],
         "tags": ["Carla"],
         "url": "/carla_simulator/Carla-Bounding-Box/",
+        "teaser": null
+      },{
+        "title": "Carla Simulator 2D Bounding Box",
+        "excerpt":"지난 포스트에서는 Carla Simulator 3D Bounding Box 생성에 대한 기본을 알아봤습니다. 이번 시간에는 2D Bounding Box 및 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다. 먼저 지난 Bounding Box 기본 포스트의 내용 중 일부를 가져오겠습니다. 1. 2D Bounding Box 1.1. 기존 코드 기존 코드와 동일하게 사용합니다. import os import...","categories": ["Carla_Simulator"],
+        "tags": ["Carla"],
+        "url": "/carla_simulator/Carla-2D-Bounding-Box/",
+        "teaser": null
+      },{
+        "title": "Carla Simulator 3D Bounding Box",
+        "excerpt":"지난 포스트에서는 Carla Simulator Bounding Box 생성에 대한 기본을 알아봤습니다. 이번 시간에는 3D Bounding Box에 대해 포스팅을 진행하도록 하겠습니다. 먼저 지난 Bounding Box 기본 포스트의 내용 중 일부를 가져오겠습니다. 1. 기존 코드 기존 코드와 동일하게 사용합니다. import os import glob import sys import time try: sys.path.append(glob.glob('carla_simulation_root/PythonAPI/carla/dist/carla-*%d.%d-%s.egg' % ( sys.version_info.major, sys.version_info.minor,...","categories": ["Carla_Simulator"],
+        "tags": ["Carla"],
+        "url": "/carla_simulator/Carla-3D-Bounding-Box/",
         "teaser": null
       }]
