@@ -337,5 +337,9 @@ from pascal_voc_writer import Writer
 ## 2.4. 전체 코드
 <script src="https://gist.github.com/jswoo0615/ce9de03d5a6da87d8f5b771dab4895cc.js"></script>
 
+## 2.5. 결과 확인
+구글 코랩으로 이미지와 Bounding Box가 서로 매칭되는지 확인해봤습니다.  
+<img src="../../assets/images/Carla_Simulator/Pascal_VOC_example.png" width="640" height="480">
+
 이로써 Carla Simulator에서의 Bounding Box 포스팅에 대해 마치도록 하겠습니다.  
 감사합니다!
