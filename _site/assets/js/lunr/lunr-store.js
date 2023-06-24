@@ -1,16 +1,4 @@
 var store = [{
-        "title": "Autoware_AI",
-        "excerpt":" ","categories": ["AD_Stack"],
-        "tags": ["AD_Stack"],
-        "url": "/ad_stack/Autoware-AI/",
-        "teaser": null
-      },{
-        "title": "Autoware_Universe",
-        "excerpt":" ","categories": ["AD_Stack"],
-        "tags": ["AD_Stack"],
-        "url": "/ad_stack/Autoware-Universe/",
-        "teaser": null
-      },{
         "title": "Carla Simulator 설치",
         "excerpt":"목차 1. Installing Graphic Driver 종속성 패키지 설치 그래픽 드라이버 설치 2. Installing Carla Simulator Packages 의존성 패키지 설치 (Carla Simulator) Carla Simulator 설치 Carla Leaderboard 설치 Carla Scenario Runner 설치 1. Installing Graphic Driver 1.1 종속성 패키지 설치 Carla Simulator를 사용하기 전에 그래픽 카드의 드라이버를 설치해주어야 합니다. 그래픽 드라이버...","categories": ["Carla_Simulator"],
         "tags": ["Carla","설치"],
@@ -77,28 +65,10 @@ var store = [{
         "url": "/c++_study/std-memory/",
         "teaser": null
       },{
-        "title": "[ROS2] Workspace 및 Package 생성",
-        "excerpt":"ROS2의 작업환경 (Workspace) 생성 방법에 관한 내용입니다. 1. 작업공간 (Workspace) 생성 1.1. ROS2 환경변수 적용 ros2를 설치한 후 실행하기 위해 아래와 같이 환경변수 설정을 해야합니다. ros2가 설치되어 있는 경로의 setup.bash 파일을 이용하여 환경변수 설정해줍니다. source /opt/ros/humble/setup.bash 위의 방법은 반영구적으로 터미널을 실행할 때마다 실행해주어야 하는 번거로움이 있습니다. 그러므로 터미널을 새로 열...","categories": ["ROS2"],
-        "tags": ["ROS2"],
-        "url": "/ros2/Creating-a-Workspace-Packages/",
-        "teaser": null
-      },{
-        "title": "[ROS2] Publisher와 Subscriber 생성",
-        "excerpt":"1. 패키지 생성 패키지를 생성 및 빌드하기 위해 작업공간의 ~/ros2_ws/src 폴더로 이동하여 패키지를 생성해줍니다. 지금은 cpp_pubsub 이라는 이름의 패키지를 만들도록 하겠습니다. 아래 그림과 같이 cpp_pubsub 이름의 패키지가 생성되었습니다. 2. Publisher 노드 Publisher 노드를 생성하기 위해 패키지 내의 cpp_pubsub/src로 이동합니다. 2.1. 전체 코드 2.2. 코드 분석 2.2.1. 헤더부분 (1) #include &lt;chrono&gt;...","categories": ["ROS2"],
-        "tags": ["ROS2"],
-        "url": "/ros2/Writing-a-simple-publisher-and-subscriber-C++/",
-        "teaser": null
-      },{
         "title": "Carla Simulator 기본",
         "excerpt":"이번 포스트에서는 Carla Simulator의 기본 사용 방법에 대해 알아보도록 하겠습니다. Carla Simulator 기본 1. 사용 모듈 추가 import os import glob import sys import time try: sys.path.append(glob.glob('carla_simulation_root/PythonAPI/carla/dist/carla-*%d.%d-%s.egg' % ( sys.version_info.major, sys.version_info.minor, 'win-amd64' if os.name == 'nt' else 'linux-x86_64'))[0]) except IndexError: pass import carla import argparse import logging from numpy import...","categories": ["Carla_Simulator"],
         "tags": ["Carla"],
         "url": "/carla_simulator/Carla-Tutorial/",
-        "teaser": null
-      },{
-        "title": "Gym_tutorial_1",
-        "excerpt":"안녕하세요, 이번 포스트부터는 Carla Simulator에서도 강화학습이 가능하다는 이야기를 듣고 모델 구성을 위해 개념을 잡아보는 시간으로 이번 포스팅을 하게 되었습니다. 강화학습 개념을 잡기 위해 OpenAI의 gym을 이용하여 개념을 잡아보고자 합니다. 0. 설치 pip install gym 위 명령어를 실행하여 gym을 설치해줍니다. 1. 환경 설정 import gym gym을 불러옵니다. 사용하고자 하는 강화학습 환경은...","categories": ["Reinforcement_Learning"],
-        "tags": ["Gym","Reinforcement_Learning"],
-        "url": "/reinforcement_learning/Gym_1/",
         "teaser": null
       },{
         "title": "Carla Simulator Vehicle Physics",

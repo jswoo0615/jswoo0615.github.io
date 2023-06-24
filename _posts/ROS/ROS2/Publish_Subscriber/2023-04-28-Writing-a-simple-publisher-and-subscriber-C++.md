@@ -8,13 +8,21 @@ author_profile: true
 sidebar: 
   nav: "main"
 search: true
+published: false
 ---
 
 ## 1. 패키지 생성 
 패키지를 생성 및 빌드하기 위해 작업공간의 `~/ros2_ws/src` 폴더로 이동하여 패키지를 생성해줍니다.  
+패키지 생성 명령어는 아래와 같습니다.  
+```shell
+ros2 pkg create --build-type ament_cmake <your_package_name>
+```
+
 
 지금은 `cpp_pubsub` 이라는 이름의 패키지를 만들도록 하겠습니다.  
-<script src="https://gist.github.com/jswoo0615/022a54ebbf8b229886b703481e31d750.js"></script>
+```shell
+ros2 pkg create --build-type ament_cmake <your_package_name>
+```
 
 아래 그림과 같이 `cpp_pubsub` 이름의 패키지가 생성되었습니다.  
 <img width="328" alt="Publisher_Subscriber_1" src="https://user-images.githubusercontent.com/128343128/235099090-3703d77b-da1e-498d-a81e-981916efda5a.png">  
