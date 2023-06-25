@@ -303,13 +303,13 @@ from pascal_voc_writer import Writer
 
 ### 2.3. 데이터셋 확인
 주변 차량의 이미지와 그에 해당하는 Pascal VOC 정답지 데이터입니다.  
-<img src="../../assets/images/Carla_Simulator/000491.png" width="640" height="480">  
+<img src="../../assets/images/Carla_Simulator/000924.png" width="640" height="480">  
 
 ```xml
 <annotation>
     <folder>output</folder>
-    <filename>000491.png</filename>
-    <path>/home/jswoo/Desktop/Carla_Jupyter/Final/output/000491.png</path>
+    <filename>000924.png</filename>
+    <path>/home/siruu/Desktop/Carla_Bounding/output/000924.png</path>
     <source>
         <database>Unknown</database>
     </source>
@@ -325,13 +325,102 @@ from pascal_voc_writer import Writer
         <truncated>0</truncated>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>389.568653147</xmin>
-            <ymin>309.145733235</ymin>
-            <xmax>410.76510081</xmax>
-            <ymax>323.099127881</ymax>
+            <xmin>428.35741312432765</xmin>
+            <ymin>305.35886370602424</ymin>
+            <xmax>454.0003911394082</xmax>
+            <ymax>324.0241356693074</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>vehicle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>145.43633313850287</xmin>
+            <ymin>277.0884879805964</ymin>
+            <xmax>331.54931164497924</xmax>
+            <ymax>408.89008555307777</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>vehicle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>360.3600275150855</xmin>
+            <ymin>305.7754281122021</ymin>
+            <xmax>380.07320393419855</xmax>
+            <ymax>318.19738007928294</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>vehicle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>390.9933382633762</xmin>
+            <ymin>304.0722657735785</ymin>
+            <xmax>410.7567231455684</xmax>
+            <ymax>321.96378359741686</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>vehicle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>446.32691995327923</xmin>
+            <ymin>306.7503342986136</ymin>
+            <xmax>508.42193038179175</xmax>
+            <ymax>348.92981872223675</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>vehicle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>391.01638762216476</xmin>
+            <ymin>313.49717923464823</ymin>
+            <xmax>407.6952483198185</xmax>
+            <ymax>338.9526359276562</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>vehicle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>323.9441082317002</xmin>
+            <ymin>304.3498678219165</ymin>
+            <xmax>346.84786221619413</xmax>
+            <ymax>319.310110633452</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>vehicle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>316.263692768674</xmin>
+            <ymin>291.9248247914944</ymin>
+            <xmax>368.62311047154213</xmax>
+            <ymax>334.5751971496285</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>vehicle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>238.43868577616968</xmin>
+            <ymin>303.6270820799055</ymin>
+            <xmax>302.4953959698112</xmax>
+            <ymax>339.8072967591419</ymax>
         </bndbox>
     </object>
 </annotation>
+
 ```
 
 ## 2.4. 전체 코드
