@@ -94,4 +94,10 @@ var store = [{
         "tags": ["Carla"],
         "url": "/carla_simulator/Carla-3D-Bounding-Box/",
         "teaser": null
+      },{
+        "title": "Carla Simulator ROS Bridge 설치",
+        "excerpt":"지난 포스트까지 Carla Simulator에서 Bounding Box, 차량 동역학적 물성 적용 등에 대해 알아봤습니다. 이번 포스트부터는 추후 Autoware (Autoware Universe가 목표입니다. 화이팅..!) 연동을 위한 준비 과정을 진행하려 합니다. Carla Simulator에서 AD Stack 플랫폼 (Autoware, Apollo 등)과의 연동을 할 수 있는 ROS Bridge를 제공합니다. Carla ROS Bridge는 Carla Simulator를 이용한 주행 성능...","categories": ["Carla_Simulator"],
+        "tags": ["Carla_Simulator","ROS_Bridge","Galactic"],
+        "url": "/carla_simulator/Carla-ROS-Bridge/",
+        "teaser": null
       }]
