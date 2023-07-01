@@ -18,10 +18,9 @@ published: false
 ros2 pkg create --build-type ament_cmake <your_package_name>
 ```
 
-
 지금은 `cpp_pubsub` 이라는 이름의 패키지를 만들도록 하겠습니다.  
 ```shell
-ros2 pkg create --build-type ament_cmake <your_package_name>
+ros2 pkg create --build-type ament_cmake cpp_pubsub
 ```
 
 아래 그림과 같이 `cpp_pubsub` 이름의 패키지가 생성되었습니다.  
