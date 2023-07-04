@@ -66,3 +66,5 @@ Carla Simulator만 사용하다가 Autoware.Universe와 연동 후 실행했을 
 (아직 해결중입니다)  
 문제점이 무엇인지부터 알아가다보니 Localization 문제인 것 같아 스터디를 하며 해결중에 있습니다.  
 하나하나 알아가는 재미가 있어서 매우 좋습니다.  
+
+스터디 할 때 [참고한 곳](https://www.youtube.com/watch?v=hMTxb8Y2cxI) 입니다.
