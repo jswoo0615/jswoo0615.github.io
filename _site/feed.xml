@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-04T22:24:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">배워서 남주기</title><subtitle>공사중입니다</subtitle><author><name>우준상</name></author><entry><title type="html">Carla Simulator ROS Bridge 설치</title><link href="http://localhost:4000/carla_simulator/Carla-ROS-Bridge/" rel="alternate" type="text/html" title="Carla Simulator ROS Bridge 설치" /><published>2023-06-21T00:00:00+09:00</published><updated>2023-06-21T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-ROS-Bridge</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-ROS-Bridge/"><![CDATA[<p>지난 포스트까지 Carla Simulator에서 Bounding Box, 차량 동역학적 물성 적용 등에 대해 알아봤습니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-04T23:33:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">배워서 남주기</title><subtitle>공사중입니다</subtitle><author><name>우준상</name></author><entry><title type="html">Slam Toolbox를 이용한 맵 생성</title><link href="http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox/" rel="alternate" type="text/html" title="Slam Toolbox를 이용한 맵 생성" /><published>2023-07-03T00:00:00+09:00</published><updated>2023-07-03T00:00:00+09:00</updated><id>http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox</id><content type="html" xml:base="http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox/"><![CDATA[<p>안녕하세요~ 이번 포스팅에서는 <b>Nav2</b>와 <b>Slam Toolbox</b>를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다.<br />
+<b>Turtlebot3</b> 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.</p>
+
+<h1 id="1-패키지-설치">1. 패키지 설치</h1>
+<p><b>Slam Toolbox</b>와 <b>Nav2</b> 스택을 사용하기 위해서 패키지를 설치합니다.<br />
+저는 ROS2 Galactic 버전을 사용했습니다.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-galactic-navigation2 ros-galactic-nav2-bringup ros-galactic-turtlebot3<span class="k">*</span> ros-galactic-slam-toolbox
+</code></pre></div></div>
+
+<h1 id="2-환경설정">2. 환경설정</h1>
+<p><b>Turtlebot3</b>를 사용하기 위해 <code class="language-plaintext highlighter-rouge">~/.bashrc</code>에 사용하고자 하는 모델을 환경변수로 추가해줍니다.<br />
+<code class="language-plaintext highlighter-rouge">~/.bashrc</code>에 <code class="language-plaintext highlighter-rouge">export TURTLEBOT3_MODEL=waffle</code></p>
+
+<h1 id="3-실행">3. 실행</h1>
+<h2 id="31-turtlebot3-gazebo">3.1. Turtlebot3 Gazebo</h2>
+<p>launch 파일을 실행하는 <code class="language-plaintext highlighter-rouge">ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py</code> 명령어를 이용하여 turtlebot과 샘플 월드가 주어지는 gazebo를 실행합니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/gazebo.png" width="800" height="480" /></p>
+
+<h2 id="32-nav2-navigation-stack">3.2. Nav2 (Navigation Stack)</h2>
+<p>위의 <a href="#31-turtlebot3-gazebo">3.1. Turtlebot3 Gazebo</a>의 Gazebo를 실행한 후 <b>Navigation 스택</b>을 실행합니다.<br />
+<code class="language-plaintext highlighter-rouge">ros2 launch nav2_bringup navigation_launch.py use_sim_time:=True</code> 명령어를 실행하면 <code class="language-plaintext highlighter-rouge">Timed out waiting for transform from base_link ...</code>와 같은 로그를 확인하실 수 있습니다.<br />
+이는 <code class="language-plaintext highlighter-rouge">target_frame</code>이 설정되지 않았기에 발생하는 로그입니다.<br />
+여기서 <code class="language-plaintext highlighter-rouge">target_frame</code>은 라이다 토픽인 <code class="language-plaintext highlighter-rouge">/scan</code>이 되는 것 같습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/nav2.png" width="800" height="480" /></p>
+
+<h2 id="33-slam-toolbox">3.3. Slam Toolbox</h2>
+<p>위의 <a href="#32-nav2-navigation-stack">3.2. Nav2</a>에서 내비게이션 스택을 실행했습니다.<br />
+해당 노드를 실행했지만 타겟으로 하는 프레임이 정해지지 않아 아무런 결과가 취득되지 않았습니다.<br />
+<code class="language-plaintext highlighter-rouge">ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True</code> 명령어를 이용하여 <b>Slam Toolbox</b>를 실행해줍니다.<br />
+해당 launch 파일을 실행하면 두 번째 터미널의 출력 로그가 바뀌었음을 확인할 수 있습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/slam_toolbox.png" width="800" height="480" /></p>
+
+<h2 id="34-rviz2">3.4. RViz2</h2>
+<p>이제 rviz를 이용하여 라이다 센서로 스캔하는 맵의 형태를 볼 예정입니다.<br />
+<code class="language-plaintext highlighter-rouge">ros2 run rviz2 rviz2 -d /opt/ros/galactic/share/nav2_bringup/rviz/nav2_default_view.rviz</code> 명령어를 이용하여 현재 실행된 <b>Trutlebot3 Gazebo</b>와 연동 된 rviz를 실행합니다.<br />
+실행하면 아래 그림과 같이 현재 라이다로 스캔중인 곳을 확인할 수 있습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/rviz.png" width="800" height="480" /><br />
+RViz의 Display 탭에서 <code class="language-plaintext highlighter-rouge">Global Planner</code>, <code class="language-plaintext highlighter-rouge">Controller</code>의 체크박스를 해제하면 아래 그림과 같이 현재 라이다 센서가 스캔중인 곳을 확인할 수 있습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/map_scanning.png" width="800" height="480" /></p>
+
+<p>이제 다른 터미널을 열어 방향키로 가상의 waffle 봇을 조종하는 turtlebot3의 teleop 패키지를 실행합니다.<br />
+<code class="language-plaintext highlighter-rouge">ros2 run turtlebot3_teleop teleop_keyboard</code><br />
+w, s, d, f 키를 이용하여 waffle 봇을 조작하면 아래 영상과 같이 라이다가 스캔하며 얻어지는 공간 정보를 획득합니다.</p>
+
+<p>획득한 라이다 맵을 저장하기 위해서는 앞의 4개의 터미널을 실행 유지되는 상태로 다른 터미널을 열어 <code class="language-plaintext highlighter-rouge">ros2 run nav2_map_server map_saver_cli</code>를 실행합니다.<br />
+옵션 명령어로 <code class="language-plaintext highlighter-rouge">-f</code>를 이용하여 파일 이름을 설정할 수 있습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/map_saver.png" width="800" height="480" /></p>
+
+<p>저장한 맵은 아래와 같습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/scan_map.png" width="800" height="480" /></p>
+
+<p>Carla Simulator만 사용하다가 Autoware.Universe와 연동 후 실행했을 때 Autoware.Universe 상의 차량 위치와 Carla Simulator 상의 차량 위치가 일치하지 않는 문제가 있었습니다.<br />
+(아직 해결중입니다)<br />
+문제점이 무엇인지부터 알아가다보니 Localization 문제인 것 같아 스터디를 하며 해결중에 있습니다.<br />
+하나하나 알아가는 재미가 있어서 매우 좋습니다.</p>]]></content><author><name>우준상</name></author><category term="ROS" /><category term="ROS" /><category term="Localization" /><category term="Slam" /><summary type="html"><![CDATA[안녕하세요~ 이번 포스팅에서는 Nav2와 Slam Toolbox를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다. Turtlebot3 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.]]></summary></entry><entry><title type="html">Carla Simulator ROS Bridge 설치</title><link href="http://localhost:4000/carla_simulator/Carla-ROS-Bridge/" rel="alternate" type="text/html" title="Carla Simulator ROS Bridge 설치" /><published>2023-06-21T00:00:00+09:00</published><updated>2023-06-21T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-ROS-Bridge</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-ROS-Bridge/"><![CDATA[<p>지난 포스트까지 Carla Simulator에서 Bounding Box, 차량 동역학적 물성 적용 등에 대해 알아봤습니다.</p>
 
 <p>이번 포스트부터는 추후 Autoware (Autoware Universe가 목표입니다. 화이팅..!) 연동을 위한 준비 과정을 진행하려 합니다.<br />
 Carla Simulator에서 AD Stack 플랫폼 (Autoware, Apollo 등)과의 연동을 할 수 있는 ROS Bridge를 제공합니다.</p>
@@ -1575,24 +1629,4 @@ UsePAM <span class="nb">yes
 </code></pre></div></div>
 
 <p>수정 후 반드시 sshd 서비스를 재실행 해줍니다.
-<code class="language-plaintext highlighter-rouge">sudo systemctl restart sshd</code></p>]]></content><author><name>우준상</name></author><category term="etc" /><category term="가상환경" /><summary type="html"><![CDATA[multipass를 이용한 가상환경 생성을 위해 아래와 같이 명령어를 입력합니다. multipass launch --cpus &lt;cpu 사용 갯수&gt; --disk &lt;용량&gt;G --mem 4GB --name ubuntu1804 &lt;우분투 버전&gt;]]></summary></entry><entry><title type="html">[깃허브 블로그] 밑줄 제거</title><link href="http://localhost:4000/github_blog/github-blog-unerline/" rel="alternate" type="text/html" title="[깃허브 블로그] 밑줄 제거" /><published>2023-04-22T00:00:00+09:00</published><updated>2023-04-22T00:00:00+09:00</updated><id>http://localhost:4000/github_blog/github-blog-unerline</id><content type="html" xml:base="http://localhost:4000/github_blog/github-blog-unerline/"><![CDATA[<h2 id="intro">Intro</h2>
-<p>이번 포스트에서는 깃허브 블로그 작성 중 밑줄을 없애는 방법에 대한 주제를 다뤄보겠습니다.
-포스트를 작성하다 보면서 아래 그림처럼 글 제목에 하이퍼링크 밑줄로 쳐져 있는 것이 너무 신경 쓰였었습니다.
-<img width="483" alt="Underline_1" src="https://user-images.githubusercontent.com/128343128/233776056-f84d94ec-c1e8-4dd6-a04b-6cb196d9c71c.png" /></p>
-
-<p>그래서 밑줄 없애는 방법에 대해 찾아보고 기록을 남기고자 합니다.</p>
-
-<h2 id="밑줄-제거">밑줄 제거</h2>
-<h3 id="_base">_base</h3>
-
-<ul>
-  <li>수정 파일 : user.github.io 폴더 -&gt; _sass -&gt; _minimal-mistakes -&gt; _base.scss</li>
-</ul>
-
-<p>해당 파일의 128 ~ 141번째 줄 부분을 수정합니다.<br />
-<script src="https://gist.github.com/jswoo0615/dae303cc792434c0fc50bef719f78419.js"></script></p>
-
-<p>위 코드블럭 중 <code class="language-plaintext highlighter-rouge">text-decoration: none;</code> 부분을 추가해주면 밑줄 제거된 제목을 볼 수 있습니다.</p>
-
-<h2 id="결과">결과</h2>
-<p><img width="521" alt="Underline_2" src="https://user-images.githubusercontent.com/128343128/233776463-c93ec9af-7258-44ad-a4a4-cded6702c573.png" /></p>]]></content><author><name>우준상</name></author><category term="Github_Blog" /><category term="Github_Blog" /><summary type="html"><![CDATA[Intro 이번 포스트에서는 깃허브 블로그 작성 중 밑줄을 없애는 방법에 대한 주제를 다뤄보겠습니다. 포스트를 작성하다 보면서 아래 그림처럼 글 제목에 하이퍼링크 밑줄로 쳐져 있는 것이 너무 신경 쓰였었습니다.]]></summary></entry></feed>
+<code class="language-plaintext highlighter-rouge">sudo systemctl restart sshd</code></p>]]></content><author><name>우준상</name></author><category term="etc" /><category term="가상환경" /><summary type="html"><![CDATA[multipass를 이용한 가상환경 생성을 위해 아래와 같이 명령어를 입력합니다. multipass launch --cpus &lt;cpu 사용 갯수&gt; --disk &lt;용량&gt;G --mem 4GB --name ubuntu1804 &lt;우분투 버전&gt;]]></summary></entry></feed>

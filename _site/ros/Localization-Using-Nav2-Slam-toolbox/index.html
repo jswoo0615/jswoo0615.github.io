@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[C++] std::memory | 배워서 남주기</title>
-<meta name="description" content="https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170">
+<!-- begin _includes/seo.html --><title>Slam Toolbox를 이용한 맵 생성 | 배워서 남주기</title>
+<meta name="description" content="안녕하세요~ 이번 포스팅에서는 Nav2와 Slam Toolbox를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다. Turtlebot3 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.">
 
 
   <meta name="author" content="우준상">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="배워서 남주기">
-<meta property="og:title" content="[C++] std::memory">
-<meta property="og:url" content="http://localhost:4000/c++_study/std-memory/">
+<meta property="og:title" content="Slam Toolbox를 이용한 맵 생성">
+<meta property="og:url" content="http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox/">
 
 
-  <meta property="og:description" content="https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-04-28T00:00:00+09:00">
+  <meta property="og:description" content="안녕하세요~ 이번 포스팅에서는 Nav2와 Slam Toolbox를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다. Turtlebot3 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2023-07-03T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/c++_study/std-memory/">
+
+<link rel="canonical" href="http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox/">
 
 
 
@@ -162,7 +162,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#c++_study" itemprop="item"><span itemprop="name">C++_study</span></a>
+          <a href="/categories/#ros" itemprop="item"><span itemprop="name">Ros</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -170,7 +170,7 @@
     
       
       
-        <li class="current">[C++] std::memory</li>
+        <li class="current">Slam Toolbox를 이용한 맵 생성</li>
       
     
   </ol>
@@ -345,16 +345,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[C++] std::memory">
-    <meta itemprop="description" content="https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170">
-    <meta itemprop="datePublished" content="2023-04-28T00:00:00+09:00">
+    <meta itemprop="headline" content="Slam Toolbox를 이용한 맵 생성">
+    <meta itemprop="description" content="안녕하세요~ 이번 포스팅에서는 Nav2와 Slam Toolbox를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다.Turtlebot3 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.">
+    <meta itemprop="datePublished" content="2023-07-03T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/c++_study/std-memory/" class="u-url" itemprop="url">[C++] std::memory
+            <a href="http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox/" class="u-url" itemprop="url">Slam Toolbox를 이용한 맵 생성
 </a>
           </h1>
           
@@ -365,7 +365,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2023-04-28T00:00:00+09:00">April 28, 2023</time>
+        <time datetime="2023-07-03T00:00:00+09:00">July 3, 2023</time>
       </span>
     
 
@@ -378,7 +378,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          1 분 소요
         
       </span>
     
@@ -393,12 +393,66 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              
+              <ul class="toc__menu"><li><a href="#1-패키지-설치">1. 패키지 설치</a></li><li><a href="#2-환경설정">2. 환경설정</a></li><li><a href="#3-실행">3. 실행</a><ul><li><a href="#31-turtlebot3-gazebo">3.1. Turtlebot3 Gazebo</a></li><li><a href="#32-nav2-navigation-stack">3.2. Nav2 (Navigation Stack)</a></li><li><a href="#33-slam-toolbox">3.3. Slam Toolbox</a></li><li><a href="#34-rviz2">3.4. RViz2</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p>https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170</p>
+        <p>안녕하세요~ 이번 포스팅에서는 <b>Nav2</b>와 <b>Slam Toolbox</b>를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다.<br />
+<b>Turtlebot3</b> 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.</p>
+
+<h1 id="1-패키지-설치">1. 패키지 설치</h1>
+<p><b>Slam Toolbox</b>와 <b>Nav2</b> 스택을 사용하기 위해서 패키지를 설치합니다.<br />
+저는 ROS2 Galactic 버전을 사용했습니다.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-galactic-navigation2 ros-galactic-nav2-bringup ros-galactic-turtlebot3<span class="k">*</span> ros-galactic-slam-toolbox
+</code></pre></div></div>
+
+<h1 id="2-환경설정">2. 환경설정</h1>
+<p><b>Turtlebot3</b>를 사용하기 위해 <code class="language-plaintext highlighter-rouge">~/.bashrc</code>에 사용하고자 하는 모델을 환경변수로 추가해줍니다.<br />
+<code class="language-plaintext highlighter-rouge">~/.bashrc</code>에 <code class="language-plaintext highlighter-rouge">export TURTLEBOT3_MODEL=waffle</code></p>
+
+<h1 id="3-실행">3. 실행</h1>
+<h2 id="31-turtlebot3-gazebo">3.1. Turtlebot3 Gazebo</h2>
+<p>launch 파일을 실행하는 <code class="language-plaintext highlighter-rouge">ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py</code> 명령어를 이용하여 turtlebot과 샘플 월드가 주어지는 gazebo를 실행합니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/gazebo.png" width="800" height="480" /></p>
+
+<h2 id="32-nav2-navigation-stack">3.2. Nav2 (Navigation Stack)</h2>
+<p>위의 <a href="#31-turtlebot3-gazebo">3.1. Turtlebot3 Gazebo</a>의 Gazebo를 실행한 후 <b>Navigation 스택</b>을 실행합니다.<br />
+<code class="language-plaintext highlighter-rouge">ros2 launch nav2_bringup navigation_launch.py use_sim_time:=True</code> 명령어를 실행하면 <code class="language-plaintext highlighter-rouge">Timed out waiting for transform from base_link ...</code>와 같은 로그를 확인하실 수 있습니다.<br />
+이는 <code class="language-plaintext highlighter-rouge">target_frame</code>이 설정되지 않았기에 발생하는 로그입니다.<br />
+여기서 <code class="language-plaintext highlighter-rouge">target_frame</code>은 라이다 토픽인 <code class="language-plaintext highlighter-rouge">/scan</code>이 되는 것 같습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/nav2.png" width="800" height="480" /></p>
+
+<h2 id="33-slam-toolbox">3.3. Slam Toolbox</h2>
+<p>위의 <a href="#32-nav2-navigation-stack">3.2. Nav2</a>에서 내비게이션 스택을 실행했습니다.<br />
+해당 노드를 실행했지만 타겟으로 하는 프레임이 정해지지 않아 아무런 결과가 취득되지 않았습니다.<br />
+<code class="language-plaintext highlighter-rouge">ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True</code> 명령어를 이용하여 <b>Slam Toolbox</b>를 실행해줍니다.<br />
+해당 launch 파일을 실행하면 두 번째 터미널의 출력 로그가 바뀌었음을 확인할 수 있습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/slam_toolbox.png" width="800" height="480" /></p>
+
+<h2 id="34-rviz2">3.4. RViz2</h2>
+<p>이제 rviz를 이용하여 라이다 센서로 스캔하는 맵의 형태를 볼 예정입니다.<br />
+<code class="language-plaintext highlighter-rouge">ros2 run rviz2 rviz2 -d /opt/ros/galactic/share/nav2_bringup/rviz/nav2_default_view.rviz</code> 명령어를 이용하여 현재 실행된 <b>Trutlebot3 Gazebo</b>와 연동 된 rviz를 실행합니다.<br />
+실행하면 아래 그림과 같이 현재 라이다로 스캔중인 곳을 확인할 수 있습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/rviz.png" width="800" height="480" /><br />
+RViz의 Display 탭에서 <code class="language-plaintext highlighter-rouge">Global Planner</code>, <code class="language-plaintext highlighter-rouge">Controller</code>의 체크박스를 해제하면 아래 그림과 같이 현재 라이다 센서가 스캔중인 곳을 확인할 수 있습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/map_scanning.png" width="800" height="480" /></p>
+
+<p>이제 다른 터미널을 열어 방향키로 가상의 waffle 봇을 조종하는 turtlebot3의 teleop 패키지를 실행합니다.<br />
+<code class="language-plaintext highlighter-rouge">ros2 run turtlebot3_teleop teleop_keyboard</code><br />
+w, s, d, f 키를 이용하여 waffle 봇을 조작하면 아래 영상과 같이 라이다가 스캔하며 얻어지는 공간 정보를 획득합니다.</p>
+
+<p>획득한 라이다 맵을 저장하기 위해서는 앞의 4개의 터미널을 실행 유지되는 상태로 다른 터미널을 열어 <code class="language-plaintext highlighter-rouge">ros2 run nav2_map_server map_saver_cli</code>를 실행합니다.<br />
+옵션 명령어로 <code class="language-plaintext highlighter-rouge">-f</code>를 이용하여 파일 이름을 설정할 수 있습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/map_saver.png" width="800" height="480" /></p>
+
+<p>저장한 맵은 아래와 같습니다.<br />
+<img src="../../../../assets/images/ROS/ROS2/scan_map.png" width="800" height="480" /></p>
+
+<p>Carla Simulator만 사용하다가 Autoware.Universe와 연동 후 실행했을 때 Autoware.Universe 상의 차량 위치와 Carla Simulator 상의 차량 위치가 일치하지 않는 문제가 있었습니다.<br />
+(아직 해결중입니다)<br />
+문제점이 무엇인지부터 알아가다보니 Localization 문제인 것 같아 스터디를 하며 해결중에 있습니다.<br />
+하나하나 알아가는 재미가 있어서 매우 좋습니다.</p>
 
         
       </section>
@@ -415,7 +469,11 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#c" class="page__taxonomy-item p-category" rel="tag">C++</a>
+      <a href="/tags/#localization" class="page__taxonomy-item p-category" rel="tag">Localization</a><span class="sep">, </span>
+    
+      <a href="/tags/#ros" class="page__taxonomy-item p-category" rel="tag">ROS</a><span class="sep">, </span>
+    
+      <a href="/tags/#slam" class="page__taxonomy-item p-category" rel="tag">Slam</a>
     
     </span>
   </p>
@@ -432,7 +490,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#c-study" class="page__taxonomy-item p-category" rel="tag">C++_Study</a>
+      <a href="/categories/#ros" class="page__taxonomy-item p-category" rel="tag">ROS</a>
     
     </span>
   </p>
@@ -440,7 +498,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-04-28T00:00:00+09:00">April 28, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-07-03T00:00:00+09:00">July 3, 2023</time></p>
 
       </footer>
 
@@ -449,23 +507,22 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BC%2B%2B%5D+std%3A%3Amemory%20http%3A%2F%2Flocalhost%3A4000%2Fc%2B%2B_study%2Fstd-memory%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Slam+Toolbox%EB%A5%BC+%EC%9D%B4%EC%9A%A9%ED%95%9C+%EB%A7%B5+%EC%83%9D%EC%84%B1%20http%3A%2F%2Flocalhost%3A4000%2Fros%2FLocalization-Using-Nav2-Slam-toolbox%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fc%2B%2B_study%2Fstd-memory%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fros%2FLocalization-Using-Nav2-Slam-toolbox%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fc%2B%2B_study%2Fstd-memory%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fros%2FLocalization-Using-Nav2-Slam-toolbox%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/c++_study/std-functional/" class="pagination--pager" title="[C++] std::functional
+      <a href="/carla_simulator/Carla-ROS-Bridge/" class="pagination--pager" title="Carla Simulator ROS Bridge 설치
 ">이전</a>
     
     
-      <a href="/carla_simulator/Carla-Tutorial/" class="pagination--pager" title="Carla Simulator 기본
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -479,54 +536,6 @@
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/ros/Localization-Using-Nav2-Slam-toolbox/" rel="permalink">Slam Toolbox를 이용한 맵 생성
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2023-07-03T00:00:00+09:00">July 3, 2023</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">안녕하세요~ 이번 포스팅에서는 Nav2와 Slam Toolbox를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다.
-Turtlebot3 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.
-</p>
-  </article>
-</div>
-
         
           
 
@@ -660,7 +669,7 @@ Carla ...</p>
       <span class="page__meta-readtime">
         <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
-          5 분 소요
+          6 분 소요
         
       </span>
     
@@ -670,6 +679,54 @@ Carla ...</p>
     <p class="archive__item-excerpt" itemprop="description">지난 포스트에서는 Carla Simulator 3D Bounding Box 생성에 대한 기본을 알아봤습니다.  
 이번 시간에는 2D Bounding Box 및 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다.
 먼저 지난 Bounding Box 기본 포스트의...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/carla_simulator/Carla-Bounding-Box/" rel="permalink">Carla Simulator Bounding Box 기본
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-06-19T00:00:00+09:00">June 19, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">지난 포스트에서는 Carla Simulator에서 맵 선택, 차량, 센서 설정 등에 대해 알아봤었습니다.
+이번 시간에는 2D / 3D Bounding Box와 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다.
+</p>
   </article>
 </div>
 
@@ -730,8 +787,8 @@ Carla ...</p>
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/c++_study/std-memory/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/c++_study/std-memory"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/ros/Localization-Using-Nav2-Slam-toolbox"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

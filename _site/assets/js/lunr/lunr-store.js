@@ -100,4 +100,10 @@ var store = [{
         "tags": ["Carla_Simulator","ROS_Bridge","Galactic"],
         "url": "/carla_simulator/Carla-ROS-Bridge/",
         "teaser": null
+      },{
+        "title": "Slam Toolbox를 이용한 맵 생성",
+        "excerpt":"안녕하세요~ 이번 포스팅에서는 Nav2와 Slam Toolbox를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다. Turtlebot3 패키지를 이용하여 시뮬레이션을 진행할 예정입니다. 1. 패키지 설치 Slam Toolbox와 Nav2 스택을 사용하기 위해서 패키지를 설치합니다. 저는 ROS2 Galactic 버전을 사용했습니다. sudo apt install ros-galactic-navigation2 ros-galactic-nav2-bringup ros-galactic-turtlebot3* ros-galactic-slam-toolbox 2. 환경설정 Turtlebot3를 사용하기 위해 ~/.bashrc에 사용하고자...","categories": ["ROS"],
+        "tags": ["ROS","Localization","Slam"],
+        "url": "/ros/Localization-Using-Nav2-Slam-toolbox/",
+        "teaser": null
       }]
