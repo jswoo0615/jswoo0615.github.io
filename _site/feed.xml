@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-04T23:35:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">배워서 남주기</title><subtitle>공사중입니다</subtitle><author><name>우준상</name></author><entry><title type="html">Slam Toolbox를 이용한 맵 생성</title><link href="http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox/" rel="alternate" type="text/html" title="Slam Toolbox를 이용한 맵 생성" /><published>2023-07-03T00:00:00+09:00</published><updated>2023-07-03T00:00:00+09:00</updated><id>http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox</id><content type="html" xml:base="http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox/"><![CDATA[<p>안녕하세요~ 이번 포스팅에서는 <b>Nav2</b>와 <b>Slam Toolbox</b>를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다.<br />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-22T12:38:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">배워서 남주기</title><subtitle>공사중입니다</subtitle><author><name>우준상</name></author><entry><title type="html">Slam Toolbox를 이용한 맵 생성</title><link href="http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox/" rel="alternate" type="text/html" title="Slam Toolbox를 이용한 맵 생성" /><published>2023-07-03T00:00:00+09:00</published><updated>2023-07-03T00:00:00+09:00</updated><id>http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox</id><content type="html" xml:base="http://localhost:4000/ros/Localization-Using-Nav2-Slam-toolbox/"><![CDATA[<p>안녕하세요~ 이번 포스팅에서는 <b>Nav2</b>와 <b>Slam Toolbox</b>를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다.<br />
 <b>Turtlebot3</b> 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.</p>
 
 <h1 id="1-패키지-설치">1. 패키지 설치</h1>
@@ -54,7 +54,54 @@ w, s, d, f 키를 이용하여 waffle 봇을 조작하면 아래 영상과 같�
 문제점이 무엇인지부터 알아가다보니 Localization 문제인 것 같아 스터디를 하며 해결중에 있습니다.<br />
 하나하나 알아가는 재미가 있어서 매우 좋습니다.</p>
 
-<p>스터디 할 때 <a href="https://www.youtube.com/watch?v=hMTxb8Y2cxI">참고한 곳</a> 입니다.</p>]]></content><author><name>우준상</name></author><category term="ROS" /><category term="ROS" /><category term="Localization" /><category term="Slam" /><summary type="html"><![CDATA[안녕하세요~ 이번 포스팅에서는 Nav2와 Slam Toolbox를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다. Turtlebot3 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.]]></summary></entry><entry><title type="html">Carla Simulator ROS Bridge 설치</title><link href="http://localhost:4000/carla_simulator/Carla-ROS-Bridge/" rel="alternate" type="text/html" title="Carla Simulator ROS Bridge 설치" /><published>2023-06-21T00:00:00+09:00</published><updated>2023-06-21T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-ROS-Bridge</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-ROS-Bridge/"><![CDATA[<p>지난 포스트까지 Carla Simulator에서 Bounding Box, 차량 동역학적 물성 적용 등에 대해 알아봤습니다.</p>
+<p>스터디 할 때 <a href="https://www.youtube.com/watch?v=hMTxb8Y2cxI">참고한 곳</a> 입니다.</p>]]></content><author><name>우준상</name></author><category term="ROS" /><category term="ROS" /><category term="Localization" /><category term="Slam" /><summary type="html"><![CDATA[안녕하세요~ 이번 포스팅에서는 Nav2와 Slam Toolbox를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다. Turtlebot3 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.]]></summary></entry><entry><title type="html">Matlab에 Carla Simulator ROS 사용자 지정 메시지 연동하기</title><link href="http://localhost:4000/carla_simulator/Custom-Messages-in-Matlab/" rel="alternate" type="text/html" title="Matlab에 Carla Simulator ROS 사용자 지정 메시지 연동하기" /><published>2023-06-23T00:00:00+09:00</published><updated>2023-06-23T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Custom-Messages-in-Matlab</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Custom-Messages-in-Matlab/"><![CDATA[<p>이번 포스트에서는 Matlab ROS Toolbox에 ROS 커스텀 메시지를 연동시키는 방법에 대해 적어보려합니다.</p>
+
+<h1 id="1-ros-사용자-지정-메시지-빌드">1. ROS 사용자 지정 메시지 빌드</h1>
+<p>MATLAB ROS Toolbox에 있는 메시지 이외의 커스텀 메시지를 사용하고자 할 때 매트랩의 커맨드 창에 커스텀 메시지 경로를 지정해줍니다.<br />
+저는 autoware의 메시지와 연동하는 것을 예시로 하겠습니다.<br />
+<code class="language-plaintext highlighter-rouge">folderpath = "/home/USER/autoware.ai.openplanner/install/autoware_msgs/share"</code></p>
+
+<p>커스텀 메시지를 MATLAB ROS Toolbox에서 사용할 수 있도록 <code class="language-plaintext highlighter-rouge">rosgenmsg</code> 명령어를 이용하여 메시지를 빌드합니다.<br />
+<code class="language-plaintext highlighter-rouge">rosgenmsg(folderpath)</code></p>
+
+<p>아래 그림은 커스텀 메시지를 Matlab ROS Toolbox에 빌드하는 과정을 나타낸 그림입니다.<br />
+<img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs1.png" /></p>
+
+<h1 id="2-메시지-빌드-결과">2. 메시지 빌드 결과</h1>
+<p>빌드 후 커스텀 메시지가 제대로 빌드되었는지 확인해보겠습니다.<br />
+매트랩 커맨드 창에 아래와 같이 입력 및 실행했습니다.<br />
+<code class="language-plaintext highlighter-rouge">data = rosmesage("autoware_msgs/VehicleCmd", "DataFormat", "struct")</code></p>
+
+<p><img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs2.png" /> 
+위 사진은 MATLAB에서 실행한 결과입니다.</p>
+
+<p>아래 사진으로 Simulink에 커스텀 메시지가 제대로 적용되었음을 확인할 수 있습니다.<br />
+<img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs3.png" /></p>
+
+<h1 id="3-발생-가능-문제">3. 발생 가능 문제</h1>
+<p>Matlab ROS Toolbox 커스텀 메시지 빌드를 하며 겪었던 문제들에 대해 해결했던 방법을 적어보려합니다.</p>
+<ul>
+  <li>
+    <p><b>CMake 3.15.5</b> 이상의 버전이 설치되어 있어야 합니다.</p>
+  </li>
+  <li>
+    <p><b>경로가 잘못되었다 하는 경우</b><br />
+커스텀 메시지 빌드를 진행하면서 처음에는 사용하고자 하는 메시지들만 있는 폴더를 선택했었습니다.<br />
+하지만 아래 그림과 같이 에러가 발생했습니다.<br />
+<img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs4.png" /> 
+빌드하고자 하는 메시지 경로를 메시지 패키지 단위로 경로를 수정 후 커스텀 메시지 빌드를 진행했습니다.</p>
+  </li>
+  <li>
+    <p><b>jsk_recognition_msgs 누락</b><br />
+커스텀하고자 하는 메시지 경로 수정 후 다시 빌드를 진행하던 도중, 아래와 같은 에러가 발생했었습니다.<br />
+<img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs5.png" /><br />
+로그를 확인하니, <code class="language-plaintext highlighter-rouge">jsk_recognition_msgs</code>가 없어서 생긴 에러였습니다.<br />
+jsk_recongition_msgs 패키지를 다운받고 커스텀 메시지 패키지 폴더에 붙여넣습니다. <br />
+<img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs6.png" width="640" height="480" /></p>
+  </li>
+</ul>
+
+<p>이렇게 매트랩의 ROS Toolbox에 커스텀 메시지를 적용하는 방법에 대한 포스팅을 마치겠습니다.</p>]]></content><author><name>우준상</name></author><category term="Carla_Simulator" /><category term="Carla_Simulator" /><category term="ROS_Bridge" /><category term="MATLAB" /><category term="Custom_message" /><summary type="html"><![CDATA[이번 포스트에서는 Matlab ROS Toolbox에 ROS 커스텀 메시지를 연동시키는 방법에 대해 적어보려합니다. 1. ROS 사용자 지정 메시지 빌드 MATLAB ROS Toolbox에 있는 메시지 이외의 커스텀 메시지를 사용하고자 할 때 매트랩의 커맨드 창에 커스텀 메시지 경로를 지정해줍니다. 저는 autoware의 메시지와 연동하는 것을 예시로 하겠습니다. folderpath = "/home/USER/autoware.ai.openplanner/install/autoware_msgs/share" 커스텀 메시지를 MATLAB ROS Toolbox에서 사용할 수 있도록 rosgenmsg 명령어를 이용하여 메시지를 빌드합니다. rosgenmsg(folderpath)]]></summary></entry><entry><title type="html">Carla Simulator ROS Bridge 설치</title><link href="http://localhost:4000/carla_simulator/Carla-ROS-Bridge/" rel="alternate" type="text/html" title="Carla Simulator ROS Bridge 설치" /><published>2023-06-21T00:00:00+09:00</published><updated>2023-06-21T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-ROS-Bridge</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-ROS-Bridge/"><![CDATA[<p>지난 포스트까지 Carla Simulator에서 Bounding Box, 차량 동역학적 물성 적용 등에 대해 알아봤습니다.</p>
 
 <p>이번 포스트부터는 추후 Autoware (Autoware Universe가 목표입니다. 화이팅..!) 연동을 위한 준비 과정을 진행하려 합니다.<br />
 Carla Simulator에서 AD Stack 플랫폼 (Autoware, Apollo 등)과의 연동을 할 수 있는 ROS Bridge를 제공합니다.</p>
@@ -145,7 +192,211 @@ colcon build
 <p>설치 / 삭제만 꽤 오랜 시간이 걸렸는데 다른 분들은 시행착오를 조금이나마 줄였으면 하는 바람입니다.</p>
 
 <p>참고 사이트 같이 공유드립니다.<br />
-<a href="https://github.com/carla-simulator/ros-bridge/issues/633">To run Carla-ros-bridge with ROS Galactic_Some error fix ideas</a></p>]]></content><author><name>우준상</name></author><category term="Carla_Simulator" /><category term="Carla_Simulator" /><category term="ROS_Bridge" /><category term="Galactic" /><summary type="html"><![CDATA[지난 포스트까지 Carla Simulator에서 Bounding Box, 차량 동역학적 물성 적용 등에 대해 알아봤습니다. 이번 포스트부터는 추후 Autoware (Autoware Universe가 목표입니다. 화이팅..!) 연동을 위한 준비 과정을 진행하려 합니다. Carla Simulator에서 AD Stack 플랫폼 (Autoware, Apollo 등)과의 연동을 할 수 있는 ROS Bridge를 제공합니다.]]></summary></entry><entry><title type="html">Carla Simulator 2D Bounding Box</title><link href="http://localhost:4000/carla_simulator/Carla-2D-Bounding-Box/" rel="alternate" type="text/html" title="Carla Simulator 2D Bounding Box" /><published>2023-06-20T00:00:00+09:00</published><updated>2023-06-20T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-2D-Bounding-Box</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-2D-Bounding-Box/"><![CDATA[<p>지난 포스트에서는 Carla Simulator 3D Bounding Box 생성에 대한 기본을 알아봤습니다.  <br />
+<a href="https://github.com/carla-simulator/ros-bridge/issues/633">To run Carla-ros-bridge with ROS Galactic_Some error fix ideas</a></p>]]></content><author><name>우준상</name></author><category term="Carla_Simulator" /><category term="Carla_Simulator" /><category term="ROS_Bridge" /><category term="Galactic" /><summary type="html"><![CDATA[지난 포스트까지 Carla Simulator에서 Bounding Box, 차량 동역학적 물성 적용 등에 대해 알아봤습니다. 이번 포스트부터는 추후 Autoware (Autoware Universe가 목표입니다. 화이팅..!) 연동을 위한 준비 과정을 진행하려 합니다. Carla Simulator에서 AD Stack 플랫폼 (Autoware, Apollo 등)과의 연동을 할 수 있는 ROS Bridge를 제공합니다.]]></summary></entry><entry><title type="html">Carla Simulator 3D Bounding Box</title><link href="http://localhost:4000/carla_simulator/Carla-3D-Bounding-Box/" rel="alternate" type="text/html" title="Carla Simulator 3D Bounding Box" /><published>2023-06-20T00:00:00+09:00</published><updated>2023-06-20T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-3D-Bounding-Box</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-3D-Bounding-Box/"><![CDATA[<p>지난 포스트에서는 Carla Simulator Bounding Box 생성에 대한 기본을 알아봤습니다.  <br />
+이번 시간에는 3D Bounding Box에 대해 포스팅을 진행하도록 하겠습니다.<br />
+먼저 지난 Bounding Box 기본 포스트의 내용 중 일부를 가져오겠습니다.</p>
+
+<h2 id="1-기존-코드">1. 기존 코드</h2>
+<p>기존 코드와 동일하게 사용합니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">import</span> <span class="n">sys</span>
+<span class="kn">import</span> <span class="n">time</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">sys</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">glob</span><span class="p">.</span><span class="nf">glob</span><span class="p">(</span><span class="s">'carla_simulation_root/PythonAPI/carla/dist/carla-*%d.%d-%s.egg'</span> <span class="o">%</span> <span class="p">(</span>
+        <span class="n">sys</span><span class="p">.</span><span class="n">version_info</span><span class="p">.</span><span class="n">major</span><span class="p">,</span>
+        <span class="n">sys</span><span class="p">.</span><span class="n">version_info</span><span class="p">.</span><span class="n">minor</span><span class="p">,</span>
+        <span class="s">'win-amd64'</span> <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">'nt'</span> <span class="k">else</span> <span class="s">'linux-x86_64'</span><span class="p">))[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">except</span> <span class="nb">IndexError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="kn">import</span> <span class="n">carla</span>
+<span class="kn">import</span> <span class="n">argparse</span>
+<span class="kn">import</span> <span class="n">logging</span>
+
+<span class="kn">from</span> <span class="n">numpy</span> <span class="kn">import</span> <span class="n">random</span>
+
+<span class="kn">import</span> <span class="n">cv2</span>
+
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="kn">import</span> <span class="n">math</span>
+<span class="kn">import</span> <span class="n">queue</span>
+</code></pre></div></div>
+
+<p>이전 포스트와 동일하게 <code class="language-plaintext highlighter-rouge">Client</code>, 맵, 차량 및 센서들을 배치하도록 하겠습니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Client 설정
+</span><span class="n">client</span> <span class="o">=</span> <span class="n">carla</span><span class="p">.</span><span class="nc">Client</span><span class="p">(</span><span class="s">'localhost'</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="n">client</span><span class="p">.</span><span class="nf">set_timeout</span><span class="p">(</span><span class="mf">20.0</span><span class="p">)</span>
+
+<span class="c1"># 맵 설정
+</span><span class="n">world</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">load_world</span><span class="p">(</span><span class="s">'Town01'</span><span class="p">)</span>
+<span class="n">settings</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">get_settings</span><span class="p">()</span>
+<span class="n">settings</span><span class="p">.</span><span class="n">fixed_delta_seconds</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">settings</span><span class="p">.</span><span class="n">synchronous_mode</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">world</span><span class="p">.</span><span class="nf">apply_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+
+<span class="n">spawn_points</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">get_map</span><span class="p">().</span><span class="nf">get_spawn_points</span><span class="p">()</span>
+
+<span class="c1"># 날씨 설정
+</span><span class="n">weather</span> <span class="o">=</span> <span class="n">carla</span><span class="p">.</span><span class="nc">WeatherParameters</span><span class="p">(</span>
+  <span class="n">cloudiness</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+  <span class="n">precipitation</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+  <span class="n">sun_altitude_angle</span> <span class="o">=</span> <span class="mf">110.0</span>
+<span class="p">)</span>
+<span class="n">world</span><span class="p">.</span><span class="nf">set_weather</span><span class="p">(</span><span class="n">weather</span><span class="p">)</span>
+
+<span class="c1"># 에고 차량 설정
+</span><span class="n">ego_vehicle</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">vehicle_bp</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="nf">get_blueprint_library</span><span class="p">().</span><span class="nf">filter</span><span class="p">(</span><span class="s">'vehicle'</span><span class="p">))</span>
+
+<span class="n">vehicle_transform</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">spawn_points</span><span class="p">)</span>
+
+<span class="n">ego_vehicle</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">spawn_actor</span><span class="p">(</span><span class="n">vehicle_bp</span><span class="p">,</span> <span class="n">vehicle_transform</span><span class="p">)</span>
+
+<span class="n">ego_vehicle</span><span class="p">.</span><span class="nf">set_autopilot</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">actor_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">ego_vehicle</span><span class="p">)</span>
+
+<span class="c1"># 카메라 설정
+</span><span class="n">ego_camera</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">camera_bp</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">get_blueprint_library</span><span class="p">().</span><span class="nf">find</span><span class="p">(</span><span class="s">'sensor.camera.rgb'</span><span class="p">)</span>
+<span class="n">camera_init_trans</span> <span class="o">=</span> <span class="n">carla</span><span class="p">.</span><span class="nc">Transform</span><span class="p">(</span><span class="n">carla</span><span class="p">.</span><span class="nc">Location</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">2.0</span><span class="p">))</span>
+<span class="n">ego_camera</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">spawn_actor</span><span class="p">(</span><span class="n">camera_bp</span><span class="p">,</span> <span class="n">camera_init_trans</span><span class="p">,</span> <span class="n">attach_to</span><span class="o">=</span><span class="n">ego_vehicle</span><span class="p">)</span>
+<span class="n">actor_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">ego_camera</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="2-image-queue">2. Image Queue</h2>
+<p>지난 포스팅의 내용을 바탕으로 맵, 차량, 센서 등을 설정했습니다.<br />
+이어서 시뮬레이션을 진행하며 얻는 카메라 데이터를 <b>queue</b> 형식으로 데이터를 받습니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 카메라 데이터를 저장 및 검색하기 위한 queue 생성
+</span><span class="n">image_q</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="nc">Queue</span><span class="p">()</span>
+<span class="n">ego_camera</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="n">image_q</span><span class="p">.</span><span class="n">put</span><span class="p">)</span>
+</code></pre></div></div>
+<p>카메라 데이터 취득 시 image의 사이즈, 시야각을 설정해줍니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">image_w</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"image_size_x"</span><span class="p">).</span><span class="nf">as_int</span><span class="p">()</span>
+<span class="n">image_h</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"image_size_y"</span><span class="p">).</span><span class="nf">as_int</span><span class="p">()</span>
+<span class="n">fov</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"fov"</span><span class="p">).</span><span class="nf">as_float</span><span class="p">()</span>
+</code></pre></div></div>
+<p>또한 아래와 같이 image 사이즈, 시야각을 설정해줄 수 있습니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">image_w</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"image_size_x"</span><span class="p">,</span> <span class="nf">str</span><span class="p">(</span><span class="mi">640</span><span class="p">))</span>
+<span class="n">image_h</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"image_size_y"</span><span class="p">,</span> <span class="nf">str</span><span class="p">(</span><span class="mi">480</span><span class="p">))</span>
+<span class="n">fov</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"fov"</span><span class="p">,</span> <span class="nf">float</span><span class="p">(</span><span class="mf">110.0</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="3-image-projection">3. Image Projection</h2>
+<p>시뮬레이션을 진행하며 3D 포인트로 이루어진 객체를 2D 평면으로 투영하는 과정을 거쳐야 합니다.<br />
+이러한 과정을 <b>image projection</b>이라 합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">build_projection_matrix</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">fov</span><span class="p">):</span>
+  <span class="n">focal</span> <span class="o">=</span> <span class="n">w</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">tan</span><span class="p">(</span><span class="n">fov</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">360.0</span><span class="p">))</span>
+  <span class="n">K</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">identity</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+  <span class="n">K</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">K</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">focal</span>           <span class="c1"># focal length
+</span>  <span class="n">K</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span> <span class="o">/</span> <span class="mf">2.0</span>                   <span class="c1"># principal point
+</span>  <span class="n">K</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">h</span> <span class="o">/</span> <span class="mf">2.0</span>                   <span class="c1"># principal point
+</span>  <span class="k">return</span> <span class="n">K</span>
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">Focal Length</code>는 normalized scale에서 pixel scale로 변환 할 수 있도록 해줍니다.<br />
+<code class="language-plaintext highlighter-rouge">Principal point</code>는 중앙 픽셀의 값입니다. 각각 <code class="language-plaintext highlighter-rouge">K[0, 2]</code>는 x축, <code class="language-plaintext highlighter-rouge">K[1, 2]</code>는 y축을 의미합니다.<br />
+<code class="language-plaintext highlighter-rouge">K[2, 2]</code>의 1은 3차원에서 2차원으로 축소하기 위해서 1로 사용합니다.</p>
+
+<p>설정한 image 사이즈 및 시야각과 위에서 정의된 함수 <code class="language-plaintext highlighter-rouge">build_projection_matrix(w, h, fov)</code>를 이용하여 Camera projection matrix를 구하겠습니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">K</span> <span class="o">=</span> <span class="nf">build_projection_matrix</span><span class="p">(</span><span class="n">image_w</span><span class="p">,</span> <span class="n">image_h</span><span class="p">,</span> <span class="n">fov</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="4-좌표-변환">4. 좌표 변환</h2>
+<p>위 <a href="#3-image-projection">Image_Projection</a>에서 구해진 3D 좌표에서 2D 좌표로 변환해야 합니다.<br />
+먼저, <code class="language-plaintext highlighter-rouge">actor.get_transform().get_inverse_matrix()</code> 메소드를 이용하여 3D 좌표를 카메라 좌표로 변환합니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">world_2_camera</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">ego_camera</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="nf">get_inverse_matrix</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_image_point</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">w2c</span><span class="p">):</span>
+  <span class="n">point</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="n">loc</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">loc</span><span class="p">.</span><span class="n">z</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+  <span class="n">point_2d</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">dot</span><span class="p">(</span><span class="n">w2c</span><span class="p">,</span> <span class="n">point</span><span class="p">)</span>
+  <span class="n">point_2d</span> <span class="o">=</span> <span class="p">[</span><span class="n">point_2d</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="o">-</span><span class="n">point_2d</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">point_2d</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+  <span class="n">point_img</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">dot</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">point_2d</span><span class="p">)</span>
+  <span class="n">point_img</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/=</span> <span class="n">point_img</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+  <span class="n">point_img</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/=</span> <span class="n">point_img</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+  <span class="k">return</span> <span class="n">point_img</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">loc</code>는 3차원 좌표로 <code class="language-plaintext highlighter-rouge">carla.Position</code>으로 얻을 수 있습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">point</code>는 <code class="language-plaintext highlighter-rouge">loc</code>로 얻어진 3차원 좌표를 배열로 나타냈습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">point_2d</code>는 3차원 좌표 배열인 <code class="language-plaintext highlighter-rouge">point</code>를 카메라 좌표인 2차원 좌표로 변환했습니다.<br />
+또한 (x, y, z) 좌표를 Unreal 엔진의 좌표 (y, -z, x)로 변환해줍니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">point_img</code>는 image projection matrix 값과 카메라 좌표로 변환된 행렬간의 곱입니다.</li>
+</ul>
+
+<h2 id="5-bounging-box-set">5. Bounging Box Set</h2>
+<p>Carla Simulator에서는 Bounding Box를 사용할 객체 카테고리를 정해줄 수 있습니다.<br />
+<code class="language-plaintext highlighter-rouge">get_level_bbs</code> attribute를 사용하여 Bounding Box 카테고리를 정해줄 수 있습니다.<br />
+Bounding Box를 추출하고자 하는 카테고리는 <code class="language-plaintext highlighter-rouge">carla.CityObjectLabel</code> attribute를 사용하여 정해줍니다.<br />
+카테고리를 추가할 경우 <code class="language-plaintext highlighter-rouge">extend</code> attribute를 사용하여 추가할 수 있습니다.<br />
+여기서는 신호등, 가로등, 차량 카테고리를 사용하도록 하겠습니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bounding_box_set</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">get_level_bbs</span><span class="p">(</span><span class="n">carla</span><span class="p">.</span><span class="n">CityObjectLabel</span><span class="p">.</span><span class="n">TrafficLight</span><span class="p">)</span>
+<span class="n">bounding_box_set</span><span class="p">.</span><span class="nf">extend</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="nf">get_level_bbs</span><span class="p">(</span><span class="n">carla</span><span class="p">.</span><span class="n">CityObjectLabel</span><span class="p">.</span><span class="n">Poles</span><span class="p">))</span>
+<span class="n">bounding_box_set</span><span class="p">.</span><span class="nf">extend</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="nf">get_level_bbs</span><span class="p">(</span><span class="n">carla</span><span class="p">.</span><span class="n">CityObjectLabel</span><span class="p">.</span><span class="n">Vehicles</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>카메라 이미지에 Bounding Box를 가시화하기 위해 아래 순서로 각 포인트대로 나타내줍니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">edges</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+</code></pre></div></div>
+
+<h2 id="6-spawn-other-vehicles">6. Spawn Other Vehicles</h2>
+<p>다른 차량들을 불러오도록 하겠습니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">vehicle_bp</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">bp_lib</span><span class="p">.</span><span class="nf">filter</span><span class="p">(</span><span class="s">'vehicle'</span><span class="p">))</span>
+    <span class="n">npc</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">try_spawn_actor</span><span class="p">(</span><span class="n">vehicle_bp</span><span class="p">,</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">spawn_points</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">npc</span><span class="p">:</span>
+        <span class="n">npc</span><span class="p">.</span><span class="nf">set_autopilot</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">actor_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">npc</span><span class="p">)</span>
+</code></pre></div></div>
+<p>타겟 차량들은 맵 내의 <code class="language-plaintext highlighter-rouge">spawn_points</code> 만큼 배치를 할 수 있지만, 랜덤으로 배치를 하도록 했기 때문에 차량간 배치 지점이 동일하여 충돌이 일어나는 현상이 있습니다.<br />
+이를 방지하기 위해 10개의 <code class="language-plaintext highlighter-rouge">spawn_points</code>만을 사용하도록 하겠습니다.</p>
+
+<h2 id="7-객체에-bounding-box-적용">7. 객체에 Bounding Box 적용</h2>
+<p>첫 번째로 queue로 되어 있는 카메라 이미지 데이터를 <code class="language-plaintext highlighter-rouge">image = image_queue.get()</code> 메소드를 이용하여 가져옵니다.<br />
+queue 데이터로 이루어진 이미지 데이터를 이미지 출력 사이즈에 맞게 <code class="language-plaintext highlighter-rouge">img = np.reshape(np.copy(image.raw_data), (image.height, image.width, 4))</code> 메소드를 이용하여 변환해줍니다.<br />
+3차원으로 되어있는 이미지 데이터를 <code class="language-plaintext highlighter-rouge">actor.get_transform().get_inverse_matrix()</code> 메소드를 사용하여 평면 (2차원)인 카메라 좌표로 변환해줍니다.</p>
+
+<p>에고 차량과 50m 내의 차량에 대해서만 Bounding Box를 쳐보도록 하겠습니다.<br />
+주변 차량과의 거리를 계산하기 위해 주변 차량의 위치 <code class="language-plaintext highlighter-rouge">npc.get_transform().location</code> 및 에고 차량의 위치 <code class="language-plaintext highlighter-rouge">vehicle.get_transform().location</code> 메소드를 이용하여 각 차량의 좌표를 얻을 수 있습니다.</p>
+
+<p>에고 차량과 주변 차량의 거리를 나타내는 메소드는 다음과 같습니다.<br />
+<code class="language-plaintext highlighter-rouge">dist = npc.get_transform().location.distance(vehicle.get_transform().location)</code>
+이렇게 얻어진 상대 거리가 50m 이내에 들어오는 주변 차량에 대해서 3D Bounding Box를 쳐줍니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">for</span> <span class="n">npc</span> <span class="ow">in</span> <span class="n">world</span><span class="p">.</span><span class="nf">get_actors</span><span class="p">().</span><span class="nf">filter</span><span class="p">(</span><span class="s">'*vehicle*'</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">npc</span><span class="p">.</span> <span class="nb">id</span> <span class="o">!=</span> <span class="n">vehicle</span><span class="p">.</span><span class="nb">id</span><span class="p">:</span>
+      <span class="n">bb</span> <span class="o">=</span> <span class="n">npc</span><span class="p">.</span><span class="n">bounding_box</span>
+      <span class="n">dist</span> <span class="o">=</span> <span class="n">npc</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="n">location</span><span class="p">.</span><span class="nf">distance</span><span class="p">(</span><span class="n">vehicle</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="n">location</span><span class="p">)</span>
+
+      <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="n">forward_vec</span> <span class="o">=</span> <span class="n">vehicle</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="nf">get_forward_vector</span><span class="p">()</span>
+        <span class="n">ray</span> <span class="o">=</span> <span class="n">npc</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="n">location</span> <span class="o">-</span> <span class="n">vehicle</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="n">location</span>
+
+        <span class="k">if</span> <span class="n">forward_vec</span><span class="p">.</span><span class="nf">dot</span><span class="p">(</span><span class="n">ray</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+          <span class="n">p1</span> <span class="o">=</span> <span class="nf">get_image_point</span><span class="p">(</span><span class="n">bb</span><span class="p">.</span><span class="n">location</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">world_2_camera</span><span class="p">)</span>
+          <span class="n">verts</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">bb</span><span class="p">.</span><span class="nf">get_world_vertices</span><span class="p">(</span><span class="n">npc</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">())]</span>
+
+          <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
+            <span class="n">p1</span> <span class="o">=</span> <span class="nf">get_image_point</span><span class="p">(</span><span class="n">verts</span><span class="p">[</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">K</span><span class="p">,</span> <span class="n">world_2_camera</span><span class="p">)</span>
+            <span class="n">p2</span> <span class="o">=</span> <span class="nf">get_image_point</span><span class="p">(</span><span class="n">verts</span><span class="p">[</span><span class="n">edge</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">K</span><span class="p">,</span> <span class="n">world_2_camera</span><span class="p">)</span>
+            <span class="n">cv2</span><span class="p">.</span><span class="nf">line</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nf">int</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">])),</span> <span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nf">int</span><span class="p">(</span><span class="n">p2</span><span class="p">[</span><span class="mi">1</span><span class="p">])),</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+<h2 id="8-전체-코드">8. 전체 코드</h2>
+<script src="https://gist.github.com/jswoo0615/76015e0d4a09e1659758b198ebd6050a.js"></script>
+
+<p>위 autopilot 기능으로 주행하는 차량의 시뮬레이션을 종료하려면 ‘q’ 키를 누르면 종료되게 되어있습니다.<br />
+그리고 다음 시뮬레이션을 위해 <code class="language-plaintext highlighter-rouge">actor_list</code>의 센서, 차량 등을 제거합니다.</p>
+
+<p>출력 결과는 아래 그림과 같이 파란색 3D Bounding Box가 쳐져있음을 확인하실 수 있습니다.<br />
+<img src="../../assets/images/Carla_Simulator/vehicle_3d_bounding_box.png" width="640" height="480" /></p>
+
+<p>다음 포스팅은 데이터셋에 주로 사용되는 2D Bounding Box 및 Pascal VOC 데이터셋 취득 방법에 대해 알아보도록 하겠습니다.<br />
+감사합니다!</p>]]></content><author><name>우준상</name></author><category term="Carla_Simulator" /><category term="Carla" /><summary type="html"><![CDATA[지난 포스트에서는 Carla Simulator Bounding Box 생성에 대한 기본을 알아봤습니다. 이번 시간에는 3D Bounding Box에 대해 포스팅을 진행하도록 하겠습니다. 먼저 지난 Bounding Box 기본 포스트의 내용 중 일부를 가져오겠습니다.]]></summary></entry><entry><title type="html">Carla Simulator 2D Bounding Box</title><link href="http://localhost:4000/carla_simulator/Carla-2D-Bounding-Box/" rel="alternate" type="text/html" title="Carla Simulator 2D Bounding Box" /><published>2023-06-20T00:00:00+09:00</published><updated>2023-06-20T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-2D-Bounding-Box</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-2D-Bounding-Box/"><![CDATA[<p>지난 포스트에서는 Carla Simulator 3D Bounding Box 생성에 대한 기본을 알아봤습니다.  <br />
 이번 시간에는 2D Bounding Box 및 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다.<br />
 먼저 지난 Bounding Box 기본 포스트의 내용 중 일부를 가져오겠습니다.</p>
 <h2 id="1-2d-bounding-box">1. 2D Bounding Box</h2>
@@ -547,211 +798,7 @@ queue 데이터로 이루어진 이미지 데이터를 이미지 출력 사이�
 <img src="../../assets/images/Carla_Simulator/Pascal_VOC_example.png" width="640" height="480" /></p>
 
 <p>이로써 Carla Simulator에서의 Bounding Box 포스팅에 대해 마치도록 하겠습니다.<br />
-감사합니다!</p>]]></content><author><name>우준상</name></author><category term="Carla_Simulator" /><category term="Carla" /><summary type="html"><![CDATA[지난 포스트에서는 Carla Simulator 3D Bounding Box 생성에 대한 기본을 알아봤습니다. 이번 시간에는 2D Bounding Box 및 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다. 먼저 지난 Bounding Box 기본 포스트의 내용 중 일부를 가져오겠습니다. 1. 2D Bounding Box 1.1. 기존 코드 기존 코드와 동일하게 사용합니다. ```python import os import glob import sys import time]]></summary></entry><entry><title type="html">Carla Simulator 3D Bounding Box</title><link href="http://localhost:4000/carla_simulator/Carla-3D-Bounding-Box/" rel="alternate" type="text/html" title="Carla Simulator 3D Bounding Box" /><published>2023-06-20T00:00:00+09:00</published><updated>2023-06-20T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-3D-Bounding-Box</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-3D-Bounding-Box/"><![CDATA[<p>지난 포스트에서는 Carla Simulator Bounding Box 생성에 대한 기본을 알아봤습니다.  <br />
-이번 시간에는 3D Bounding Box에 대해 포스팅을 진행하도록 하겠습니다.<br />
-먼저 지난 Bounding Box 기본 포스트의 내용 중 일부를 가져오겠습니다.</p>
-
-<h2 id="1-기존-코드">1. 기존 코드</h2>
-<p>기존 코드와 동일하게 사용합니다.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
-<span class="kn">import</span> <span class="n">glob</span>
-<span class="kn">import</span> <span class="n">sys</span>
-<span class="kn">import</span> <span class="n">time</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">sys</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">glob</span><span class="p">.</span><span class="nf">glob</span><span class="p">(</span><span class="s">'carla_simulation_root/PythonAPI/carla/dist/carla-*%d.%d-%s.egg'</span> <span class="o">%</span> <span class="p">(</span>
-        <span class="n">sys</span><span class="p">.</span><span class="n">version_info</span><span class="p">.</span><span class="n">major</span><span class="p">,</span>
-        <span class="n">sys</span><span class="p">.</span><span class="n">version_info</span><span class="p">.</span><span class="n">minor</span><span class="p">,</span>
-        <span class="s">'win-amd64'</span> <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">'nt'</span> <span class="k">else</span> <span class="s">'linux-x86_64'</span><span class="p">))[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="k">except</span> <span class="nb">IndexError</span><span class="p">:</span>
-    <span class="k">pass</span>
-
-<span class="kn">import</span> <span class="n">carla</span>
-<span class="kn">import</span> <span class="n">argparse</span>
-<span class="kn">import</span> <span class="n">logging</span>
-
-<span class="kn">from</span> <span class="n">numpy</span> <span class="kn">import</span> <span class="n">random</span>
-
-<span class="kn">import</span> <span class="n">cv2</span>
-
-<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
-
-<span class="kn">import</span> <span class="n">math</span>
-<span class="kn">import</span> <span class="n">queue</span>
-</code></pre></div></div>
-
-<p>이전 포스트와 동일하게 <code class="language-plaintext highlighter-rouge">Client</code>, 맵, 차량 및 센서들을 배치하도록 하겠습니다.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Client 설정
-</span><span class="n">client</span> <span class="o">=</span> <span class="n">carla</span><span class="p">.</span><span class="nc">Client</span><span class="p">(</span><span class="s">'localhost'</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
-<span class="n">client</span><span class="p">.</span><span class="nf">set_timeout</span><span class="p">(</span><span class="mf">20.0</span><span class="p">)</span>
-
-<span class="c1"># 맵 설정
-</span><span class="n">world</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">load_world</span><span class="p">(</span><span class="s">'Town01'</span><span class="p">)</span>
-<span class="n">settings</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">get_settings</span><span class="p">()</span>
-<span class="n">settings</span><span class="p">.</span><span class="n">fixed_delta_seconds</span> <span class="o">=</span> <span class="mf">0.05</span>
-<span class="n">settings</span><span class="p">.</span><span class="n">synchronous_mode</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="n">world</span><span class="p">.</span><span class="nf">apply_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-
-<span class="n">spawn_points</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">get_map</span><span class="p">().</span><span class="nf">get_spawn_points</span><span class="p">()</span>
-
-<span class="c1"># 날씨 설정
-</span><span class="n">weather</span> <span class="o">=</span> <span class="n">carla</span><span class="p">.</span><span class="nc">WeatherParameters</span><span class="p">(</span>
-  <span class="n">cloudiness</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
-  <span class="n">precipitation</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
-  <span class="n">sun_altitude_angle</span> <span class="o">=</span> <span class="mf">110.0</span>
-<span class="p">)</span>
-<span class="n">world</span><span class="p">.</span><span class="nf">set_weather</span><span class="p">(</span><span class="n">weather</span><span class="p">)</span>
-
-<span class="c1"># 에고 차량 설정
-</span><span class="n">ego_vehicle</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="n">vehicle_bp</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="nf">get_blueprint_library</span><span class="p">().</span><span class="nf">filter</span><span class="p">(</span><span class="s">'vehicle'</span><span class="p">))</span>
-
-<span class="n">vehicle_transform</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">spawn_points</span><span class="p">)</span>
-
-<span class="n">ego_vehicle</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">spawn_actor</span><span class="p">(</span><span class="n">vehicle_bp</span><span class="p">,</span> <span class="n">vehicle_transform</span><span class="p">)</span>
-
-<span class="n">ego_vehicle</span><span class="p">.</span><span class="nf">set_autopilot</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">actor_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">ego_vehicle</span><span class="p">)</span>
-
-<span class="c1"># 카메라 설정
-</span><span class="n">ego_camera</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="n">camera_bp</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">get_blueprint_library</span><span class="p">().</span><span class="nf">find</span><span class="p">(</span><span class="s">'sensor.camera.rgb'</span><span class="p">)</span>
-<span class="n">camera_init_trans</span> <span class="o">=</span> <span class="n">carla</span><span class="p">.</span><span class="nc">Transform</span><span class="p">(</span><span class="n">carla</span><span class="p">.</span><span class="nc">Location</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">2.0</span><span class="p">))</span>
-<span class="n">ego_camera</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">spawn_actor</span><span class="p">(</span><span class="n">camera_bp</span><span class="p">,</span> <span class="n">camera_init_trans</span><span class="p">,</span> <span class="n">attach_to</span><span class="o">=</span><span class="n">ego_vehicle</span><span class="p">)</span>
-<span class="n">actor_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">ego_camera</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="2-image-queue">2. Image Queue</h2>
-<p>지난 포스팅의 내용을 바탕으로 맵, 차량, 센서 등을 설정했습니다.<br />
-이어서 시뮬레이션을 진행하며 얻는 카메라 데이터를 <b>queue</b> 형식으로 데이터를 받습니다.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 카메라 데이터를 저장 및 검색하기 위한 queue 생성
-</span><span class="n">image_q</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="nc">Queue</span><span class="p">()</span>
-<span class="n">ego_camera</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="n">image_q</span><span class="p">.</span><span class="n">put</span><span class="p">)</span>
-</code></pre></div></div>
-<p>카메라 데이터 취득 시 image의 사이즈, 시야각을 설정해줍니다.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">image_w</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"image_size_x"</span><span class="p">).</span><span class="nf">as_int</span><span class="p">()</span>
-<span class="n">image_h</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"image_size_y"</span><span class="p">).</span><span class="nf">as_int</span><span class="p">()</span>
-<span class="n">fov</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"fov"</span><span class="p">).</span><span class="nf">as_float</span><span class="p">()</span>
-</code></pre></div></div>
-<p>또한 아래와 같이 image 사이즈, 시야각을 설정해줄 수 있습니다.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">image_w</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"image_size_x"</span><span class="p">,</span> <span class="nf">str</span><span class="p">(</span><span class="mi">640</span><span class="p">))</span>
-<span class="n">image_h</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"image_size_y"</span><span class="p">,</span> <span class="nf">str</span><span class="p">(</span><span class="mi">480</span><span class="p">))</span>
-<span class="n">fov</span> <span class="o">=</span> <span class="n">camera_bp</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">"fov"</span><span class="p">,</span> <span class="nf">float</span><span class="p">(</span><span class="mf">110.0</span><span class="p">))</span>
-</code></pre></div></div>
-
-<h2 id="3-image-projection">3. Image Projection</h2>
-<p>시뮬레이션을 진행하며 3D 포인트로 이루어진 객체를 2D 평면으로 투영하는 과정을 거쳐야 합니다.<br />
-이러한 과정을 <b>image projection</b>이라 합니다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">build_projection_matrix</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">fov</span><span class="p">):</span>
-  <span class="n">focal</span> <span class="o">=</span> <span class="n">w</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">tan</span><span class="p">(</span><span class="n">fov</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">360.0</span><span class="p">))</span>
-  <span class="n">K</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">identity</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-  <span class="n">K</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">K</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">focal</span>           <span class="c1"># focal length
-</span>  <span class="n">K</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span> <span class="o">/</span> <span class="mf">2.0</span>                   <span class="c1"># principal point
-</span>  <span class="n">K</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">h</span> <span class="o">/</span> <span class="mf">2.0</span>                   <span class="c1"># principal point
-</span>  <span class="k">return</span> <span class="n">K</span>
-</code></pre></div></div>
-<p><code class="language-plaintext highlighter-rouge">Focal Length</code>는 normalized scale에서 pixel scale로 변환 할 수 있도록 해줍니다.<br />
-<code class="language-plaintext highlighter-rouge">Principal point</code>는 중앙 픽셀의 값입니다. 각각 <code class="language-plaintext highlighter-rouge">K[0, 2]</code>는 x축, <code class="language-plaintext highlighter-rouge">K[1, 2]</code>는 y축을 의미합니다.<br />
-<code class="language-plaintext highlighter-rouge">K[2, 2]</code>의 1은 3차원에서 2차원으로 축소하기 위해서 1로 사용합니다.</p>
-
-<p>설정한 image 사이즈 및 시야각과 위에서 정의된 함수 <code class="language-plaintext highlighter-rouge">build_projection_matrix(w, h, fov)</code>를 이용하여 Camera projection matrix를 구하겠습니다.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">K</span> <span class="o">=</span> <span class="nf">build_projection_matrix</span><span class="p">(</span><span class="n">image_w</span><span class="p">,</span> <span class="n">image_h</span><span class="p">,</span> <span class="n">fov</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="4-좌표-변환">4. 좌표 변환</h2>
-<p>위 <a href="#3-image-projection">Image_Projection</a>에서 구해진 3D 좌표에서 2D 좌표로 변환해야 합니다.<br />
-먼저, <code class="language-plaintext highlighter-rouge">actor.get_transform().get_inverse_matrix()</code> 메소드를 이용하여 3D 좌표를 카메라 좌표로 변환합니다.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">world_2_camera</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">ego_camera</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="nf">get_inverse_matrix</span><span class="p">())</span>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_image_point</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">w2c</span><span class="p">):</span>
-  <span class="n">point</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="n">loc</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">loc</span><span class="p">.</span><span class="n">z</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-  <span class="n">point_2d</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">dot</span><span class="p">(</span><span class="n">w2c</span><span class="p">,</span> <span class="n">point</span><span class="p">)</span>
-  <span class="n">point_2d</span> <span class="o">=</span> <span class="p">[</span><span class="n">point_2d</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="o">-</span><span class="n">point_2d</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">point_2d</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-  <span class="n">point_img</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">dot</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">point_2d</span><span class="p">)</span>
-  <span class="n">point_img</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/=</span> <span class="n">point_img</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-  <span class="n">point_img</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/=</span> <span class="n">point_img</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-
-  <span class="k">return</span> <span class="n">point_img</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-</code></pre></div></div>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">loc</code>는 3차원 좌표로 <code class="language-plaintext highlighter-rouge">carla.Position</code>으로 얻을 수 있습니다.</li>
-  <li><code class="language-plaintext highlighter-rouge">point</code>는 <code class="language-plaintext highlighter-rouge">loc</code>로 얻어진 3차원 좌표를 배열로 나타냈습니다.</li>
-  <li><code class="language-plaintext highlighter-rouge">point_2d</code>는 3차원 좌표 배열인 <code class="language-plaintext highlighter-rouge">point</code>를 카메라 좌표인 2차원 좌표로 변환했습니다.<br />
-또한 (x, y, z) 좌표를 Unreal 엔진의 좌표 (y, -z, x)로 변환해줍니다.</li>
-  <li><code class="language-plaintext highlighter-rouge">point_img</code>는 image projection matrix 값과 카메라 좌표로 변환된 행렬간의 곱입니다.</li>
-</ul>
-
-<h2 id="5-bounging-box-set">5. Bounging Box Set</h2>
-<p>Carla Simulator에서는 Bounding Box를 사용할 객체 카테고리를 정해줄 수 있습니다.<br />
-<code class="language-plaintext highlighter-rouge">get_level_bbs</code> attribute를 사용하여 Bounding Box 카테고리를 정해줄 수 있습니다.<br />
-Bounding Box를 추출하고자 하는 카테고리는 <code class="language-plaintext highlighter-rouge">carla.CityObjectLabel</code> attribute를 사용하여 정해줍니다.<br />
-카테고리를 추가할 경우 <code class="language-plaintext highlighter-rouge">extend</code> attribute를 사용하여 추가할 수 있습니다.<br />
-여기서는 신호등, 가로등, 차량 카테고리를 사용하도록 하겠습니다.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bounding_box_set</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">get_level_bbs</span><span class="p">(</span><span class="n">carla</span><span class="p">.</span><span class="n">CityObjectLabel</span><span class="p">.</span><span class="n">TrafficLight</span><span class="p">)</span>
-<span class="n">bounding_box_set</span><span class="p">.</span><span class="nf">extend</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="nf">get_level_bbs</span><span class="p">(</span><span class="n">carla</span><span class="p">.</span><span class="n">CityObjectLabel</span><span class="p">.</span><span class="n">Poles</span><span class="p">))</span>
-<span class="n">bounding_box_set</span><span class="p">.</span><span class="nf">extend</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="nf">get_level_bbs</span><span class="p">(</span><span class="n">carla</span><span class="p">.</span><span class="n">CityObjectLabel</span><span class="p">.</span><span class="n">Vehicles</span><span class="p">))</span>
-</code></pre></div></div>
-
-<p>카메라 이미지에 Bounding Box를 가시화하기 위해 아래 순서로 각 포인트대로 나타내줍니다.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">edges</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
-</code></pre></div></div>
-
-<h2 id="6-spawn-other-vehicles">6. Spawn Other Vehicles</h2>
-<p>다른 차량들을 불러오도록 하겠습니다.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">vehicle_bp</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">bp_lib</span><span class="p">.</span><span class="nf">filter</span><span class="p">(</span><span class="s">'vehicle'</span><span class="p">))</span>
-    <span class="n">npc</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="nf">try_spawn_actor</span><span class="p">(</span><span class="n">vehicle_bp</span><span class="p">,</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">spawn_points</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">npc</span><span class="p">:</span>
-        <span class="n">npc</span><span class="p">.</span><span class="nf">set_autopilot</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">actor_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">npc</span><span class="p">)</span>
-</code></pre></div></div>
-<p>타겟 차량들은 맵 내의 <code class="language-plaintext highlighter-rouge">spawn_points</code> 만큼 배치를 할 수 있지만, 랜덤으로 배치를 하도록 했기 때문에 차량간 배치 지점이 동일하여 충돌이 일어나는 현상이 있습니다.<br />
-이를 방지하기 위해 10개의 <code class="language-plaintext highlighter-rouge">spawn_points</code>만을 사용하도록 하겠습니다.</p>
-
-<h2 id="7-객체에-bounding-box-적용">7. 객체에 Bounding Box 적용</h2>
-<p>첫 번째로 queue로 되어 있는 카메라 이미지 데이터를 <code class="language-plaintext highlighter-rouge">image = image_queue.get()</code> 메소드를 이용하여 가져옵니다.<br />
-queue 데이터로 이루어진 이미지 데이터를 이미지 출력 사이즈에 맞게 <code class="language-plaintext highlighter-rouge">img = np.reshape(np.copy(image.raw_data), (image.height, image.width, 4))</code> 메소드를 이용하여 변환해줍니다.<br />
-3차원으로 되어있는 이미지 데이터를 <code class="language-plaintext highlighter-rouge">actor.get_transform().get_inverse_matrix()</code> 메소드를 사용하여 평면 (2차원)인 카메라 좌표로 변환해줍니다.</p>
-
-<p>에고 차량과 50m 내의 차량에 대해서만 Bounding Box를 쳐보도록 하겠습니다.<br />
-주변 차량과의 거리를 계산하기 위해 주변 차량의 위치 <code class="language-plaintext highlighter-rouge">npc.get_transform().location</code> 및 에고 차량의 위치 <code class="language-plaintext highlighter-rouge">vehicle.get_transform().location</code> 메소드를 이용하여 각 차량의 좌표를 얻을 수 있습니다.</p>
-
-<p>에고 차량과 주변 차량의 거리를 나타내는 메소드는 다음과 같습니다.<br />
-<code class="language-plaintext highlighter-rouge">dist = npc.get_transform().location.distance(vehicle.get_transform().location)</code>
-이렇게 얻어진 상대 거리가 50m 이내에 들어오는 주변 차량에 대해서 3D Bounding Box를 쳐줍니다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">for</span> <span class="n">npc</span> <span class="ow">in</span> <span class="n">world</span><span class="p">.</span><span class="nf">get_actors</span><span class="p">().</span><span class="nf">filter</span><span class="p">(</span><span class="s">'*vehicle*'</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">npc</span><span class="p">.</span> <span class="nb">id</span> <span class="o">!=</span> <span class="n">vehicle</span><span class="p">.</span><span class="nb">id</span><span class="p">:</span>
-      <span class="n">bb</span> <span class="o">=</span> <span class="n">npc</span><span class="p">.</span><span class="n">bounding_box</span>
-      <span class="n">dist</span> <span class="o">=</span> <span class="n">npc</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="n">location</span><span class="p">.</span><span class="nf">distance</span><span class="p">(</span><span class="n">vehicle</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="n">location</span><span class="p">)</span>
-
-      <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
-        <span class="n">forward_vec</span> <span class="o">=</span> <span class="n">vehicle</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="nf">get_forward_vector</span><span class="p">()</span>
-        <span class="n">ray</span> <span class="o">=</span> <span class="n">npc</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="n">location</span> <span class="o">-</span> <span class="n">vehicle</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">().</span><span class="n">location</span>
-
-        <span class="k">if</span> <span class="n">forward_vec</span><span class="p">.</span><span class="nf">dot</span><span class="p">(</span><span class="n">ray</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-          <span class="n">p1</span> <span class="o">=</span> <span class="nf">get_image_point</span><span class="p">(</span><span class="n">bb</span><span class="p">.</span><span class="n">location</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">world_2_camera</span><span class="p">)</span>
-          <span class="n">verts</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">bb</span><span class="p">.</span><span class="nf">get_world_vertices</span><span class="p">(</span><span class="n">npc</span><span class="p">.</span><span class="nf">get_transform</span><span class="p">())]</span>
-
-          <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
-            <span class="n">p1</span> <span class="o">=</span> <span class="nf">get_image_point</span><span class="p">(</span><span class="n">verts</span><span class="p">[</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">K</span><span class="p">,</span> <span class="n">world_2_camera</span><span class="p">)</span>
-            <span class="n">p2</span> <span class="o">=</span> <span class="nf">get_image_point</span><span class="p">(</span><span class="n">verts</span><span class="p">[</span><span class="n">edge</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">K</span><span class="p">,</span> <span class="n">world_2_camera</span><span class="p">)</span>
-            <span class="n">cv2</span><span class="p">.</span><span class="nf">line</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nf">int</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">])),</span> <span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nf">int</span><span class="p">(</span><span class="n">p2</span><span class="p">[</span><span class="mi">1</span><span class="p">])),</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></div></div>
-<h2 id="8-전체-코드">8. 전체 코드</h2>
-<script src="https://gist.github.com/jswoo0615/76015e0d4a09e1659758b198ebd6050a.js"></script>
-
-<p>위 autopilot 기능으로 주행하는 차량의 시뮬레이션을 종료하려면 ‘q’ 키를 누르면 종료되게 되어있습니다.<br />
-그리고 다음 시뮬레이션을 위해 <code class="language-plaintext highlighter-rouge">actor_list</code>의 센서, 차량 등을 제거합니다.</p>
-
-<p>출력 결과는 아래 그림과 같이 파란색 3D Bounding Box가 쳐져있음을 확인하실 수 있습니다.<br />
-<img src="../../assets/images/Carla_Simulator/vehicle_3d_bounding_box.png" width="640" height="480" /></p>
-
-<p>다음 포스팅은 데이터셋에 주로 사용되는 2D Bounding Box 및 Pascal VOC 데이터셋 취득 방법에 대해 알아보도록 하겠습니다.<br />
-감사합니다!</p>]]></content><author><name>우준상</name></author><category term="Carla_Simulator" /><category term="Carla" /><summary type="html"><![CDATA[지난 포스트에서는 Carla Simulator Bounding Box 생성에 대한 기본을 알아봤습니다. 이번 시간에는 3D Bounding Box에 대해 포스팅을 진행하도록 하겠습니다. 먼저 지난 Bounding Box 기본 포스트의 내용 중 일부를 가져오겠습니다.]]></summary></entry><entry><title type="html">Carla Simulator Bounding Box 기본</title><link href="http://localhost:4000/carla_simulator/Carla-Bounding-Box/" rel="alternate" type="text/html" title="Carla Simulator Bounding Box 기본" /><published>2023-06-19T00:00:00+09:00</published><updated>2023-06-19T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-Bounding-Box</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-Bounding-Box/"><![CDATA[<p>지난 포스트에서는 Carla Simulator에서 맵 선택, 차량, 센서 설정 등에 대해 알아봤었습니다.<br />
+감사합니다!</p>]]></content><author><name>우준상</name></author><category term="Carla_Simulator" /><category term="Carla" /><summary type="html"><![CDATA[지난 포스트에서는 Carla Simulator 3D Bounding Box 생성에 대한 기본을 알아봤습니다. 이번 시간에는 2D Bounding Box 및 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다. 먼저 지난 Bounding Box 기본 포스트의 내용 중 일부를 가져오겠습니다. 1. 2D Bounding Box 1.1. 기존 코드 기존 코드와 동일하게 사용합니다. ```python import os import glob import sys import time]]></summary></entry><entry><title type="html">Carla Simulator Bounding Box 기본</title><link href="http://localhost:4000/carla_simulator/Carla-Bounding-Box/" rel="alternate" type="text/html" title="Carla Simulator Bounding Box 기본" /><published>2023-06-19T00:00:00+09:00</published><updated>2023-06-19T00:00:00+09:00</updated><id>http://localhost:4000/carla_simulator/Carla-Bounding-Box</id><content type="html" xml:base="http://localhost:4000/carla_simulator/Carla-Bounding-Box/"><![CDATA[<p>지난 포스트에서는 Carla Simulator에서 맵 선택, 차량, 센서 설정 등에 대해 알아봤었습니다.<br />
 이번 시간에는 2D / 3D Bounding Box와 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다.</p>
 
 <h2 id="1-기존-코드">1. 기존 코드</h2>
@@ -1598,37 +1645,4 @@ Carla Simulator의 Radar 센서는 흰색, 적색, 청색 점으로 debug를 합
 <h2 id="6-전체-코드">6. 전체 코드</h2>
 <script src="https://gist.github.com/jswoo0615/577349a1681352dd08f12584a5768e56.js"></script>
 
-<p>다음 포스트는 Bounding Box 및 Pascal VOC 데이터셋 취득 방법에 대해 알아보도록 하겠습니다.</p>]]></content><author><name>우준상</name></author><category term="Carla_Simulator" /><category term="Carla" /><summary type="html"><![CDATA[이번 포스트에서는 Carla Simulator의 기본 사용 방법에 대해 알아보도록 하겠습니다.]]></summary></entry><entry><title type="html">[C++] std::memory</title><link href="http://localhost:4000/c++_study/std-memory/" rel="alternate" type="text/html" title="[C++] std::memory" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/c++_study/std-memory</id><content type="html" xml:base="http://localhost:4000/c++_study/std-memory/"><![CDATA[<p>https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170</p>]]></content><author><name>우준상</name></author><category term="C++_Study" /><category term="C++" /><summary type="html"><![CDATA[https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170]]></summary></entry><entry><title type="html">[C++] std::functional</title><link href="http://localhost:4000/c++_study/std-functional/" rel="alternate" type="text/html" title="[C++] std::functional" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/c++_study/std-functional</id><content type="html" xml:base="http://localhost:4000/c++_study/std-functional/"><![CDATA[<p>https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)</p>]]></content><author><name>우준상</name></author><category term="C++_Study" /><category term="C++" /><summary type="html"><![CDATA[https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)]]></summary></entry><entry><title type="html">multipass를 이용한 우분투 가상환경 생성</title><link href="http://localhost:4000/etc/multipass-how-to-use/" rel="alternate" type="text/html" title="multipass를 이용한 우분투 가상환경 생성" /><published>2023-04-23T00:00:00+09:00</published><updated>2023-04-23T00:00:00+09:00</updated><id>http://localhost:4000/etc/multipass-how-to-use</id><content type="html" xml:base="http://localhost:4000/etc/multipass-how-to-use/"><![CDATA[<p>multipass를 이용한 가상환경 생성을 위해 아래와 같이 명령어를 입력합니다.<br />
-<code class="language-plaintext highlighter-rouge">multipass launch --cpus &lt;cpu 사용 갯수&gt; --disk &lt;용량&gt;G --mem 4GB --name ubuntu1804 &lt;우분투 버전&gt;</code></p>
-
-<h2 id="visual-studio-code에서-가상환경-사용하기-ssh">Visual Studio Code에서 가상환경 사용하기 (ssh)</h2>
-<p>가상환경으로 생성한 우분투의 터미널에서 ssh 접속을 위한 비밀번호 설정을 해줍니다.
-<code class="language-plaintext highlighter-rouge">sudo passwd root</code>, <code class="language-plaintext highlighter-rouge">sudo passwd &lt;user_name&gt;</code>를 이용하여 비밀번호를 설정해줍니다.</p>
-
-<p>그 후 ifconfig를 이용하기 위해 <code class="language-plaintext highlighter-rouge">sudo apt install net-tools</code> 명령어를 이용해서 설치해줍니다.</p>
-
-<p>설치 후 <code class="language-plaintext highlighter-rouge">ifconfig</code> 명령어를 이용하여 가상환경의 ip 주소를 확인할 수 있습니다.</p>
-
-<p>다음 과정으로 <code class="language-plaintext highlighter-rouge">sudo apt install openssh-server</code>를 설치해줍니다.</p>
-
-<p>설치 후 <code class="language-plaintext highlighter-rouge">sudo vi /etc/ssh/sshd_config</code> 파일을 열고 일부를 수정해줍니다.</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Authentication:</span>
-PermitRootLogin <span class="nb">yes
-
-</span>PubkeyAuthenication <span class="nb">yes
-
-</span>PasswordAuthentication <span class="nb">yes
-
-</span>kbdInteractiveAuthentication no
-
-<span class="c"># GSSAPI options</span>
-GSSAPIAuthentication <span class="nb">yes
-</span>GSSAPICleanupCredentials no
-
-UsePAM <span class="nb">yes
-
-</span>X11Forwarding <span class="nb">yes</span>
-</code></pre></div></div>
-
-<p>수정 후 반드시 sshd 서비스를 재실행 해줍니다.
-<code class="language-plaintext highlighter-rouge">sudo systemctl restart sshd</code></p>]]></content><author><name>우준상</name></author><category term="etc" /><category term="가상환경" /><summary type="html"><![CDATA[multipass를 이용한 가상환경 생성을 위해 아래와 같이 명령어를 입력합니다. multipass launch --cpus &lt;cpu 사용 갯수&gt; --disk &lt;용량&gt;G --mem 4GB --name ubuntu1804 &lt;우분투 버전&gt;]]></summary></entry></feed>
+<p>다음 포스트는 Bounding Box 및 Pascal VOC 데이터셋 취득 방법에 대해 알아보도록 하겠습니다.</p>]]></content><author><name>우준상</name></author><category term="Carla_Simulator" /><category term="Carla" /><summary type="html"><![CDATA[이번 포스트에서는 Carla Simulator의 기본 사용 방법에 대해 알아보도록 하겠습니다.]]></summary></entry><entry><title type="html">[C++] std::memory</title><link href="http://localhost:4000/c++_study/std-memory/" rel="alternate" type="text/html" title="[C++] std::memory" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/c++_study/std-memory</id><content type="html" xml:base="http://localhost:4000/c++_study/std-memory/"><![CDATA[<p>https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170</p>]]></content><author><name>우준상</name></author><category term="C++_Study" /><category term="C++" /><summary type="html"><![CDATA[https://learn.microsoft.com/ko-kr/cpp/standard-library/shared-ptr-class?view=msvc-170]]></summary></entry><entry><title type="html">[C++] std::functional</title><link href="http://localhost:4000/c++_study/std-functional/" rel="alternate" type="text/html" title="[C++] std::functional" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/c++_study/std-functional</id><content type="html" xml:base="http://localhost:4000/c++_study/std-functional/"><![CDATA[<p>https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)</p>]]></content><author><name>우준상</name></author><category term="C++_Study" /><category term="C++" /><summary type="html"><![CDATA[https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)]]></summary></entry></feed>

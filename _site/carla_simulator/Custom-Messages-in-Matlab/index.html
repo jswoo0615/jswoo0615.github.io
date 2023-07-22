@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[C++] std::functional | 배워서 남주기</title>
-<meta name="description" content="https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)">
+<!-- begin _includes/seo.html --><title>Matlab에 Carla Simulator ROS 사용자 지정 메시지 연동하기 | 배워서 남주기</title>
+<meta name="description" content="이번 포스트에서는 Matlab ROS Toolbox에 ROS 커스텀 메시지를 연동시키는 방법에 대해 적어보려합니다.  1. ROS 사용자 지정 메시지 빌드 MATLAB ROS Toolbox에 있는 메시지 이외의 커스텀 메시지를 사용하고자 할 때 매트랩의 커맨드 창에 커스텀 메시지 경로를 지정해줍니다. 저는 autoware의 메시지와 연동하는 것을 예시로 하겠습니다. folderpath = &quot;/home/USER/autoware.ai.openplanner/install/autoware_msgs/share&quot;  커스텀 메시지를 MATLAB ROS Toolbox에서 사용할 수 있도록 rosgenmsg 명령어를 이용하여 메시지를 빌드합니다. rosgenmsg(folderpath)">
 
 
   <meta name="author" content="우준상">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="배워서 남주기">
-<meta property="og:title" content="[C++] std::functional">
-<meta property="og:url" content="http://localhost:4000/c++_study/std-functional/">
+<meta property="og:title" content="Matlab에 Carla Simulator ROS 사용자 지정 메시지 연동하기">
+<meta property="og:url" content="http://localhost:4000/carla_simulator/Custom-Messages-in-Matlab/">
 
 
-  <meta property="og:description" content="https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-04-28T00:00:00+09:00">
+  <meta property="og:description" content="이번 포스트에서는 Matlab ROS Toolbox에 ROS 커스텀 메시지를 연동시키는 방법에 대해 적어보려합니다.  1. ROS 사용자 지정 메시지 빌드 MATLAB ROS Toolbox에 있는 메시지 이외의 커스텀 메시지를 사용하고자 할 때 매트랩의 커맨드 창에 커스텀 메시지 경로를 지정해줍니다. 저는 autoware의 메시지와 연동하는 것을 예시로 하겠습니다. folderpath = &quot;/home/USER/autoware.ai.openplanner/install/autoware_msgs/share&quot;  커스텀 메시지를 MATLAB ROS Toolbox에서 사용할 수 있도록 rosgenmsg 명령어를 이용하여 메시지를 빌드합니다. rosgenmsg(folderpath)">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2023-06-23T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/c++_study/std-functional/">
+
+<link rel="canonical" href="http://localhost:4000/carla_simulator/Custom-Messages-in-Matlab/">
 
 
 
@@ -162,7 +162,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#c++_study" itemprop="item"><span itemprop="name">C++_study</span></a>
+          <a href="/categories/#carla_simulator" itemprop="item"><span itemprop="name">Carla_simulator</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -170,7 +170,7 @@
     
       
       
-        <li class="current">[C++] std::functional</li>
+        <li class="current">Matlab에 Carla Simulator ROS 사용자 지정 메시지 연동하기</li>
       
     
   </ol>
@@ -345,16 +345,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[C++] std::functional">
-    <meta itemprop="description" content="https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)">
-    <meta itemprop="datePublished" content="2023-04-28T00:00:00+09:00">
+    <meta itemprop="headline" content="Matlab에 Carla Simulator ROS 사용자 지정 메시지 연동하기">
+    <meta itemprop="description" content="이번 포스트에서는 Matlab ROS Toolbox에 ROS 커스텀 메시지를 연동시키는 방법에 대해 적어보려합니다.1. ROS 사용자 지정 메시지 빌드MATLAB ROS Toolbox에 있는 메시지 이외의 커스텀 메시지를 사용하고자 할 때 매트랩의 커맨드 창에 커스텀 메시지 경로를 지정해줍니다.저는 autoware의 메시지와 연동하는 것을 예시로 하겠습니다.folderpath = &quot;/home/USER/autoware.ai.openplanner/install/autoware_msgs/share&quot;커스텀 메시지를 MATLAB ROS Toolbox에서 사용할 수 있도록 rosgenmsg 명령어를 이용하여 메시지를 빌드합니다.rosgenmsg(folderpath)">
+    <meta itemprop="datePublished" content="2023-06-23T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/c++_study/std-functional/" class="u-url" itemprop="url">[C++] std::functional
+            <a href="http://localhost:4000/carla_simulator/Custom-Messages-in-Matlab/" class="u-url" itemprop="url">Matlab에 Carla Simulator ROS 사용자 지정 메시지 연동하기
 </a>
           </h1>
           
@@ -365,7 +365,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2023-04-28T00:00:00+09:00">April 28, 2023</time>
+        <time datetime="2023-06-23T00:00:00+09:00">June 23, 2023</time>
       </span>
     
 
@@ -378,7 +378,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          1 분 소요
         
       </span>
     
@@ -393,12 +393,59 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              
+              <ul class="toc__menu"><li><a href="#1-ros-사용자-지정-메시지-빌드">1. ROS 사용자 지정 메시지 빌드</a></li><li><a href="#2-메시지-빌드-결과">2. 메시지 빌드 결과</a></li><li><a href="#3-발생-가능-문제">3. 발생 가능 문제</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>https://chipmaker.tistory.com/entry/stdfunction-%EC%A0%95%EB%A6%AC (내용 참고하여 정리!)</p>
+        <p>이번 포스트에서는 Matlab ROS Toolbox에 ROS 커스텀 메시지를 연동시키는 방법에 대해 적어보려합니다.</p>
+
+<h1 id="1-ros-사용자-지정-메시지-빌드">1. ROS 사용자 지정 메시지 빌드</h1>
+<p>MATLAB ROS Toolbox에 있는 메시지 이외의 커스텀 메시지를 사용하고자 할 때 매트랩의 커맨드 창에 커스텀 메시지 경로를 지정해줍니다.<br />
+저는 autoware의 메시지와 연동하는 것을 예시로 하겠습니다.<br />
+<code class="language-plaintext highlighter-rouge">folderpath = "/home/USER/autoware.ai.openplanner/install/autoware_msgs/share"</code></p>
+
+<p>커스텀 메시지를 MATLAB ROS Toolbox에서 사용할 수 있도록 <code class="language-plaintext highlighter-rouge">rosgenmsg</code> 명령어를 이용하여 메시지를 빌드합니다.<br />
+<code class="language-plaintext highlighter-rouge">rosgenmsg(folderpath)</code></p>
+
+<p>아래 그림은 커스텀 메시지를 Matlab ROS Toolbox에 빌드하는 과정을 나타낸 그림입니다.<br />
+<img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs1.png" /></p>
+
+<h1 id="2-메시지-빌드-결과">2. 메시지 빌드 결과</h1>
+<p>빌드 후 커스텀 메시지가 제대로 빌드되었는지 확인해보겠습니다.<br />
+매트랩 커맨드 창에 아래와 같이 입력 및 실행했습니다.<br />
+<code class="language-plaintext highlighter-rouge">data = rosmesage("autoware_msgs/VehicleCmd", "DataFormat", "struct")</code></p>
+
+<p><img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs2.png" /> 
+위 사진은 MATLAB에서 실행한 결과입니다.</p>
+
+<p>아래 사진으로 Simulink에 커스텀 메시지가 제대로 적용되었음을 확인할 수 있습니다.<br />
+<img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs3.png" /></p>
+
+<h1 id="3-발생-가능-문제">3. 발생 가능 문제</h1>
+<p>Matlab ROS Toolbox 커스텀 메시지 빌드를 하며 겪었던 문제들에 대해 해결했던 방법을 적어보려합니다.</p>
+<ul>
+  <li>
+    <p><b>CMake 3.15.5</b> 이상의 버전이 설치되어 있어야 합니다.</p>
+  </li>
+  <li>
+    <p><b>경로가 잘못되었다 하는 경우</b><br />
+커스텀 메시지 빌드를 진행하면서 처음에는 사용하고자 하는 메시지들만 있는 폴더를 선택했었습니다.<br />
+하지만 아래 그림과 같이 에러가 발생했습니다.<br />
+<img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs4.png" /> 
+빌드하고자 하는 메시지 경로를 메시지 패키지 단위로 경로를 수정 후 커스텀 메시지 빌드를 진행했습니다.</p>
+  </li>
+  <li>
+    <p><b>jsk_recognition_msgs 누락</b><br />
+커스텀하고자 하는 메시지 경로 수정 후 다시 빌드를 진행하던 도중, 아래와 같은 에러가 발생했었습니다.<br />
+<img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs5.png" /><br />
+로그를 확인하니, <code class="language-plaintext highlighter-rouge">jsk_recognition_msgs</code>가 없어서 생긴 에러였습니다.<br />
+jsk_recongition_msgs 패키지를 다운받고 커스텀 메시지 패키지 폴더에 붙여넣습니다. <br />
+<img src="../../../assets/images/Carla_Simulator/MATLAB_ROS_Msgs6.png" width="640" height="480" /></p>
+  </li>
+</ul>
+
+<p>이렇게 매트랩의 ROS Toolbox에 커스텀 메시지를 적용하는 방법에 대한 포스팅을 마치겠습니다.</p>
 
         
       </section>
@@ -415,7 +462,13 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#c" class="page__taxonomy-item p-category" rel="tag">C++</a>
+      <a href="/tags/#carla-simulator" class="page__taxonomy-item p-category" rel="tag">Carla_Simulator</a><span class="sep">, </span>
+    
+      <a href="/tags/#custom-message" class="page__taxonomy-item p-category" rel="tag">Custom_message</a><span class="sep">, </span>
+    
+      <a href="/tags/#matlab" class="page__taxonomy-item p-category" rel="tag">MATLAB</a><span class="sep">, </span>
+    
+      <a href="/tags/#ros-bridge" class="page__taxonomy-item p-category" rel="tag">ROS_Bridge</a>
     
     </span>
   </p>
@@ -432,7 +485,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#c-study" class="page__taxonomy-item p-category" rel="tag">C++_Study</a>
+      <a href="/categories/#carla-simulator" class="page__taxonomy-item p-category" rel="tag">Carla_Simulator</a>
     
     </span>
   </p>
@@ -440,7 +493,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-04-28T00:00:00+09:00">April 28, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-06-23T00:00:00+09:00">June 23, 2023</time></p>
 
       </footer>
 
@@ -449,22 +502,22 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BC%2B%2B%5D+std%3A%3Afunctional%20http%3A%2F%2Flocalhost%3A4000%2Fc%2B%2B_study%2Fstd-functional%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Matlab%EC%97%90+Carla+Simulator+ROS+%EC%82%AC%EC%9A%A9%EC%9E%90+%EC%A7%80%EC%A0%95+%EB%A9%94%EC%8B%9C%EC%A7%80+%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fcarla_simulator%2FCustom-Messages-in-Matlab%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fc%2B%2B_study%2Fstd-functional%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fcarla_simulator%2FCustom-Messages-in-Matlab%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fc%2B%2B_study%2Fstd-functional%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcarla_simulator%2FCustom-Messages-in-Matlab%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/etc/multipass-how-to-use/" class="pagination--pager" title="multipass를 이용한 우분투 가상환경 생성
+      <a href="/carla_simulator/Carla-ROS-Bridge/" class="pagination--pager" title="Carla Simulator ROS Bridge 설치
 ">이전</a>
     
     
-      <a href="/c++_study/std-memory/" class="pagination--pager" title="[C++] std::memory
+      <a href="/ros/Localization-Using-Nav2-Slam-toolbox/" class="pagination--pager" title="Slam Toolbox를 이용한 맵 생성
 ">다음</a>
     
   </nav>
@@ -524,55 +577,6 @@
     <p class="archive__item-excerpt" itemprop="description">안녕하세요~ 이번 포스팅에서는 Nav2와 Slam Toolbox를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다.
 Turtlebot3 패키지를 이용하여 시뮬레이션을 진행할 예정입니다.
 </p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/carla_simulator/Custom-Messages-in-Matlab/" rel="permalink">Matlab에 Carla Simulator ROS 사용자 지정 메시지 연동하기
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2023-06-23T00:00:00+09:00">June 23, 2023</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">이번 포스트에서는 Matlab ROS Toolbox에 ROS 커스텀 메시지를 연동시키는 방법에 대해 적어보려합니다.
-
-1. ROS 사용자 지정 메시지 빌드
-MATLAB ROS Toolbox에 있는 메시지 이외의 커스텀 메시지를 사용하고자 할 때 매트랩의 커맨드 창에 커스텀 메시지 ...</p>
   </article>
 </div>
 
@@ -675,6 +679,54 @@ Carla ...</p>
 </div>
 
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/carla_simulator/Carla-2D-Bounding-Box/" rel="permalink">Carla Simulator 2D Bounding Box
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-06-20T00:00:00+09:00">June 20, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">지난 포스트에서는 Carla Simulator 3D Bounding Box 생성에 대한 기본을 알아봤습니다.  
+이번 시간에는 2D Bounding Box 및 Pascal VOC 데이터 셋 수집에 대해 포스팅을 진행하도록 하겠습니다.
+먼저 지난 Bounding Box 기본 포스트의...</p>
+  </article>
+</div>
+
+        
       </div>
     </div>
   
@@ -731,8 +783,8 @@ Carla ...</p>
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/c++_study/std-functional/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/c++_study/std-functional"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/carla_simulator/Custom-Messages-in-Matlab/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/carla_simulator/Custom-Messages-in-Matlab"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

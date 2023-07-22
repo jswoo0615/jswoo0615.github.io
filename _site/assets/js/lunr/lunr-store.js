@@ -101,6 +101,12 @@ var store = [{
         "url": "/carla_simulator/Carla-ROS-Bridge/",
         "teaser": null
       },{
+        "title": "Matlab에 Carla Simulator ROS 사용자 지정 메시지 연동하기",
+        "excerpt":"이번 포스트에서는 Matlab ROS Toolbox에 ROS 커스텀 메시지를 연동시키는 방법에 대해 적어보려합니다. 1. ROS 사용자 지정 메시지 빌드 MATLAB ROS Toolbox에 있는 메시지 이외의 커스텀 메시지를 사용하고자 할 때 매트랩의 커맨드 창에 커스텀 메시지 경로를 지정해줍니다. 저는 autoware의 메시지와 연동하는 것을 예시로 하겠습니다. folderpath = \"/home/USER/autoware.ai.openplanner/install/autoware_msgs/share\" 커스텀 메시지를 MATLAB ROS...","categories": ["Carla_Simulator"],
+        "tags": ["Carla_Simulator","ROS_Bridge","MATLAB","Custom_message"],
+        "url": "/carla_simulator/Custom-Messages-in-Matlab/",
+        "teaser": null
+      },{
         "title": "Slam Toolbox를 이용한 맵 생성",
         "excerpt":"안녕하세요~ 이번 포스팅에서는 Nav2와 Slam Toolbox를 이용한 맵 생성에 대해 스터디 기록을 남기고자 합니다. Turtlebot3 패키지를 이용하여 시뮬레이션을 진행할 예정입니다. 1. 패키지 설치 Slam Toolbox와 Nav2 스택을 사용하기 위해서 패키지를 설치합니다. 저는 ROS2 Galactic 버전을 사용했습니다. sudo apt install ros-galactic-navigation2 ros-galactic-nav2-bringup ros-galactic-turtlebot3* ros-galactic-slam-toolbox 2. 환경설정 Turtlebot3를 사용하기 위해 ~/.bashrc에 사용하고자...","categories": ["ROS"],
         "tags": ["ROS","Localization","Slam"],
